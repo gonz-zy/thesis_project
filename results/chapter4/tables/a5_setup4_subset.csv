@@ -1,0 +1,5 @@
+split,images,patients,Pneumonia,No_Finding
+test,124,118,59,65
+train,487,460,232,255
+validation,65,61,31,34
+total,676,639,322,354

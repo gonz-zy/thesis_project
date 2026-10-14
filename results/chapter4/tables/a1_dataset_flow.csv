@@ -1,0 +1,8 @@
+step,images,patients
+"NIH ChestX-ray14, all images",112120,30805
+... label is exactly 'Pneumonia',322,286
+... label is 'No Finding',60361,24907
+"... any label that contains Pneumonia (multi-label, not used if the pipeline kept single-label only)",1431,1008
+filtered_labels.csv (what the pipeline kept),60683,24948
+   ... Pneumonia,322,286
+   ... No Finding,60361,24907

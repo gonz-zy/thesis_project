@@ -1,0 +1,201 @@
+number,image,cls,cluster,provisional,manual,note,round
+1,00001182_004.png,Pneumonia,0,clean,c,,1
+2,00018843_000.png,Pneumonia,0,clean,c,,1
+3,00000061_015.png,Pneumonia,0,clean,a,,1
+4,00028076_000.png,Pneumonia,0,clean,c,,1
+5,00027320_010.png,Pneumonia,0,clean,c,,1
+6,00021710_002.png,Pneumonia,0,clean,a,,1
+7,00026938_000.png,Pneumonia,0,clean,a,,1
+8,00022952_003.png,Pneumonia,0,clean,c,,1
+9,00016705_002.png,Pneumonia,0,clean,a,,1
+10,00014603_006.png,Pneumonia,0,clean,c,,1
+11,00019275_001.png,Pneumonia,0,clean,c,,1
+12,00015977_002.png,Pneumonia,0,clean,c,,1
+13,00011973_015.png,Pneumonia,0,clean,c,,1
+14,00026629_006.png,Pneumonia,0,clean,c,,1
+15,00014234_000.png,Pneumonia,0,clean,c,,1
+16,00029889_000.png,Pneumonia,0,clean,a,,1
+17,00020405_030.png,Pneumonia,0,clean,a,,1
+18,00005274_011.png,Pneumonia,0,clean,c,,1
+19,00027415_064.png,Pneumonia,0,clean,a,,1
+20,00027648_005.png,Pneumonia,0,clean,c,,1
+21,00006260_001.png,Pneumonia,0,clean,c,,1
+22,00009903_000.png,Pneumonia,0,clean,a,,1
+23,00005069_001.png,Pneumonia,0,clean,a,,1
+24,00026580_000.png,Pneumonia,0,clean,c,,1
+25,00025776_000.png,Pneumonia,0,clean,c,,1
+26,00001582_021.png,Pneumonia,1,artifact,a,,1
+27,00010544_007.png,Pneumonia,1,artifact,a,,1
+28,00022815_043.png,Pneumonia,1,artifact,a,,1
+29,00026806_000.png,Pneumonia,1,artifact,c,,1
+30,00013930_001.png,Pneumonia,1,artifact,c,,1
+31,00011553_006.png,Pneumonia,1,artifact,a,,1
+32,00000218_001.png,Pneumonia,1,artifact,c,,1
+33,00014436_008.png,Pneumonia,1,artifact,c,,1
+34,00015018_003.png,Pneumonia,1,artifact,a,,1
+35,00018198_004.png,Pneumonia,1,artifact,a,,1
+36,00013678_006.png,Pneumonia,1,artifact,c,,1
+37,00021201_036.png,Pneumonia,1,artifact,a,,1
+38,00003950_002.png,Pneumonia,1,artifact,c,,1
+39,00015338_015.png,Pneumonia,1,artifact,a,,1
+40,00007444_003.png,Pneumonia,1,artifact,c,,1
+41,00000798_025.png,Pneumonia,1,artifact,a,,1
+42,00000893_000.png,Pneumonia,1,artifact,c,,1
+43,00005778_001.png,Pneumonia,1,artifact,c,,1
+44,00008470_008.png,Pneumonia,1,artifact,a,,1
+45,00018996_002.png,Pneumonia,1,artifact,a,,1
+46,00003523_011.png,Pneumonia,1,artifact,a,,1
+47,00000193_019.png,Pneumonia,1,artifact,c,,1
+48,00001247_011.png,Pneumonia,1,artifact,c,,1
+49,00006289_005.png,Pneumonia,1,artifact,c,,1
+50,00008397_016.png,Pneumonia,1,artifact,c,,1
+51,00024002_000.png,No Finding,0,clean,c,,1
+52,00030516_000.png,No Finding,0,clean,c,,1
+53,00022304_000.png,No Finding,0,clean,c,,1
+54,00012886_000.png,No Finding,0,clean,c,,1
+55,00020318_005.png,No Finding,0,clean,c,,1
+56,00010545_001.png,No Finding,0,clean,c,,1
+57,00022207_000.png,No Finding,0,clean,c,,1
+58,00016022_000.png,No Finding,0,clean,c,,1
+59,00029997_000.png,No Finding,0,clean,c,,1
+60,00012865_002.png,No Finding,0,clean,c,,1
+61,00020280_000.png,No Finding,0,clean,c,,1
+62,00013709_001.png,No Finding,0,clean,c,,1
+63,00026952_000.png,No Finding,0,clean,c,,1
+64,00017517_000.png,No Finding,0,clean,c,,1
+65,00019163_000.png,No Finding,0,clean,c,,1
+66,00020151_000.png,No Finding,0,clean,c,,1
+67,00021026_000.png,No Finding,0,clean,c,,1
+68,00013486_000.png,No Finding,0,clean,c,,1
+69,00001211_000.png,No Finding,0,clean,c,,1
+70,00010668_000.png,No Finding,0,clean,c,,1
+71,00011142_000.png,No Finding,0,clean,c,,1
+72,00021263_000.png,No Finding,0,clean,c,,1
+73,00016204_000.png,No Finding,0,clean,c,,1
+74,00020393_000.png,No Finding,0,clean,c,,1
+75,00027281_000.png,No Finding,0,clean,c,,1
+76,00014515_000.png,No Finding,1,artifact,c,,1
+77,00023960_000.png,No Finding,1,artifact,c,,1
+78,00007512_000.png,No Finding,1,artifact,c,,1
+79,00003150_000.png,No Finding,1,artifact,c,,1
+80,00012456_000.png,No Finding,1,artifact,c,,1
+81,00007396_000.png,No Finding,1,artifact,c,,1
+82,00014271_000.png,No Finding,1,artifact,c,,1
+83,00020629_000.png,No Finding,1,artifact,c,,1
+84,00002307_000.png,No Finding,1,artifact,c,,1
+85,00002673_000.png,No Finding,1,artifact,c,,1
+86,00005284_000.png,No Finding,1,artifact,c,,1
+87,00005928_000.png,No Finding,1,artifact,c,,1
+88,00008107_000.png,No Finding,1,artifact,a,,1
+89,00026418_000.png,No Finding,1,artifact,c,,1
+90,00009367_000.png,No Finding,1,artifact,a,,1
+91,00008488_000.png,No Finding,1,artifact,c,,1
+92,00030143_000.png,No Finding,1,artifact,c,,1
+93,00007485_004.png,No Finding,1,artifact,a,,1
+94,00026050_002.png,No Finding,1,artifact,a,,1
+95,00005055_000.png,No Finding,1,artifact,c,,1
+96,00001153_001.png,No Finding,1,artifact,c,,1
+97,00022855_000.png,No Finding,1,artifact,c,,1
+98,00006489_000.png,No Finding,1,artifact,c,,1
+99,00007460_000.png,No Finding,1,artifact,a,,1
+100,00001412_000.png,No Finding,1,artifact,c,,1
+101,00016936_000.png,Pneumonia,0,clean,c,,2
+102,00022436_000.png,Pneumonia,0,clean,c,,2
+103,00017405_013.png,Pneumonia,0,clean,a,,2
+104,00003510_008.png,Pneumonia,0,clean,a,,2
+105,00013997_000.png,Pneumonia,0,clean,a,,2
+106,00001317_002.png,Pneumonia,0,clean,c,,2
+107,00013611_001.png,Pneumonia,0,clean,c,,2
+108,00001529_005.png,Pneumonia,0,clean,c,,2
+109,00020845_002.png,Pneumonia,0,clean,a,,2
+110,00011472_001.png,Pneumonia,0,clean,c,,2
+111,00020928_000.png,Pneumonia,0,clean,c,,2
+112,00009323_005.png,Pneumonia,0,clean,c,,2
+113,00005567_017.png,Pneumonia,0,clean,c,,2
+114,00016011_011.png,Pneumonia,0,clean,c,,2
+115,00010375_000.png,Pneumonia,0,clean,c,,2
+116,00012733_000.png,Pneumonia,0,clean,c,,2
+117,00021243_001.png,Pneumonia,0,clean,c,,2
+118,00017659_000.png,Pneumonia,0,clean,c,,2
+119,00000165_001.png,Pneumonia,0,clean,c,,2
+120,00003640_004.png,Pneumonia,0,clean,c,,2
+121,00016705_003.png,Pneumonia,0,clean,a,,2
+122,00001749_003.png,Pneumonia,0,clean,c,,2
+123,00022965_004.png,Pneumonia,0,clean,c,,2
+124,00021016_000.png,Pneumonia,0,clean,c,,2
+125,00022201_000.png,Pneumonia,0,clean,c,,2
+126,00013992_005.png,Pneumonia,1,artifact,a,,2
+127,00019707_017.png,Pneumonia,1,artifact,a,,2
+128,00013615_024.png,Pneumonia,1,artifact,a,,2
+129,00003064_026.png,Pneumonia,1,artifact,c,,2
+130,00010509_003.png,Pneumonia,1,artifact,a,,2
+131,00028873_017.png,Pneumonia,1,artifact,a,,2
+132,00006997_000.png,Pneumonia,1,artifact,a,,2
+133,00017254_000.png,Pneumonia,1,artifact,a,,2
+134,00011386_000.png,Pneumonia,1,artifact,c,,2
+135,00028301_000.png,Pneumonia,1,artifact,c,,2
+136,00021571_000.png,Pneumonia,1,artifact,a,,2
+137,00026729_000.png,Pneumonia,1,artifact,c,,2
+138,00001946_007.png,Pneumonia,1,artifact,c,,2
+139,00012094_011.png,Pneumonia,1,artifact,a,,2
+140,00000963_007.png,Pneumonia,1,artifact,c,,2
+141,00013272_005.png,Pneumonia,1,artifact,a,,2
+142,00006985_002.png,Pneumonia,1,artifact,a,,2
+143,00026374_004.png,Pneumonia,1,artifact,a,,2
+144,00017138_068.png,Pneumonia,1,artifact,a,,2
+145,00003535_025.png,Pneumonia,1,artifact,c,,2
+146,00010531_012.png,Pneumonia,1,artifact,a,,2
+147,00010773_017.png,Pneumonia,1,artifact,a,,2
+148,00001749_002.png,Pneumonia,1,artifact,c,,2
+149,00014022_102.png,Pneumonia,1,artifact,a,,2
+150,00021201_037.png,Pneumonia,1,artifact,a,,2
+151,00015145_000.png,No Finding,0,clean,c,,2
+152,00027609_000.png,No Finding,0,clean,c,,2
+153,00022335_001.png,No Finding,0,clean,c,,2
+154,00000526_000.png,No Finding,0,clean,c,,2
+155,00010790_000.png,No Finding,0,clean,a,,2
+156,00015168_000.png,No Finding,0,clean,c,,2
+157,00020278_000.png,No Finding,0,clean,c,,2
+158,00015727_000.png,No Finding,0,clean,c,,2
+159,00011436_009.png,No Finding,0,clean,c,,2
+160,00001809_000.png,No Finding,0,clean,c,,2
+161,00026640_000.png,No Finding,0,clean,c,,2
+162,00001403_000.png,No Finding,0,clean,c,,2
+163,00028272_000.png,No Finding,0,clean,c,,2
+164,00024431_000.png,No Finding,0,clean,c,,2
+165,00021359_000.png,No Finding,0,clean,c,,2
+166,00029551_001.png,No Finding,0,clean,a,,2
+167,00024194_000.png,No Finding,0,clean,c,,2
+168,00027827_000.png,No Finding,0,clean,c,,2
+169,00015735_000.png,No Finding,0,clean,c,,2
+170,00005623_000.png,No Finding,0,clean,c,,2
+171,00028208_002.png,No Finding,0,clean,a,,2
+172,00005865_000.png,No Finding,0,clean,c,,2
+173,00027889_000.png,No Finding,0,clean,c,,2
+174,00005047_000.png,No Finding,0,clean,c,,2
+175,00024926_000.png,No Finding,0,clean,c,,2
+176,00000222_000.png,No Finding,1,artifact,c,,2
+177,00001642_000.png,No Finding,1,artifact,c,,2
+178,00010089_000.png,No Finding,1,artifact,c,,2
+179,00008058_001.png,No Finding,1,artifact,c,,2
+180,00005916_000.png,No Finding,1,artifact,a,,2
+181,00001640_000.png,No Finding,1,artifact,c,,2
+182,00008347_000.png,No Finding,1,artifact,c,,2
+183,00005746_000.png,No Finding,1,artifact,c,,2
+184,00013721_000.png,No Finding,1,artifact,a,,2
+185,00010376_000.png,No Finding,1,artifact,c,,2
+186,00002678_000.png,No Finding,1,artifact,c,,2
+187,00015203_000.png,No Finding,1,artifact,c,,2
+188,00000860_000.png,No Finding,1,artifact,c,,2
+189,00005767_000.png,No Finding,1,artifact,c,,2
+190,00002982_000.png,No Finding,1,artifact,c,,2
+191,00024755_000.png,No Finding,1,artifact,c,,2
+192,00006599_000.png,No Finding,1,artifact,c,,2
+193,00006898_000.png,No Finding,1,artifact,c,,2
+194,00004915_001.png,No Finding,1,artifact,a,,2
+195,00003296_001.png,No Finding,1,artifact,c,,2
+196,00008820_000.png,No Finding,1,artifact,c,,2
+197,00015600_001.png,No Finding,1,artifact,a,,2
+198,00005453_000.png,No Finding,1,artifact,c,,2
+199,00007967_000.png,No Finding,1,artifact,c,,2
+200,00004689_000.png,No Finding,1,artifact,c,,2

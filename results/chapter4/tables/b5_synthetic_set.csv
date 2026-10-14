@@ -1,0 +1,3 @@
+item,images
+real pneumonia images used to train StyleGAN2-ADA (training_pneumonia_only),232
+generated pneumonia images (generated-pneumonia),41972

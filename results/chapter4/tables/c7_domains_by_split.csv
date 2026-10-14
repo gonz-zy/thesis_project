@@ -1,0 +1,4 @@
+split,artifact,clean
+test,48,76
+train,235,252
+validation,22,43

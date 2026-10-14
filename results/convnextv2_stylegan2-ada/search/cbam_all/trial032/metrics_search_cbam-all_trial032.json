@@ -1,0 +1,22 @@
+{
+  "run_id": "search_cbam-all_trial032",
+  "phase": "search",
+  "setup": "3_convnextv2_stylegan2ada",
+  "cbam": "all",
+  "seed": 100,
+  "trial": 32,
+  "lr": 0.0001619412556132596,
+  "min_lr_ratio": 0.030804721366977997,
+  "batch": 16,
+  "warmup_epochs": 3,
+  "epoch_cap": 15,
+  "patience": 5,
+  "weight_decay": 0.0001,
+  "samples_per_epoch": 84384,
+  "pos_weight": 1.0,
+  "epochs_run": 10,
+  "best_epoch": 5,
+  "diverged": false,
+  "best_val_auc": 0.556031727112161,
+  "top3_val_auc": 0.546178407215173
+}

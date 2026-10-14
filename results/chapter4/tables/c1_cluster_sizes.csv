@@ -1,0 +1,4 @@
+class,n,cluster0,cluster1,provisional_artifact_cluster,ours_artifact,ours_clean,chehade_artifact,chehade_clean
+Pneumonia,322,180.0,142.0,1.0,142,180,152,170
+No Finding,354,191.0,163.0,1.0,163,191,133,221
+total,676,,,,305,371,285,391

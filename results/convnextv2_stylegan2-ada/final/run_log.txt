@@ -1,0 +1,8 @@
+2026-10-14 04:21:28 | cbam=all | seed=42 | ok | 84.5 min
+2026-10-14 05:43:15 | cbam=all | seed=43 | ok | 81.8 min
+2026-10-14 07:04:56 | cbam=all | seed=44 | ok | 81.7 min
+2026-10-14 08:49:02 | cbam=all | seed=42 | ok | 0.2 min
+2026-10-14 08:49:05 | cbam=all | seed=43 | ok | 0.0 min
+2026-10-14 08:49:08 | cbam=all | seed=44 | ok | 0.0 min
+2026-10-14 10:11:25 | cbam=all | seed=45 | ok | 82.3 min
+2026-10-14 11:32:53 | cbam=all | seed=46 | ok | 81.5 min

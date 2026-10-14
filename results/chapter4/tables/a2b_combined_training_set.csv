@@ -1,0 +1,4 @@
+part,images,Pneumonia,No_Finding,pneumonia_pct
+real,42436,232,42204,0.55
+synthetic,41972,41972,0,100.0
+combined,84408,42204,42204,50.0

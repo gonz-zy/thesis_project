@@ -1,0 +1,5 @@
+class,cluster,variance_of_gradients,lung_sharpness,black_ratio,white_ratio
+Pneumonia,0,0.01712,0.10263,0.21677,0.19549
+Pneumonia,1,0.03162,0.08406,0.22202,0.19414
+No Finding,0,0.01465,0.10154,0.22544,0.19367
+No Finding,1,0.02294,0.09139,0.19847,0.20126

@@ -1,0 +1,12 @@
+snapshot,kimg,fid50k_full,eval_minutes,best
+network-snapshot-001000.pkl,1000,87.235,7.3,False
+network-snapshot-001600.pkl,1600,75.186,7.3,False
+network-snapshot-002000.pkl,2000,73.812,7.3,False
+network-snapshot-002600.pkl,2600,70.307,7.4,False
+network-snapshot-003000.pkl,3000,69.587,7.4,False
+network-snapshot-003600.pkl,3600,65.18,7.4,False
+network-snapshot-003800.pkl,3800,63.871,4.4,False
+network-snapshot-004000.pkl,4000,62.458,7.0,True
+network-snapshot-004600.pkl,4600,62.586,6.6,False
+network-snapshot-004800.pkl,4800,63.952,7.0,False
+network-snapshot-005000.pkl,5000,63.969,6.6,False

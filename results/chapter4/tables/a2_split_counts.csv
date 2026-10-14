@@ -1,0 +1,5 @@
+split,images,patients,Pneumonia,No_Finding,pneumonia_pct
+train,42436,17463,232,42204,0.55
+validation,5985,2495,31,5954,0.52
+test,12262,4990,59,12203,0.48
+total (patients counted once),60683,24948,322,60361,0.53

@@ -1,0 +1,66 @@
+Image Index,Finding Labels,Patient ID,Patient Age,Patient Sex,View Position,split,src_path
+00000554_000.png,No Finding,554,55,F,PA,validation,data\2-processed\1-normalized_images\00000554_000.png
+00001211_000.png,No Finding,1211,40,M,PA,validation,data\2-processed\1-normalized_images\00001211_000.png
+00002747_000.png,No Finding,2747,35,F,PA,validation,data\2-processed\1-normalized_images\00002747_000.png
+00003150_000.png,No Finding,3150,59,M,AP,validation,data\2-processed\1-normalized_images\00003150_000.png
+00003296_001.png,No Finding,3296,62,F,PA,validation,data\2-processed\1-normalized_images\00003296_001.png
+00003497_000.png,No Finding,3497,28,F,PA,validation,data\2-processed\1-normalized_images\00003497_000.png
+00003769_002.png,No Finding,3769,53,M,PA,validation,data\2-processed\1-normalized_images\00003769_002.png
+00003848_000.png,No Finding,3848,26,F,PA,validation,data\2-processed\1-normalized_images\00003848_000.png
+00004050_000.png,No Finding,4050,73,M,PA,validation,data\2-processed\1-normalized_images\00004050_000.png
+00005767_000.png,No Finding,5767,59,M,PA,validation,data\2-processed\1-normalized_images\00005767_000.png
+00005865_000.png,No Finding,5865,53,M,PA,validation,data\2-processed\1-normalized_images\00005865_000.png
+00006173_003.png,No Finding,6173,50,M,PA,validation,data\2-processed\1-normalized_images\00006173_003.png
+00006497_000.png,No Finding,6497,63,M,PA,validation,data\2-processed\1-normalized_images\00006497_000.png
+00007331_000.png,No Finding,7331,50,M,PA,validation,data\2-processed\1-normalized_images\00007331_000.png
+00007512_000.png,No Finding,7512,17,M,PA,validation,data\2-processed\1-normalized_images\00007512_000.png
+00009839_000.png,No Finding,9839,59,M,AP,validation,data\2-processed\1-normalized_images\00009839_000.png
+00009927_000.png,No Finding,9927,63,F,AP,validation,data\2-processed\1-normalized_images\00009927_000.png
+00012218_000.png,No Finding,12218,22,F,PA,validation,data\2-processed\1-normalized_images\00012218_000.png
+00012225_000.png,No Finding,12225,66,M,PA,validation,data\2-processed\1-normalized_images\00012225_000.png
+00013521_000.png,No Finding,13521,56,F,PA,validation,data\2-processed\1-normalized_images\00013521_000.png
+00013591_000.png,No Finding,13591,52,M,PA,validation,data\2-processed\1-normalized_images\00013591_000.png
+00014515_000.png,No Finding,14515,47,F,PA,validation,data\2-processed\1-normalized_images\00014515_000.png
+00015484_000.png,No Finding,15484,64,M,PA,validation,data\2-processed\1-normalized_images\00015484_000.png
+00017517_000.png,No Finding,17517,34,F,PA,validation,data\2-processed\1-normalized_images\00017517_000.png
+00018313_000.png,No Finding,18313,28,M,AP,validation,data\2-processed\1-normalized_images\00018313_000.png
+00018526_000.png,No Finding,18526,23,F,PA,validation,data\2-processed\1-normalized_images\00018526_000.png
+00019163_000.png,No Finding,19163,29,M,PA,validation,data\2-processed\1-normalized_images\00019163_000.png
+00019639_002.png,No Finding,19639,50,F,PA,validation,data\2-processed\1-normalized_images\00019639_002.png
+00023297_002.png,No Finding,23297,35,F,PA,validation,data\2-processed\1-normalized_images\00023297_002.png
+00024002_000.png,No Finding,24002,37,F,PA,validation,data\2-processed\1-normalized_images\00024002_000.png
+00024290_000.png,No Finding,24290,29,M,PA,validation,data\2-processed\1-normalized_images\00024290_000.png
+00026375_000.png,No Finding,26375,63,M,PA,validation,data\2-processed\1-normalized_images\00026375_000.png
+00026743_000.png,No Finding,26743,40,M,PA,validation,data\2-processed\1-normalized_images\00026743_000.png
+00028020_001.png,No Finding,28020,60,F,AP,validation,data\2-processed\1-normalized_images\00028020_001.png
+00000218_001.png,Pneumonia,218,33,M,PA,validation,data\2-processed\1-normalized_images\00000218_001.png
+00000310_001.png,Pneumonia,310,59,M,AP,validation,data\2-processed\1-normalized_images\00000310_001.png
+00002360_002.png,Pneumonia,2360,33,F,PA,validation,data\2-processed\1-normalized_images\00002360_002.png
+00003053_007.png,Pneumonia,3053,83,M,AP,validation,data\2-processed\1-normalized_images\00003053_007.png
+00003092_000.png,Pneumonia,3092,53,M,PA,validation,data\2-processed\1-normalized_images\00003092_000.png
+00004344_002.png,Pneumonia,4344,46,F,AP,validation,data\2-processed\1-normalized_images\00004344_002.png
+00005639_003.png,Pneumonia,5639,22,M,PA,validation,data\2-processed\1-normalized_images\00005639_003.png
+00008745_034.png,Pneumonia,8745,45,M,AP,validation,data\2-processed\1-normalized_images\00008745_034.png
+00009798_016.png,Pneumonia,9798,26,M,PA,validation,data\2-processed\1-normalized_images\00009798_016.png
+00012158_021.png,Pneumonia,12158,45,F,PA,validation,data\2-processed\1-normalized_images\00012158_021.png
+00012158_025.png,Pneumonia,12158,47,F,PA,validation,data\2-processed\1-normalized_images\00012158_025.png
+00012761_007.png,Pneumonia,12761,54,M,PA,validation,data\2-processed\1-normalized_images\00012761_007.png
+00014201_008.png,Pneumonia,14201,31,F,PA,validation,data\2-processed\1-normalized_images\00014201_008.png
+00015442_000.png,Pneumonia,15442,63,F,PA,validation,data\2-processed\1-normalized_images\00015442_000.png
+00015442_001.png,Pneumonia,15442,63,F,PA,validation,data\2-processed\1-normalized_images\00015442_001.png
+00016205_000.png,Pneumonia,16205,58,F,AP,validation,data\2-processed\1-normalized_images\00016205_000.png
+00016896_012.png,Pneumonia,16896,44,M,PA,validation,data\2-processed\1-normalized_images\00016896_012.png
+00016936_000.png,Pneumonia,16936,43,M,PA,validation,data\2-processed\1-normalized_images\00016936_000.png
+00016991_002.png,Pneumonia,16991,31,F,PA,validation,data\2-processed\1-normalized_images\00016991_002.png
+00019169_001.png,Pneumonia,19169,56,F,PA,validation,data\2-processed\1-normalized_images\00019169_001.png
+00019770_000.png,Pneumonia,19770,55,M,AP,validation,data\2-processed\1-normalized_images\00019770_000.png
+00019865_013.png,Pneumonia,19865,22,M,PA,validation,data\2-processed\1-normalized_images\00019865_013.png
+00019895_002.png,Pneumonia,19895,3,M,AP,validation,data\2-processed\1-normalized_images\00019895_002.png
+00019962_002.png,Pneumonia,19962,29,M,PA,validation,data\2-processed\1-normalized_images\00019962_002.png
+00020945_020.png,Pneumonia,20945,34,M,AP,validation,data\2-processed\1-normalized_images\00020945_020.png
+00020945_021.png,Pneumonia,20945,34,M,AP,validation,data\2-processed\1-normalized_images\00020945_021.png
+00022156_007.png,Pneumonia,22156,65,M,AP,validation,data\2-processed\1-normalized_images\00022156_007.png
+00022156_008.png,Pneumonia,22156,65,M,PA,validation,data\2-processed\1-normalized_images\00022156_008.png
+00022201_000.png,Pneumonia,22201,40,M,PA,validation,data\2-processed\1-normalized_images\00022201_000.png
+00026580_000.png,Pneumonia,26580,21,F,PA,validation,data\2-processed\1-normalized_images\00026580_000.png
+00027539_001.png,Pneumonia,27539,34,F,PA,validation,data\2-processed\1-normalized_images\00027539_001.png

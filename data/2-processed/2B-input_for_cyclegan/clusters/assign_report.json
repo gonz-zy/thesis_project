@@ -1,0 +1,19 @@
+{
+  "cluster_to_domain": {
+    "No Finding|0": "clean",
+    "No Finding|1": "artifact",
+    "Pneumonia|0": "clean",
+    "Pneumonia|1": "artifact"
+  },
+  "selfcheck": {
+    "n": 676,
+    "clusters_reproduced": 676,
+    "max_scalar_diff": 9.8879238130678e-17
+  },
+  "n_new": 18058,
+  "n_total": 18734,
+  "mask_fallbacks": 34,
+  "artifact_share_new": {
+    "No Finding": 0.49158267803743494
+  }
+}

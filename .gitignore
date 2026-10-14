@@ -1,0 +1,25 @@
+# images
+*.png
+*.jpg
+*.jpeg
+*.tif
+
+# model files
+*.pt
+*.pth
+*.pkl
+*.ckpt
+
+# environment, archives, cache
+venv/
+archived*/
+**/archived*/
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+._*
+
+*.npy
+*.zip
+**/_backup*/

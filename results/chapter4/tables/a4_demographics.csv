@@ -1,0 +1,4 @@
+set,images,patients,age_mean,age_sd,age_median,age_min,age_max,male_pct,PA_pct,AP_pct
+train,42436,17463,45.7,16.6,47.0,0,95,56.4,64.7,35.3
+validation,5985,2495,44.7,16.8,46.0,0,94,54.4,65.6,34.4
+test,12262,4990,45.1,16.3,47.0,0,92,56.6,65.9,34.1
