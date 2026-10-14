@@ -1,0 +1,26 @@
+{
+  "backbone": "fid",
+  "pool": 2000,
+  "n_per_set": 1000,
+  "repeats": 10,
+  "seed": 0,
+  "resize_check": "40/40",
+  "group_sizes": {
+    "seen_all (676)": {
+      "artifact": 305,
+      "clean": 371
+    },
+    "seen_NoFinding": {
+      "artifact": 163,
+      "clean": 191
+    },
+    "seen_Pneumonia": {
+      "artifact": 142,
+      "clean": 180
+    },
+    "unseen_NoFinding (G_AB never saw these)": {
+      "artifact": 8877,
+      "clean": 9181
+    }
+  }
+}

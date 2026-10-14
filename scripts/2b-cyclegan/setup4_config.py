@@ -24,7 +24,12 @@ DEVIATION LOG (for the thesis; each line is a choice of ours, not of Chehade et 
   * 2026-10-14  CycleGAN works at 256 x 256 and the classifier input is 224 (earlier plan: 224 direct). Reason: the
                 chain must equal Setup 3's, so that the data method is the only difference between Setups 3 and 4.
   * 2026-10-14  CycleGAN images are held in memory and sampled by one seeded generator (no DataLoader workers):
-                676 grayscale images are 44 MB, so workers add nothing and cannot repeat each other's samples.
+                676 grayscale images are 44 MB, so workers add nothing and cannot repeat each other's samples.             
+  *2026-10-14   The CycleGAN checkpoint at epoch 100 is used, not the final epoch 200. Chosen only on image criteria: 
+                anatomy change (centre MAE, SSIM) and visual checks. Epoch 200 changed the lungs strongly. Classifier results were not used.
+  *2026-10-14   Translation failures: images whose centre change (mean absolute difference, centre 70% of the image, after vs before G_AB)
+                exceeds 20 grey levels are flagged (120 of 9,182 artifact-domain images). All images stay in the main results; a sensitivity result
+                without them is reported. The rule was fixed before any Setup 4 result was seen
 """
 import os
 
