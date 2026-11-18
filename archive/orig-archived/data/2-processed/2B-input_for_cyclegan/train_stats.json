@@ -1,0 +1,9 @@
+{
+  "mean": 0.4875085797256484,
+  "std": 0.29736611357255305,
+  "n": 487,
+  "n_pixels": 24435712,
+  "std_of_image_means": 0.01902365240638675,
+  "source_csv": "data\\2-processed\\2B-input_for_cyclegan\\cleaned\\cleaned_manifest.csv",
+  "split": "training"
+}

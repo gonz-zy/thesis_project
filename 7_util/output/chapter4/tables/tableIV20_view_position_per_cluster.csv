@@ -1,0 +1,5 @@
+class,cluster,AP,PA,AP_share_pct,chi_square_p
+Pneumonia,artifact,113,29,79.6,2.0380366559516253e-27
+Pneumonia,clean,33,147,18.3,
+No Finding,artifact,37,126,22.7,3.0211715984267454e-06
+No Finding,clean,10,181,5.2,

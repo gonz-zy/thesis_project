@@ -1,0 +1,16 @@
+option,value
+num_gpus,2
+metrics,[]
+random_seed,42
+training_set_kwargs.use_labels,False
+training_set_kwargs.max_size,232
+training_set_kwargs.xflip,False
+training_set_kwargs.resolution,256
+G_opt_kwargs.lr,0.0025
+D_opt_kwargs.lr,0.0025
+loss_kwargs.r1_gamma,0.8192
+total_kimg,5000
+batch_size,32
+batch_gpu,16
+ema_kimg,10.0
+ada_target,0.6

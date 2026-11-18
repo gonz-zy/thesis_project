@@ -1,0 +1,80 @@
+{
+  "seed": 42,
+  "per_class": {
+    "Pneumonia": {
+      "n": 322,
+      "sizes": {
+        "0": 180,
+        "1": 142
+      },
+      "scalar_means": {
+        "0": {
+          "variance_of_gradients": 0.017121428015848778,
+          "lung_sharpness": 0.1026339339299334,
+          "black_ratio": 0.21676637331644694,
+          "white_ratio": 0.19549236297607422
+        },
+        "1": {
+          "variance_of_gradients": 0.03162114099848644,
+          "lung_sharpness": 0.08406403359078181,
+          "black_ratio": 0.22202454150562556,
+          "white_ratio": 0.19413864108878123
+        }
+      },
+      "provisional_artifact_cluster": 1,
+      "quality": {
+        "silhouette": 0.0325455404818058,
+        "calinski_harabasz": 9.406946182250977,
+        "davies_bouldin": 5.79367769715424
+      },
+      "chehade_artifact": 152,
+      "chehade_clean": 170,
+      "inertia": 181629296.0
+    },
+    "No Finding": {
+      "n": 354,
+      "sizes": {
+        "0": 191,
+        "1": 163
+      },
+      "scalar_means": {
+        "0": {
+          "variance_of_gradients": 0.014649263690396395,
+          "lung_sharpness": 0.10153854492057053,
+          "black_ratio": 0.22543813296013476,
+          "white_ratio": 0.1936733435585861
+        },
+        "1": {
+          "variance_of_gradients": 0.022939693598373768,
+          "lung_sharpness": 0.09139392026728643,
+          "black_ratio": 0.19846700890663943,
+          "white_ratio": 0.2012599172767686
+        }
+      },
+      "provisional_artifact_cluster": 1,
+      "quality": {
+        "silhouette": 0.026724394410848618,
+        "calinski_harabasz": 9.101975440979004,
+        "davies_bouldin": 6.196025894890122
+      },
+      "chehade_artifact": 133,
+      "chehade_clean": 221,
+      "inertia": 200368480.0
+    }
+  },
+  "standardisation": "per class, StandardScaler, no PCA",
+  "scalar_only_agreement": {
+    "Pneumonia": 0.6024844720496895,
+    "No Finding": 0.536723163841808
+  },
+  "crosstab": {
+    "artifact": {
+      "No Finding": 163,
+      "Pneumonia": 142
+    },
+    "clean": {
+      "No Finding": 191,
+      "Pneumonia": 180
+    }
+  }
+}

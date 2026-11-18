@@ -1,0 +1,9 @@
+{
+  "mean": 0.4928509462620717,
+  "std": 0.2934167663131939,
+  "n": 84408,
+  "n_pixels": 4235255808,
+  "std_of_image_means": 0.02283679461940975,
+  "source_csv": "data\\2-processed\\2A-input_for_stylegan2ada\\labels\\combined_training_labels.csv",
+  "split": null
+}

@@ -1,0 +1,25 @@
+{
+  "cbam": "all",
+  "lr": 1.001802063924503e-05,
+  "min_lr_ratio": 0.23010745241512293,
+  "objective_top3_val_auc": 0.6038887745113976,
+  "best_trial": 35,
+  "n_complete": 20,
+  "n_diverged": 0,
+  "search_seed": 100,
+  "sampler": "TPE",
+  "n_startup_trials": 5,
+  "epoch_cap": 15,
+  "patience": 5,
+  "search_space": {
+    "lr": [
+      1e-05,
+      0.0003,
+      "log"
+    ],
+    "min_lr_ratio": [
+      0.0,
+      0.5
+    ]
+  }
+}

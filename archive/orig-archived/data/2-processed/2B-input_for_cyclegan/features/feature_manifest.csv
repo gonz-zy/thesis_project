@@ -1,0 +1,677 @@
+Image Index,Finding Labels,split,row,extracted
+00000423_000.png,No Finding,test,0,True
+00000777_000.png,No Finding,test,1,True
+00001403_000.png,No Finding,test,2,True
+00001917_001.png,No Finding,test,3,True
+00002078_000.png,No Finding,test,4,True
+00002508_000.png,No Finding,test,5,True
+00002627_000.png,No Finding,test,6,True
+00003233_002.png,No Finding,test,7,True
+00003256_000.png,No Finding,test,8,True
+00003415_000.png,No Finding,test,9,True
+00003648_000.png,No Finding,test,10,True
+00003707_000.png,No Finding,test,11,True
+00004142_000.png,No Finding,test,12,True
+00004277_000.png,No Finding,test,13,True
+00005284_000.png,No Finding,test,14,True
+00005453_000.png,No Finding,test,15,True
+00005623_000.png,No Finding,test,16,True
+00006411_000.png,No Finding,test,17,True
+00006667_003.png,No Finding,test,18,True
+00006876_000.png,No Finding,test,19,True
+00007967_000.png,No Finding,test,20,True
+00008058_001.png,No Finding,test,21,True
+00009129_000.png,No Finding,test,22,True
+00009679_001.png,No Finding,test,23,True
+00010545_001.png,No Finding,test,24,True
+00010790_000.png,No Finding,test,25,True
+00010864_000.png,No Finding,test,26,True
+00010893_000.png,No Finding,test,27,True
+00011436_009.png,No Finding,test,28,True
+00012270_001.png,No Finding,test,29,True
+00012725_000.png,No Finding,test,30,True
+00013341_000.png,No Finding,test,31,True
+00013486_000.png,No Finding,test,32,True
+00013721_000.png,No Finding,test,33,True
+00014855_000.png,No Finding,test,34,True
+00014879_007.png,No Finding,test,35,True
+00015233_000.png,No Finding,test,36,True
+00015452_000.png,No Finding,test,37,True
+00015600_001.png,No Finding,test,38,True
+00016757_002.png,No Finding,test,39,True
+00018308_008.png,No Finding,test,40,True
+00018576_000.png,No Finding,test,41,True
+00019227_000.png,No Finding,test,42,True
+00019919_000.png,No Finding,test,43,True
+00020300_000.png,No Finding,test,44,True
+00020393_000.png,No Finding,test,45,True
+00020607_000.png,No Finding,test,46,True
+00020629_000.png,No Finding,test,47,True
+00021006_011.png,No Finding,test,48,True
+00021526_000.png,No Finding,test,49,True
+00021878_000.png,No Finding,test,50,True
+00022247_001.png,No Finding,test,51,True
+00022335_001.png,No Finding,test,52,True
+00023210_000.png,No Finding,test,53,True
+00024926_000.png,No Finding,test,54,True
+00025244_000.png,No Finding,test,55,True
+00026544_000.png,No Finding,test,56,True
+00027601_000.png,No Finding,test,57,True
+00027615_000.png,No Finding,test,58,True
+00027827_000.png,No Finding,test,59,True
+00027889_000.png,No Finding,test,60,True
+00029997_000.png,No Finding,test,61,True
+00030074_000.png,No Finding,test,62,True
+00030143_000.png,No Finding,test,63,True
+00030626_000.png,No Finding,test,64,True
+00000061_015.png,Pneumonia,test,65,True
+00000144_001.png,Pneumonia,test,66,True
+00000583_045.png,Pneumonia,test,67,True
+00000893_000.png,Pneumonia,test,68,True
+00001317_002.png,Pneumonia,test,69,True
+00001837_002.png,Pneumonia,test,70,True
+00003211_000.png,Pneumonia,test,71,True
+00003973_007.png,Pneumonia,test,72,True
+00005032_000.png,Pneumonia,test,73,True
+00005892_001.png,Pneumonia,test,74,True
+00005963_025.png,Pneumonia,test,75,True
+00006289_005.png,Pneumonia,test,76,True
+00006759_001.png,Pneumonia,test,77,True
+00006832_001.png,Pneumonia,test,78,True
+00006997_000.png,Pneumonia,test,79,True
+00007735_018.png,Pneumonia,test,80,True
+00007787_001.png,Pneumonia,test,81,True
+00008727_009.png,Pneumonia,test,82,True
+00009229_003.png,Pneumonia,test,83,True
+00010531_012.png,Pneumonia,test,84,True
+00010531_073.png,Pneumonia,test,85,True
+00010544_000.png,Pneumonia,test,86,True
+00010544_007.png,Pneumonia,test,87,True
+00010544_029.png,Pneumonia,test,88,True
+00011973_015.png,Pneumonia,test,89,True
+00013272_005.png,Pneumonia,test,90,True
+00013662_005.png,Pneumonia,test,91,True
+00013818_000.png,Pneumonia,test,92,True
+00013930_001.png,Pneumonia,test,93,True
+00013992_005.png,Pneumonia,test,94,True
+00014414_007.png,Pneumonia,test,95,True
+00014492_005.png,Pneumonia,test,96,True
+00015968_000.png,Pneumonia,test,97,True
+00016213_007.png,Pneumonia,test,98,True
+00016778_028.png,Pneumonia,test,99,True
+00016972_005.png,Pneumonia,test,100,True
+00016972_028.png,Pneumonia,test,101,True
+00017254_000.png,Pneumonia,test,102,True
+00017659_000.png,Pneumonia,test,103,True
+00017714_019.png,Pneumonia,test,104,True
+00018525_000.png,Pneumonia,test,105,True
+00018960_023.png,Pneumonia,test,106,True
+00019275_001.png,Pneumonia,test,107,True
+00019275_002.png,Pneumonia,test,108,True
+00020405_030.png,Pneumonia,test,109,True
+00020505_022.png,Pneumonia,test,110,True
+00021860_003.png,Pneumonia,test,111,True
+00022192_032.png,Pneumonia,test,112,True
+00022192_038.png,Pneumonia,test,113,True
+00022965_004.png,Pneumonia,test,114,True
+00025583_005.png,Pneumonia,test,115,True
+00025607_001.png,Pneumonia,test,116,True
+00025806_005.png,Pneumonia,test,117,True
+00026085_000.png,Pneumonia,test,118,True
+00026389_002.png,Pneumonia,test,119,True
+00026825_008.png,Pneumonia,test,120,True
+00027784_007.png,Pneumonia,test,121,True
+00028764_002.png,Pneumonia,test,122,True
+00030079_018.png,Pneumonia,test,123,True
+00000032_002.png,No Finding,train,124,True
+00000095_000.png,No Finding,train,125,True
+00000222_000.png,No Finding,train,126,True
+00000459_000.png,No Finding,train,127,True
+00000526_000.png,No Finding,train,128,True
+00000754_000.png,No Finding,train,129,True
+00000860_000.png,No Finding,train,130,True
+00000901_000.png,No Finding,train,131,True
+00001100_000.png,No Finding,train,132,True
+00001136_000.png,No Finding,train,133,True
+00001153_001.png,No Finding,train,134,True
+00001318_000.png,No Finding,train,135,True
+00001380_000.png,No Finding,train,136,True
+00001402_000.png,No Finding,train,137,True
+00001412_000.png,No Finding,train,138,True
+00001499_000.png,No Finding,train,139,True
+00001640_000.png,No Finding,train,140,True
+00001642_000.png,No Finding,train,141,True
+00001758_000.png,No Finding,train,142,True
+00001809_000.png,No Finding,train,143,True
+00001872_000.png,No Finding,train,144,True
+00001981_000.png,No Finding,train,145,True
+00002157_000.png,No Finding,train,146,True
+00002184_000.png,No Finding,train,147,True
+00002307_000.png,No Finding,train,148,True
+00002327_000.png,No Finding,train,149,True
+00002340_000.png,No Finding,train,150,True
+00002367_000.png,No Finding,train,151,True
+00002673_000.png,No Finding,train,152,True
+00002678_000.png,No Finding,train,153,True
+00002709_000.png,No Finding,train,154,True
+00002982_000.png,No Finding,train,155,True
+00003139_002.png,No Finding,train,156,True
+00003311_000.png,No Finding,train,157,True
+00003492_000.png,No Finding,train,158,True
+00003634_002.png,No Finding,train,159,True
+00003653_000.png,No Finding,train,160,True
+00004148_000.png,No Finding,train,161,True
+00004264_000.png,No Finding,train,162,True
+00004310_000.png,No Finding,train,163,True
+00004455_000.png,No Finding,train,164,True
+00004640_000.png,No Finding,train,165,True
+00004689_000.png,No Finding,train,166,True
+00004809_000.png,No Finding,train,167,True
+00004915_001.png,No Finding,train,168,True
+00004919_000.png,No Finding,train,169,True
+00004926_000.png,No Finding,train,170,True
+00005047_000.png,No Finding,train,171,True
+00005055_000.png,No Finding,train,172,True
+00005222_000.png,No Finding,train,173,True
+00005257_000.png,No Finding,train,174,True
+00005613_000.png,No Finding,train,175,True
+00005722_000.png,No Finding,train,176,True
+00005746_000.png,No Finding,train,177,True
+00005756_000.png,No Finding,train,178,True
+00005908_000.png,No Finding,train,179,True
+00005916_000.png,No Finding,train,180,True
+00005928_000.png,No Finding,train,181,True
+00006299_001.png,No Finding,train,182,True
+00006310_000.png,No Finding,train,183,True
+00006352_000.png,No Finding,train,184,True
+00006413_000.png,No Finding,train,185,True
+00006489_000.png,No Finding,train,186,True
+00006536_000.png,No Finding,train,187,True
+00006565_000.png,No Finding,train,188,True
+00006595_000.png,No Finding,train,189,True
+00006599_000.png,No Finding,train,190,True
+00006784_000.png,No Finding,train,191,True
+00006898_000.png,No Finding,train,192,True
+00007255_001.png,No Finding,train,193,True
+00007277_000.png,No Finding,train,194,True
+00007320_000.png,No Finding,train,195,True
+00007396_000.png,No Finding,train,196,True
+00007460_000.png,No Finding,train,197,True
+00007485_004.png,No Finding,train,198,True
+00007904_002.png,No Finding,train,199,True
+00008107_000.png,No Finding,train,200,True
+00008120_000.png,No Finding,train,201,True
+00008142_000.png,No Finding,train,202,True
+00008347_000.png,No Finding,train,203,True
+00008488_000.png,No Finding,train,204,True
+00008650_000.png,No Finding,train,205,True
+00008742_000.png,No Finding,train,206,True
+00008747_000.png,No Finding,train,207,True
+00008820_000.png,No Finding,train,208,True
+00008826_000.png,No Finding,train,209,True
+00008900_000.png,No Finding,train,210,True
+00008995_000.png,No Finding,train,211,True
+00009024_000.png,No Finding,train,212,True
+00009143_000.png,No Finding,train,213,True
+00009179_000.png,No Finding,train,214,True
+00009343_000.png,No Finding,train,215,True
+00009367_000.png,No Finding,train,216,True
+00009405_000.png,No Finding,train,217,True
+00009508_000.png,No Finding,train,218,True
+00009930_000.png,No Finding,train,219,True
+00009941_000.png,No Finding,train,220,True
+00009956_000.png,No Finding,train,221,True
+00009998_000.png,No Finding,train,222,True
+00010089_000.png,No Finding,train,223,True
+00010138_000.png,No Finding,train,224,True
+00010202_000.png,No Finding,train,225,True
+00010308_000.png,No Finding,train,226,True
+00010375_002.png,No Finding,train,227,True
+00010376_000.png,No Finding,train,228,True
+00010668_000.png,No Finding,train,229,True
+00010802_000.png,No Finding,train,230,True
+00010938_000.png,No Finding,train,231,True
+00011107_000.png,No Finding,train,232,True
+00011142_000.png,No Finding,train,233,True
+00011283_000.png,No Finding,train,234,True
+00011440_000.png,No Finding,train,235,True
+00011447_000.png,No Finding,train,236,True
+00011552_000.png,No Finding,train,237,True
+00011583_002.png,No Finding,train,238,True
+00012067_000.png,No Finding,train,239,True
+00012313_000.png,No Finding,train,240,True
+00012406_000.png,No Finding,train,241,True
+00012456_000.png,No Finding,train,242,True
+00012562_002.png,No Finding,train,243,True
+00012566_000.png,No Finding,train,244,True
+00012865_002.png,No Finding,train,245,True
+00012886_000.png,No Finding,train,246,True
+00013045_000.png,No Finding,train,247,True
+00013315_000.png,No Finding,train,248,True
+00013505_003.png,No Finding,train,249,True
+00013544_000.png,No Finding,train,250,True
+00013709_001.png,No Finding,train,251,True
+00013923_000.png,No Finding,train,252,True
+00014034_000.png,No Finding,train,253,True
+00014065_000.png,No Finding,train,254,True
+00014271_000.png,No Finding,train,255,True
+00014872_000.png,No Finding,train,256,True
+00015145_000.png,No Finding,train,257,True
+00015168_000.png,No Finding,train,258,True
+00015203_000.png,No Finding,train,259,True
+00015355_000.png,No Finding,train,260,True
+00015727_000.png,No Finding,train,261,True
+00015735_000.png,No Finding,train,262,True
+00015758_001.png,No Finding,train,263,True
+00015975_000.png,No Finding,train,264,True
+00016022_000.png,No Finding,train,265,True
+00016085_000.png,No Finding,train,266,True
+00016204_000.png,No Finding,train,267,True
+00016528_000.png,No Finding,train,268,True
+00016589_001.png,No Finding,train,269,True
+00016601_000.png,No Finding,train,270,True
+00016789_000.png,No Finding,train,271,True
+00017113_000.png,No Finding,train,272,True
+00017161_000.png,No Finding,train,273,True
+00017418_000.png,No Finding,train,274,True
+00017524_000.png,No Finding,train,275,True
+00017535_000.png,No Finding,train,276,True
+00018019_001.png,No Finding,train,277,True
+00018100_000.png,No Finding,train,278,True
+00018324_000.png,No Finding,train,279,True
+00018738_001.png,No Finding,train,280,True
+00019192_000.png,No Finding,train,281,True
+00019199_000.png,No Finding,train,282,True
+00019373_002.png,No Finding,train,283,True
+00019708_000.png,No Finding,train,284,True
+00019728_000.png,No Finding,train,285,True
+00020020_000.png,No Finding,train,286,True
+00020151_000.png,No Finding,train,287,True
+00020263_000.png,No Finding,train,288,True
+00020278_000.png,No Finding,train,289,True
+00020280_000.png,No Finding,train,290,True
+00020318_005.png,No Finding,train,291,True
+00020388_000.png,No Finding,train,292,True
+00020563_000.png,No Finding,train,293,True
+00020697_002.png,No Finding,train,294,True
+00020964_000.png,No Finding,train,295,True
+00021026_000.png,No Finding,train,296,True
+00021110_004.png,No Finding,train,297,True
+00021263_000.png,No Finding,train,298,True
+00021359_000.png,No Finding,train,299,True
+00021446_000.png,No Finding,train,300,True
+00021994_000.png,No Finding,train,301,True
+00022109_000.png,No Finding,train,302,True
+00022117_000.png,No Finding,train,303,True
+00022134_001.png,No Finding,train,304,True
+00022207_000.png,No Finding,train,305,True
+00022304_000.png,No Finding,train,306,True
+00022382_000.png,No Finding,train,307,True
+00022826_006.png,No Finding,train,308,True
+00022832_000.png,No Finding,train,309,True
+00022855_000.png,No Finding,train,310,True
+00022976_000.png,No Finding,train,311,True
+00023152_000.png,No Finding,train,312,True
+00023499_000.png,No Finding,train,313,True
+00023522_000.png,No Finding,train,314,True
+00023705_000.png,No Finding,train,315,True
+00023730_000.png,No Finding,train,316,True
+00023843_000.png,No Finding,train,317,True
+00023960_000.png,No Finding,train,318,True
+00023964_000.png,No Finding,train,319,True
+00024006_000.png,No Finding,train,320,True
+00024085_000.png,No Finding,train,321,True
+00024099_000.png,No Finding,train,322,True
+00024194_000.png,No Finding,train,323,True
+00024332_000.png,No Finding,train,324,True
+00024431_000.png,No Finding,train,325,True
+00024571_000.png,No Finding,train,326,True
+00024597_000.png,No Finding,train,327,True
+00024755_000.png,No Finding,train,328,True
+00024927_000.png,No Finding,train,329,True
+00025001_000.png,No Finding,train,330,True
+00025025_000.png,No Finding,train,331,True
+00025128_003.png,No Finding,train,332,True
+00025358_001.png,No Finding,train,333,True
+00025422_000.png,No Finding,train,334,True
+00025586_000.png,No Finding,train,335,True
+00025622_000.png,No Finding,train,336,True
+00025640_002.png,No Finding,train,337,True
+00025724_000.png,No Finding,train,338,True
+00025743_000.png,No Finding,train,339,True
+00025884_000.png,No Finding,train,340,True
+00025889_000.png,No Finding,train,341,True
+00026050_002.png,No Finding,train,342,True
+00026201_000.png,No Finding,train,343,True
+00026293_000.png,No Finding,train,344,True
+00026410_000.png,No Finding,train,345,True
+00026418_000.png,No Finding,train,346,True
+00026640_000.png,No Finding,train,347,True
+00026842_000.png,No Finding,train,348,True
+00026952_000.png,No Finding,train,349,True
+00027046_000.png,No Finding,train,350,True
+00027281_000.png,No Finding,train,351,True
+00027442_001.png,No Finding,train,352,True
+00027594_002.png,No Finding,train,353,True
+00027609_000.png,No Finding,train,354,True
+00027714_001.png,No Finding,train,355,True
+00027733_000.png,No Finding,train,356,True
+00027861_001.png,No Finding,train,357,True
+00028208_002.png,No Finding,train,358,True
+00028241_000.png,No Finding,train,359,True
+00028272_000.png,No Finding,train,360,True
+00028311_000.png,No Finding,train,361,True
+00028594_000.png,No Finding,train,362,True
+00028715_000.png,No Finding,train,363,True
+00028800_000.png,No Finding,train,364,True
+00028979_000.png,No Finding,train,365,True
+00028996_000.png,No Finding,train,366,True
+00029038_000.png,No Finding,train,367,True
+00029100_000.png,No Finding,train,368,True
+00029292_001.png,No Finding,train,369,True
+00029551_001.png,No Finding,train,370,True
+00029803_000.png,No Finding,train,371,True
+00029905_000.png,No Finding,train,372,True
+00030032_000.png,No Finding,train,373,True
+00030101_000.png,No Finding,train,374,True
+00030255_000.png,No Finding,train,375,True
+00030258_000.png,No Finding,train,376,True
+00030516_000.png,No Finding,train,377,True
+00030740_000.png,No Finding,train,378,True
+00000165_001.png,Pneumonia,train,379,True
+00000193_019.png,Pneumonia,train,380,True
+00000261_002.png,Pneumonia,train,381,True
+00000499_008.png,Pneumonia,train,382,True
+00000798_025.png,Pneumonia,train,383,True
+00000963_007.png,Pneumonia,train,384,True
+00001018_005.png,Pneumonia,train,385,True
+00001021_000.png,Pneumonia,train,386,True
+00001162_000.png,Pneumonia,train,387,True
+00001182_004.png,Pneumonia,train,388,True
+00001247_011.png,Pneumonia,train,389,True
+00001437_019.png,Pneumonia,train,390,True
+00001529_002.png,Pneumonia,train,391,True
+00001529_005.png,Pneumonia,train,392,True
+00001582_019.png,Pneumonia,train,393,True
+00001582_021.png,Pneumonia,train,394,True
+00001637_001.png,Pneumonia,train,395,True
+00001749_002.png,Pneumonia,train,396,True
+00001749_003.png,Pneumonia,train,397,True
+00001855_008.png,Pneumonia,train,398,True
+00001906_004.png,Pneumonia,train,399,True
+00001946_007.png,Pneumonia,train,400,True
+00001946_024.png,Pneumonia,train,401,True
+00001992_002.png,Pneumonia,train,402,True
+00002052_002.png,Pneumonia,train,403,True
+00002109_000.png,Pneumonia,train,404,True
+00002118_009.png,Pneumonia,train,405,True
+00002288_004.png,Pneumonia,train,406,True
+00002451_007.png,Pneumonia,train,407,True
+00002572_006.png,Pneumonia,train,408,True
+00003064_026.png,Pneumonia,train,409,True
+00003248_007.png,Pneumonia,train,410,True
+00003426_017.png,Pneumonia,train,411,True
+00003510_008.png,Pneumonia,train,412,True
+00003510_009.png,Pneumonia,train,413,True
+00003510_010.png,Pneumonia,train,414,True
+00003523_011.png,Pneumonia,train,415,True
+00003528_043.png,Pneumonia,train,416,True
+00003535_025.png,Pneumonia,train,417,True
+00003640_004.png,Pneumonia,train,418,True
+00003950_002.png,Pneumonia,train,419,True
+00004893_027.png,Pneumonia,train,420,True
+00004893_070.png,Pneumonia,train,421,True
+00005069_001.png,Pneumonia,train,422,True
+00005138_009.png,Pneumonia,train,423,True
+00005274_011.png,Pneumonia,train,424,True
+00005567_017.png,Pneumonia,train,425,True
+00005567_025.png,Pneumonia,train,426,True
+00005638_000.png,Pneumonia,train,427,True
+00005673_003.png,Pneumonia,train,428,True
+00005778_001.png,Pneumonia,train,429,True
+00006260_001.png,Pneumonia,train,430,True
+00006296_032.png,Pneumonia,train,431,True
+00006490_006.png,Pneumonia,train,432,True
+00006717_007.png,Pneumonia,train,433,True
+00006966_004.png,Pneumonia,train,434,True
+00006985_002.png,Pneumonia,train,435,True
+00007191_001.png,Pneumonia,train,436,True
+00007444_003.png,Pneumonia,train,437,True
+00007624_024.png,Pneumonia,train,438,True
+00007699_003.png,Pneumonia,train,439,True
+00007992_006.png,Pneumonia,train,440,True
+00008362_013.png,Pneumonia,train,441,True
+00008397_016.png,Pneumonia,train,442,True
+00008401_006.png,Pneumonia,train,443,True
+00008470_008.png,Pneumonia,train,444,True
+00009048_002.png,Pneumonia,train,445,True
+00009081_000.png,Pneumonia,train,446,True
+00009305_002.png,Pneumonia,train,447,True
+00009323_005.png,Pneumonia,train,448,True
+00009863_058.png,Pneumonia,train,449,True
+00009863_059.png,Pneumonia,train,450,True
+00009903_000.png,Pneumonia,train,451,True
+00010334_010.png,Pneumonia,train,452,True
+00010375_000.png,Pneumonia,train,453,True
+00010375_001.png,Pneumonia,train,454,True
+00010384_035.png,Pneumonia,train,455,True
+00010505_018.png,Pneumonia,train,456,True
+00010509_003.png,Pneumonia,train,457,True
+00010586_000.png,Pneumonia,train,458,True
+00010693_012.png,Pneumonia,train,459,True
+00010761_002.png,Pneumonia,train,460,True
+00010773_017.png,Pneumonia,train,461,True
+00010805_042.png,Pneumonia,train,462,True
+00011147_000.png,Pneumonia,train,463,True
+00011188_002.png,Pneumonia,train,464,True
+00011386_000.png,Pneumonia,train,465,True
+00011391_006.png,Pneumonia,train,466,True
+00011472_001.png,Pneumonia,train,467,True
+00011514_015.png,Pneumonia,train,468,True
+00011553_006.png,Pneumonia,train,469,True
+00011553_007.png,Pneumonia,train,470,True
+00011553_045.png,Pneumonia,train,471,True
+00011702_043.png,Pneumonia,train,472,True
+00011842_002.png,Pneumonia,train,473,True
+00011882_000.png,Pneumonia,train,474,True
+00011966_006.png,Pneumonia,train,475,True
+00011966_007.png,Pneumonia,train,476,True
+00012094_009.png,Pneumonia,train,477,True
+00012094_011.png,Pneumonia,train,478,True
+00012297_004.png,Pneumonia,train,479,True
+00012667_000.png,Pneumonia,train,480,True
+00012733_000.png,Pneumonia,train,481,True
+00012777_005.png,Pneumonia,train,482,True
+00012834_085.png,Pneumonia,train,483,True
+00013070_000.png,Pneumonia,train,484,True
+00013304_002.png,Pneumonia,train,485,True
+00013447_012.png,Pneumonia,train,486,True
+00013611_001.png,Pneumonia,train,487,True
+00013615_004.png,Pneumonia,train,488,True
+00013615_024.png,Pneumonia,train,489,True
+00013615_053.png,Pneumonia,train,490,True
+00013625_069.png,Pneumonia,train,491,True
+00013641_048.png,Pneumonia,train,492,True
+00013678_006.png,Pneumonia,train,493,True
+00013779_000.png,Pneumonia,train,494,True
+00013993_046.png,Pneumonia,train,495,True
+00013997_000.png,Pneumonia,train,496,True
+00014022_102.png,Pneumonia,train,497,True
+00014072_002.png,Pneumonia,train,498,True
+00014234_000.png,Pneumonia,train,499,True
+00014294_011.png,Pneumonia,train,500,True
+00014393_007.png,Pneumonia,train,501,True
+00014405_001.png,Pneumonia,train,502,True
+00014436_008.png,Pneumonia,train,503,True
+00014603_006.png,Pneumonia,train,504,True
+00014616_011.png,Pneumonia,train,505,True
+00014647_005.png,Pneumonia,train,506,True
+00014647_009.png,Pneumonia,train,507,True
+00014958_001.png,Pneumonia,train,508,True
+00015018_003.png,Pneumonia,train,509,True
+00015273_000.png,Pneumonia,train,510,True
+00015338_015.png,Pneumonia,train,511,True
+00015605_051.png,Pneumonia,train,512,True
+00015628_018.png,Pneumonia,train,513,True
+00015734_000.png,Pneumonia,train,514,True
+00015806_003.png,Pneumonia,train,515,True
+00015809_014.png,Pneumonia,train,516,True
+00015809_015.png,Pneumonia,train,517,True
+00015826_036.png,Pneumonia,train,518,True
+00015977_002.png,Pneumonia,train,519,True
+00016011_011.png,Pneumonia,train,520,True
+00016036_001.png,Pneumonia,train,521,True
+00016184_037.png,Pneumonia,train,522,True
+00016291_015.png,Pneumonia,train,523,True
+00016362_000.png,Pneumonia,train,524,True
+00016425_000.png,Pneumonia,train,525,True
+00016705_002.png,Pneumonia,train,526,True
+00016705_003.png,Pneumonia,train,527,True
+00016705_004.png,Pneumonia,train,528,True
+00016825_000.png,Pneumonia,train,529,True
+00017005_000.png,Pneumonia,train,530,True
+00017138_068.png,Pneumonia,train,531,True
+00017231_001.png,Pneumonia,train,532,True
+00017236_034.png,Pneumonia,train,533,True
+00017236_075.png,Pneumonia,train,534,True
+00017405_013.png,Pneumonia,train,535,True
+00017641_003.png,Pneumonia,train,536,True
+00017652_000.png,Pneumonia,train,537,True
+00018191_003.png,Pneumonia,train,538,True
+00018198_004.png,Pneumonia,train,539,True
+00018237_028.png,Pneumonia,train,540,True
+00018319_000.png,Pneumonia,train,541,True
+00018319_001.png,Pneumonia,train,542,True
+00018464_027.png,Pneumonia,train,543,True
+00018843_000.png,Pneumonia,train,544,True
+00018926_001.png,Pneumonia,train,545,True
+00018996_002.png,Pneumonia,train,546,True
+00019021_001.png,Pneumonia,train,547,True
+00019176_076.png,Pneumonia,train,548,True
+00019707_017.png,Pneumonia,train,549,True
+00019750_031.png,Pneumonia,train,550,True
+00019894_038.png,Pneumonia,train,551,True
+00020076_002.png,Pneumonia,train,552,True
+00020171_000.png,Pneumonia,train,553,True
+00020482_029.png,Pneumonia,train,554,True
+00020845_002.png,Pneumonia,train,555,True
+00020928_000.png,Pneumonia,train,556,True
+00021016_000.png,Pneumonia,train,557,True
+00021127_018.png,Pneumonia,train,558,True
+00021201_036.png,Pneumonia,train,559,True
+00021201_037.png,Pneumonia,train,560,True
+00021243_001.png,Pneumonia,train,561,True
+00021369_002.png,Pneumonia,train,562,True
+00021399_000.png,Pneumonia,train,563,True
+00021571_000.png,Pneumonia,train,564,True
+00021572_017.png,Pneumonia,train,565,True
+00021584_001.png,Pneumonia,train,566,True
+00021627_007.png,Pneumonia,train,567,True
+00021706_004.png,Pneumonia,train,568,True
+00021706_005.png,Pneumonia,train,569,True
+00021710_002.png,Pneumonia,train,570,True
+00021895_001.png,Pneumonia,train,571,True
+00022329_001.png,Pneumonia,train,572,True
+00022436_000.png,Pneumonia,train,573,True
+00022815_043.png,Pneumonia,train,574,True
+00022815_066.png,Pneumonia,train,575,True
+00022877_014.png,Pneumonia,train,576,True
+00022952_003.png,Pneumonia,train,577,True
+00025075_006.png,Pneumonia,train,578,True
+00025383_001.png,Pneumonia,train,579,True
+00025383_002.png,Pneumonia,train,580,True
+00025421_001.png,Pneumonia,train,581,True
+00025624_000.png,Pneumonia,train,582,True
+00025776_000.png,Pneumonia,train,583,True
+00026112_001.png,Pneumonia,train,584,True
+00026179_003.png,Pneumonia,train,585,True
+00026366_001.png,Pneumonia,train,586,True
+00026374_004.png,Pneumonia,train,587,True
+00026629_006.png,Pneumonia,train,588,True
+00026729_000.png,Pneumonia,train,589,True
+00026753_004.png,Pneumonia,train,590,True
+00026806_000.png,Pneumonia,train,591,True
+00026883_001.png,Pneumonia,train,592,True
+00026908_002.png,Pneumonia,train,593,True
+00026938_000.png,Pneumonia,train,594,True
+00027266_001.png,Pneumonia,train,595,True
+00027320_010.png,Pneumonia,train,596,True
+00027415_064.png,Pneumonia,train,597,True
+00027508_001.png,Pneumonia,train,598,True
+00027648_005.png,Pneumonia,train,599,True
+00027775_004.png,Pneumonia,train,600,True
+00028076_000.png,Pneumonia,train,601,True
+00028173_010.png,Pneumonia,train,602,True
+00028301_000.png,Pneumonia,train,603,True
+00028457_010.png,Pneumonia,train,604,True
+00028873_017.png,Pneumonia,train,605,True
+00028874_003.png,Pneumonia,train,606,True
+00028924_005.png,Pneumonia,train,607,True
+00029481_004.png,Pneumonia,train,608,True
+00029889_000.png,Pneumonia,train,609,True
+00030621_002.png,Pneumonia,train,610,True
+00000554_000.png,No Finding,validation,611,True
+00001211_000.png,No Finding,validation,612,True
+00002747_000.png,No Finding,validation,613,True
+00003150_000.png,No Finding,validation,614,True
+00003296_001.png,No Finding,validation,615,True
+00003497_000.png,No Finding,validation,616,True
+00003769_002.png,No Finding,validation,617,True
+00003848_000.png,No Finding,validation,618,True
+00004050_000.png,No Finding,validation,619,True
+00005767_000.png,No Finding,validation,620,True
+00005865_000.png,No Finding,validation,621,True
+00006173_003.png,No Finding,validation,622,True
+00006497_000.png,No Finding,validation,623,True
+00007331_000.png,No Finding,validation,624,True
+00007512_000.png,No Finding,validation,625,True
+00009839_000.png,No Finding,validation,626,True
+00009927_000.png,No Finding,validation,627,True
+00012218_000.png,No Finding,validation,628,True
+00012225_000.png,No Finding,validation,629,True
+00013521_000.png,No Finding,validation,630,True
+00013591_000.png,No Finding,validation,631,True
+00014515_000.png,No Finding,validation,632,True
+00015484_000.png,No Finding,validation,633,True
+00017517_000.png,No Finding,validation,634,True
+00018313_000.png,No Finding,validation,635,True
+00018526_000.png,No Finding,validation,636,True
+00019163_000.png,No Finding,validation,637,True
+00019639_002.png,No Finding,validation,638,True
+00023297_002.png,No Finding,validation,639,True
+00024002_000.png,No Finding,validation,640,True
+00024290_000.png,No Finding,validation,641,True
+00026375_000.png,No Finding,validation,642,True
+00026743_000.png,No Finding,validation,643,True
+00028020_001.png,No Finding,validation,644,True
+00000218_001.png,Pneumonia,validation,645,True
+00000310_001.png,Pneumonia,validation,646,True
+00002360_002.png,Pneumonia,validation,647,True
+00003053_007.png,Pneumonia,validation,648,True
+00003092_000.png,Pneumonia,validation,649,True
+00004344_002.png,Pneumonia,validation,650,True
+00005639_003.png,Pneumonia,validation,651,True
+00008745_034.png,Pneumonia,validation,652,True
+00009798_016.png,Pneumonia,validation,653,True
+00012158_021.png,Pneumonia,validation,654,True
+00012158_025.png,Pneumonia,validation,655,True
+00012761_007.png,Pneumonia,validation,656,True
+00014201_008.png,Pneumonia,validation,657,True
+00015442_000.png,Pneumonia,validation,658,True
+00015442_001.png,Pneumonia,validation,659,True
+00016205_000.png,Pneumonia,validation,660,True
+00016896_012.png,Pneumonia,validation,661,True
+00016936_000.png,Pneumonia,validation,662,True
+00016991_002.png,Pneumonia,validation,663,True
+00019169_001.png,Pneumonia,validation,664,True
+00019770_000.png,Pneumonia,validation,665,True
+00019865_013.png,Pneumonia,validation,666,True
+00019895_002.png,Pneumonia,validation,667,True
+00019962_002.png,Pneumonia,validation,668,True
+00020945_020.png,Pneumonia,validation,669,True
+00020945_021.png,Pneumonia,validation,670,True
+00022156_007.png,Pneumonia,validation,671,True
+00022156_008.png,Pneumonia,validation,672,True
+00022201_000.png,Pneumonia,validation,673,True
+00026580_000.png,Pneumonia,validation,674,True
+00027539_001.png,Pneumonia,validation,675,True

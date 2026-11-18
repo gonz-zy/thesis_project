@@ -1,0 +1,29 @@
+{
+  "n": 676,
+  "n_translated": 305,
+  "n_passthrough": 371,
+  "checkpoint": "data\\2-processed\\2B-input_for_cyclegan\\cyclegan\\cyclegan_epoch100.pt",
+  "checkpoint_epoch": 100,
+  "by_split": {
+    "artifact": {
+      "test": 48,
+      "train": 235,
+      "validation": 22
+    },
+    "clean": {
+      "test": 76,
+      "train": 252,
+      "validation": 43
+    }
+  },
+  "translated_mean_abs_grey_change": {
+    "mean": 8.81942638960041,
+    "min": 2.6096954345703125,
+    "max": 47.797027587890625
+  },
+  "translated_fraction_pixels_changed": {
+    "mean": 0.9176826852266906,
+    "min": 0.806732177734375,
+    "max": 0.99658203125
+  }
+}

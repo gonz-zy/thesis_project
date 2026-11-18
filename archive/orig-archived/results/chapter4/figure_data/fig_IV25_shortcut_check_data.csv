@@ -1,0 +1,11 @@
+setup,seed,best_epoch,real_recall_best,synth_recall_best,real_recall_last,synth_recall_last
+Setup 1,42,4,0.004,1.0,0.026,1.0
+Setup 1,43,9,0.009,1.0,0.595,1.0
+Setup 1,44,8,0.009,1.0,0.401,1.0
+Setup 1,45,6,0.009,1.0,0.155,1.0
+Setup 1,46,6,0.013,1.0,0.125,1.0
+Setup 3,42,13,0.0,1.0,0.0,1.0
+Setup 3,43,13,0.0,1.0,0.004,1.0
+Setup 3,44,15,0.004,1.0,0.004,1.0
+Setup 3,45,13,0.0,1.0,0.0,1.0
+Setup 3,46,15,0.0,1.0,0.0,1.0

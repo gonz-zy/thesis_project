@@ -1,0 +1,34 @@
+{
+  "n_images": 676,
+  "feature_dim": 580648,
+  "hog_dim": 580644,
+  "n_scalars": 4,
+  "feature_size": 1024,
+  "hog_orientations": 9,
+  "hog_pixels_per_cell": [
+    8,
+    8
+  ],
+  "hog_cells_per_block": [
+    2,
+    2
+  ],
+  "hog_block_norm": "L2-Hys",
+  "sobel_ksize": 3,
+  "black_threshold": 0.2,
+  "white_threshold": 0.8,
+  "lung_mask": "darkest 25% inside window (0.15, 0.88, 0.12, 0.88), close+open, two largest components",
+  "mask_roi": [
+    0.15,
+    0.88,
+    0.12,
+    0.88
+  ],
+  "mask_percentile": 25,
+  "mask_fallbacks": 1,
+  "seconds_per_image_per_core": 0.2619977921423827,
+  "minutes_total": 0.7599558115005494,
+  "workers": 4,
+  "chehade_reported_dim": 580648,
+  "dims_match": true
+}

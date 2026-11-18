@@ -1,0 +1,3 @@
+setup,pneumonia,pneumonia_real,pneumonia_synthetic,no_finding,total
+Setup 1 & 3,42204,232,41972,42204,84408
+Setup 4,232,232,0,255,487

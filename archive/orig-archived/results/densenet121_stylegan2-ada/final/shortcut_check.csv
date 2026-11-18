@@ -1,0 +1,6 @@
+run_id,cbam,seed,epochs_run,best_epoch,best_val_auc,real_recall_best,synth_recall_best,real_recall_last,synth_recall_last,nofinding_acc_best
+cbam-all_seed42,all,42,9,4,0.6933,0.004,1.0,0.026,1.0,1.0
+cbam-all_seed43,all,43,14,9,0.7037,0.009,1.0,0.595,1.0,1.0
+cbam-all_seed44,all,44,13,8,0.6838,0.009,1.0,0.401,1.0,1.0
+cbam-all_seed45,all,45,11,6,0.7057,0.009,1.0,0.155,1.0,1.0
+cbam-all_seed46,all,46,11,6,0.6789,0.013,1.0,0.125,1.0,1.0

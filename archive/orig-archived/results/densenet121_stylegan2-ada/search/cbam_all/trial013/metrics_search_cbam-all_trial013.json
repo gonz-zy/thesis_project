@@ -1,0 +1,22 @@
+{
+  "run_id": "search_cbam-all_trial013",
+  "phase": "search",
+  "setup": "1_densenet121_stylegan2ada",
+  "cbam": "all",
+  "seed": 100,
+  "trial": 13,
+  "lr": 4.918067964585475e-05,
+  "min_lr_ratio": 0.309990312651026,
+  "batch": 16,
+  "warmup_epochs": 3,
+  "epoch_cap": 15,
+  "patience": 5,
+  "weight_decay": 0.0001,
+  "samples_per_epoch": 84384,
+  "pos_weight": 1.0,
+  "epochs_run": 14,
+  "best_epoch": 9,
+  "diverged": false,
+  "best_val_auc": 0.6406211058979054,
+  "top3_val_auc": 0.6376810023802558
+}

@@ -1,0 +1,5 @@
+class,cluster,domain,cluster_images,marked,marked_artifact,artifact_share_pct,ci95,est_true_artifacts
+No Finding,0,clean,191,50,3,6.0,2-16,11.5
+No Finding,1,artifact,163,50,9,18.0,10-31,29.3
+Pneumonia,0,clean,180,50,14,28.0,17-42,50.4
+Pneumonia,1,artifact,142,50,29,58.0,44-71,82.4

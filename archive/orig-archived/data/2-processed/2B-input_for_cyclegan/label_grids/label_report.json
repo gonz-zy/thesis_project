@@ -1,0 +1,64 @@
+{
+  "per_class": {
+    "Pneumonia": {
+      "n_marked": 100,
+      "artifact_cluster": 1,
+      "agreement": 0.65,
+      "agreement_ci95": [
+        0.5525426042919797,
+        0.7363589534652197
+      ],
+      "fisher_p": 0.00442576907455947,
+      "contingency": [
+        [
+          14,
+          36
+        ],
+        [
+          29,
+          21
+        ]
+      ],
+      "artifact_share_per_cluster": {
+        "0": 0.28,
+        "1": 0.58
+      },
+      "provisional_was": 1,
+      "overturned": false,
+      "chehade_agreement": 83.54
+    },
+    "No Finding": {
+      "n_marked": 100,
+      "artifact_cluster": 1,
+      "agreement": 0.56,
+      "agreement_ci95": [
+        0.4622792771125631,
+        0.6532813459903167
+      ],
+      "fisher_p": 0.12124495753823497,
+      "contingency": [
+        [
+          3,
+          47
+        ],
+        [
+          9,
+          41
+        ]
+      ],
+      "artifact_share_per_cluster": {
+        "0": 0.06,
+        "1": 0.18
+      },
+      "provisional_was": 1,
+      "overturned": false,
+      "chehade_agreement": 82.49
+    }
+  },
+  "final_artifact_cluster": {
+    "Pneumonia": 1,
+    "No Finding": 1
+  },
+  "n_marked": 200,
+  "n_shown": 200
+}

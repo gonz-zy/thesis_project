@@ -1,0 +1,5 @@
+2026-10-14 21:22:05 | run=A | cbam=all | seed=42 | ok | 4.8 min
+2026-10-14 21:28:45 | run=A | cbam=all | seed=43 | ok | 6.7 min
+2026-10-14 21:33:58 | run=A | cbam=all | seed=44 | ok | 5.2 min
+2026-10-14 21:39:20 | run=A | cbam=all | seed=45 | ok | 5.4 min
+2026-10-14 21:45:40 | run=A | cbam=all | seed=46 | ok | 6.3 min

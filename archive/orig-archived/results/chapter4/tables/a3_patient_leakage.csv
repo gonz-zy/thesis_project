@@ -1,0 +1,4 @@
+pair,patient_overlap,image_overlap
+train / validation,0,0
+train / test,0,0
+validation / test,0,0

@@ -1,0 +1,11 @@
+item,value
+translated images,9182.0
+mean center change (grey levels),4.1975
+median center change,3.3891
+90th percentile of center change,5.0071
+maximum center change,101.8944
+images with center change > 10,273.0
+images with center change > 20 (flagged as failed),120.0
+"mean center change, Pneumonia",4.7285
+"mean center change, No Finding",4.1891
+"Mann-Whitney p, Pneumonia vs No Finding",0.0644

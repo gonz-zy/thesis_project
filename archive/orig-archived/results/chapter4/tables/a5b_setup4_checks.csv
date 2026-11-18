@@ -1,0 +1,5 @@
+check,value
+patients shared across splits,0
+patients with both classes,1
+test_balanced_124.csv: images / pneumonia / no finding,124 / 59 / 65
+validation_small_65.csv: images / pneumonia / no finding,65 / 31 / 34
