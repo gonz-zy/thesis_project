@@ -1,0 +1,4 @@
+group,n_artifact_total,n_clean_total,n_per_set,repeats,kid1000_before,kid1000_before_sd,kid1000_after,kid1000_after_sd,kid1000_floor,kid1000_floor_sd,kid_improved_in,fid_before,fid_after,fid_floor,fid_before_sd,fid_after_sd,fid_floor_sd
+seen_all (676),341,335,167,10,9.5814,1.9741,18.5458,2.3618,-0.3493,0.5761,0/10,71.0895,79.7791,58.579,1.2421,2.0276,0.7368
+seen_NoFinding,177,177,88,10,6.0274,2.5966,14.2832,1.6601,-0.006,1.2809,0/10,83.1144,93.9634,74.4237,1.9028,1.6451,1.1222
+seen_Pneumonia,164,158,79,10,14.5844,4.2121,23.0083,4.8482,-1.0209,1.0174,0/10,104.4271,111.3963,86.5143,2.2712,3.5851,1.1046

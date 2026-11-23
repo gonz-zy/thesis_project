@@ -1,0 +1,310 @@
+
+===== 2026-11-23 04:33:00 | 1/8 clean the 676 images with the new epoch-100 generator
+676 images (341 artifact, 335 clean), generator epoch 100, device cuda
+G_AB changed the artifact images by 8.80 grey levels on average (min 2.28, max 75.40); 93% of their pixels differ
+WARNING: at least one image changed by more than 40 grey levels on average; look at it
+wrote 676 images to supplementary_test_for_downsampling\3_new_downsampling_branch\output\cleaned\224
+      supplementary_test_for_downsampling\3_new_downsampling_branch\output\cleaned\cleaned_manifest.csv
+
+===== 2026-11-23 04:33:09 | 2/8 normalization statistics of the 487 newly cleaned training images
+{
+  "mean": 0.47622814645654055,
+  "std": 0.30118044616926876,
+  "n": 487,
+  "n_pixels": 24435712,
+  "std_of_image_means": 0.027527149929375293,
+  "source_csv": "supplementary_test_for_downsampling/3_new_downsampling_branch/output/cleaned/cleaned_manifest.csv",
+  "split": "train"
+}
+
+===== 2026-11-23 04:33:11 | 3/8 self-check of the Setup 2 and Setup 4B data tables
+run B: train 487 | validation 65 | test 124
+
+train: class x domain
+domain          artifact  clean  All
+Finding Labels                      
+No Finding           139    116  255
+Pneumonia            123    109  232
+All                  262    225  487
+  files missing: 0
+
+validation: class x domain
+domain          artifact  clean  All
+Finding Labels                      
+No Finding            16     18   34
+Pneumonia             13     18   31
+All                   29     36   65
+  files missing: 0
+
+test: class x domain
+domain          artifact  clean  All
+Finding Labels                      
+No Finding            22     43   65
+Pneumonia             28     31   59
+All                   50     74  124
+  files missing: 0
+
+Setup 4 normalisation: mean 0.4762 std 0.3012 (Setup 3 was 0.4929 / 0.2934)
+test order identical to testing_labels.csv: OK
+results go to: supplementary_test_for_downsampling\5_new_training_and_classification\s2_densenet121_cyclegan\output\run_B
+run B: train 487 | validation 65 | test 124
+
+train: class x domain
+domain          artifact  clean  All
+Finding Labels                      
+No Finding           139    116  255
+Pneumonia            123    109  232
+All                  262    225  487
+  files missing: 0
+
+validation: class x domain
+domain          artifact  clean  All
+Finding Labels                      
+No Finding            16     18   34
+Pneumonia             13     18   31
+All                   29     36   65
+  files missing: 0
+
+test: class x domain
+domain          artifact  clean  All
+Finding Labels                      
+No Finding            22     43   65
+Pneumonia             28     31   59
+All                   50     74  124
+  files missing: 0
+
+Setup 4 normalisation: mean 0.4762 std 0.3012 (Setup 3 was 0.4929 / 0.2934)
+test order identical to testing_labels.csv: OK
+results go to: supplementary_test_for_downsampling\5_new_training_and_classification\s4_convnextv2_cyclegan\output\run_B
+
+===== 2026-11-23 04:33:16 | 4/8 how much the translation changed each image
+
+=== CHANGE BETWEEN BEFORE (Setup 3 image) AND AFTER (cleaned), ARTIFACT-DOMAIN IMAGES ===
+
+cleaned  (341 images)
+  whole image   mean abs change 8.51   mean brightness shift -6.44
+  centre (anatomy)  mean 5.32  median 4.61  90th pct 6.59  max 49.89   SSIM mean 0.972  min 0.762
+  border (markers)  mean 11.59
+  images with centre change > 10: 12   > 20: 7
+  centre change, pneumonia 5.27 vs No Finding 5.37   Mann-Whitney p = 0.045
+
+written: supplementary_test_for_downsampling\3_new_downsampling_branch\output\translation_change\summary.csv; per folder: translation_change.csv, most_changed.png, pneumonia_most_changed.png
+
+===== 2026-11-23 04:33:19 | 5/8 FID / KID of artifact vs clean images, before and after
+resize check: 40 of 40 clean-domain images identical before/after (expect all)
+extracting 1017 feature vectors with 'fid' on cuda (cached: 0)
+  done in 0.2 min
+[skip] unseen_NoFinding (G_AB never saw these): only 0 artifact / 0 clean images in the pool (need n >= 30)
+
+backbone fid | KID x1000 (mean +- sd over 10 repeats); floor = clean vs clean
+
+seen_all (676)  (artifact 341, clean 335, n per set 167)
+  KID x1000  before     9.58 +- 1.97   after    18.55 +- 2.36   floor    -0.35 +- 0.58   improved in 0/10
+  FID        before    71.09            after    79.78            floor    58.58
+
+seen_NoFinding  (artifact 177, clean 177, n per set 88)
+  KID x1000  before     6.03 +- 2.60   after    14.28 +- 1.66   floor    -0.01 +- 1.28   improved in 0/10
+  FID        before    83.11            after    93.96            floor    74.42
+
+seen_Pneumonia  (artifact 164, clean 158, n per set 79)
+  KID x1000  before    14.58 +- 4.21   after    23.01 +- 4.85   floor    -1.02 +- 1.02   improved in 0/10
+  FID        before   104.43            after   111.40            floor    86.51
+
+written: supplementary_test_for_downsampling\3_new_downsampling_branch\output\fid_kid\fid_kid_fid.csv
+
+===== 2026-11-23 04:33:32 | 6/8 Setup 2 (DenseNet-121): search + seeds 42-46
+
+===== 2026-11-23 05:01:46 | 7/8 Setup 4B (ConvNeXt V2): search + seeds 42-46
+
+===== 2026-11-23 05:31:12 | 8/8 evaluation on the 124 test images
+Test set: 124 images, 59 pneumonia / 65 No Finding   (subset test_balanced_124.csv)
+Declared comparisons (Holm over exactly these): S2new - S4Bnew
+
+=== PER-SEED TEST METRICS ===
+ setup  seed  threshold    auc  accuracy  precision  recall  specificity     f1
+ S2new    42     0.6352 0.7499    0.6452     0.6154  0.6780       0.6154 0.6452
+ S2new    43     0.5521 0.6977    0.6855     0.6613  0.6949       0.6769 0.6777
+ S2new    44     0.4838 0.7156    0.6371     0.5897  0.7797       0.5077 0.6715
+ S2new    45     0.3007 0.7542    0.6694     0.6216  0.7797       0.5692 0.6917
+ S2new    46     0.6406 0.7003    0.6210     0.6000  0.6102       0.6308 0.6050
+S4Bnew    42     0.2031 0.7167    0.6613     0.6104  0.7966       0.5385 0.6912
+S4Bnew    43     0.2553 0.7416    0.7016     0.6833  0.6949       0.7077 0.6891
+S4Bnew    44     0.6252 0.7134    0.6613     0.6667  0.5763       0.7385 0.6182
+S4Bnew    45     0.2568 0.7327    0.6452     0.6056  0.7288       0.5692 0.6615
+S4Bnew    46     0.2999 0.7579    0.6532     0.6143  0.7288       0.5846 0.6667
+
+=== ENSEMBLE (mean of seeds), stratified bootstrap x1000, CI = estimate +/- 1.96 SD ===
+ setup      metric  n_seeds  threshold  estimate     sd  ci_lower  ci_upper
+ S2new         auc        5     0.5135    0.7369 0.0437    0.6512    0.8226
+ S2new    accuracy        5     0.5135    0.6532 0.0413    0.5724    0.7341
+ S2new   precision        5     0.5135    0.6176 0.0402    0.5389    0.6964
+ S2new      recall        5     0.5135    0.7119 0.0573    0.5996    0.8241
+ S2new specificity        5     0.5135    0.6000 0.0598    0.4828    0.7172
+ S2new          f1        5     0.5135    0.6614 0.0409    0.5812    0.7416
+S4Bnew         auc        5     0.3678    0.7377 0.0442    0.6510    0.8243
+S4Bnew    accuracy        5     0.3678    0.6613 0.0414    0.5802    0.7424
+S4Bnew   precision        5     0.3678    0.6393 0.0447    0.5518    0.7269
+S4Bnew      recall        5     0.3678    0.6610 0.0606    0.5422    0.7798
+S4Bnew specificity        5     0.3678    0.6615 0.0585    0.5469    0.7762
+S4Bnew          f1        5     0.3678    0.6500 0.0447    0.5625    0.7375
+
+=== CONFUSION COUNTS at the validation threshold (tp = pneumonia found, fn = missed, fp = false alarms, tn) ===
+ setup    level  seed  threshold  tp  fn  fp  tn
+ S2new     seed    42    0.63522  40  19  25  40
+ S2new     seed    43    0.55206  41  18  21  44
+ S2new     seed    44    0.48377  46  13  32  33
+ S2new     seed    45    0.30075  46  13  28  37
+ S2new     seed    46    0.64064  36  23  24  41
+S4Bnew     seed    42    0.20307  47  12  30  35
+S4Bnew     seed    43    0.25534  41  18  19  46
+S4Bnew     seed    44    0.62521  34  25  17  48
+S4Bnew     seed    45    0.25683  43  16  28  37
+S4Bnew     seed    46    0.29992  43  16  27  38
+ S2new ensemble    -1    0.51353  42  17  26  39
+S4Bnew ensemble    -1    0.36780  39  20  22  43
+
+Reference (descriptive only, no per-image predictions published): Chehade et al. (2025) AUC 0.8387 +/- 0.014 (mean +/- SD over ten random splits, balanced ~135-image test sets)
+
+=== DELONG (ensemble AUC, difference = first - second, Holm over 1 declared comparisons) ===
+setup_a setup_b  auc_a  auc_b    diff  ci_lower  ci_upper       z  p_value  p_holm  significant_holm_0.05
+  S2new  S4Bnew 0.7369 0.7377 -0.0008    -0.045    0.0434 -0.0347   0.9723  0.9723                  False
+
+=== ANOVA ACROSS SEEDS (training randomness; n = seeds per setup; per declared pair, Holm per metric) ===
+     metric setup_a setup_b  n_a  n_b  mean_a  mean_b    diff      F  p_value  eta_squared  p_holm
+        auc   S2new  S4Bnew    5    5  0.7235  0.7325 -0.0089 0.3739   0.5579       0.0446  0.5579
+   accuracy   S2new  S4Bnew    5    5  0.6516  0.6645 -0.0129 0.7314   0.4173       0.0838  0.4173
+  precision   S2new  S4Bnew    5    5  0.6176  0.6361 -0.0185 0.8260   0.3900       0.0936  0.3900
+     recall   S2new  S4Bnew    5    5  0.7085  0.7051  0.0034 0.0049   0.9460       0.0006  0.9460
+specificity   S2new  S4Bnew    5    5  0.6000  0.6277 -0.0277 0.3164   0.5892       0.0380  0.5892
+         f1   S2new  S4Bnew    5    5  0.6582  0.6653 -0.0071 0.1236   0.7342       0.0152  0.7342
+
+=== ANOVA ACROSS BOOTSTRAP RESAMPLES (test-set sampling noise; read eta-squared, resamples overlap) ===
+     metric setup_a setup_b        F  p_value  eta_squared  mean_a  mean_b
+        auc   S2new  S4Bnew   0.1261   0.7226       0.0001  0.7363  0.7370
+   accuracy   S2new  S4Bnew  19.9332   0.0000       0.0099  0.6523  0.6605
+  precision   S2new  S4Bnew 129.5942   0.0000       0.0609  0.6179  0.6395
+     recall   S2new  S4Bnew 349.9235   0.0000       0.1490  0.7109  0.6616
+specificity   S2new  S4Bnew 523.1925   0.0000       0.2075  0.5991  0.6596
+         f1   S2new  S4Bnew  33.3079   0.0000       0.0164  0.6602  0.6491
+
+Files written to supplementary_test_for_downsampling/5_new_training_and_classification/evaluation_124
+Test set: 124 images, 59 pneumonia / 65 No Finding   (subset test_balanced_124.csv)
+Declared comparisons (Holm over exactly these): S2 - S2new, S4B - S4Bnew
+
+=== PER-SEED TEST METRICS ===
+ setup  seed  threshold    auc  accuracy  precision  recall  specificity     f1
+    S2    42     0.2147 0.7229    0.6129     0.5663  0.7966       0.4462 0.6620
+    S2    43     0.4818 0.6979    0.5806     0.5455  0.7119       0.4615 0.6176
+    S2    44     0.0575 0.6926    0.5806     0.5402  0.7966       0.3846 0.6438
+    S2    45     0.2862 0.6945    0.6290     0.5915  0.7119       0.5538 0.6462
+    S2    46     0.1859 0.7236    0.5887     0.5426  0.8644       0.3385 0.6667
+ S2new    42     0.6352 0.7499    0.6452     0.6154  0.6780       0.6154 0.6452
+ S2new    43     0.5521 0.6977    0.6855     0.6613  0.6949       0.6769 0.6777
+ S2new    44     0.4838 0.7156    0.6371     0.5897  0.7797       0.5077 0.6715
+ S2new    45     0.3007 0.7542    0.6694     0.6216  0.7797       0.5692 0.6917
+ S2new    46     0.6406 0.7003    0.6210     0.6000  0.6102       0.6308 0.6050
+   S4B    42     0.1461 0.7326    0.6694     0.6184  0.7966       0.5538 0.6963
+   S4B    43     0.2553 0.7403    0.6613     0.6269  0.7119       0.6154 0.6667
+   S4B    44     0.2598 0.7302    0.6613     0.6269  0.7119       0.6154 0.6667
+   S4B    45     0.1848 0.7029    0.6048     0.5610  0.7797       0.4462 0.6525
+   S4B    46     0.3933 0.7274    0.6129     0.5753  0.7119       0.5231 0.6364
+S4Bnew    42     0.2031 0.7167    0.6613     0.6104  0.7966       0.5385 0.6912
+S4Bnew    43     0.2553 0.7416    0.7016     0.6833  0.6949       0.7077 0.6891
+S4Bnew    44     0.6252 0.7134    0.6613     0.6667  0.5763       0.7385 0.6182
+S4Bnew    45     0.2568 0.7327    0.6452     0.6056  0.7288       0.5692 0.6615
+S4Bnew    46     0.2999 0.7579    0.6532     0.6143  0.7288       0.5846 0.6667
+
+=== ENSEMBLE (mean of seeds), stratified bootstrap x1000, CI = estimate +/- 1.96 SD ===
+ setup      metric  n_seeds  threshold  estimate     sd  ci_lower  ci_upper
+    S2         auc        5     0.2171    0.7246 0.0457    0.6351    0.8142
+    S2    accuracy        5     0.2171    0.5726 0.0393    0.4955    0.6497
+    S2   precision        5     0.2171    0.5333 0.0279    0.4786    0.5881
+    S2      recall        5     0.2171    0.8136 0.0508    0.7141    0.9130
+    S2 specificity        5     0.2171    0.3538 0.0604    0.2355    0.4722
+    S2          f1        5     0.2171    0.6443 0.0319    0.5817    0.7069
+ S2new         auc        5     0.5135    0.7369 0.0437    0.6512    0.8226
+ S2new    accuracy        5     0.5135    0.6532 0.0413    0.5724    0.7341
+ S2new   precision        5     0.5135    0.6176 0.0402    0.5389    0.6964
+ S2new      recall        5     0.5135    0.7119 0.0573    0.5996    0.8241
+ S2new specificity        5     0.5135    0.6000 0.0598    0.4828    0.7172
+ S2new          f1        5     0.5135    0.6614 0.0409    0.5812    0.7416
+   S4B         auc        5     0.4687    0.7351 0.0443    0.6483    0.8219
+   S4B    accuracy        5     0.4687    0.6774 0.0403    0.5984    0.7565
+   S4B   precision        5     0.4687    0.6557 0.0436    0.5702    0.7413
+   S4B      recall        5     0.4687    0.6780 0.0590    0.5623    0.7936
+   S4B specificity        5     0.4687    0.6769 0.0565    0.5662    0.7876
+   S4B          f1        5     0.4687    0.6667 0.0434    0.5815    0.7518
+S4Bnew         auc        5     0.3678    0.7377 0.0442    0.6510    0.8243
+S4Bnew    accuracy        5     0.3678    0.6613 0.0414    0.5802    0.7424
+S4Bnew   precision        5     0.3678    0.6393 0.0447    0.5518    0.7269
+S4Bnew      recall        5     0.3678    0.6610 0.0606    0.5422    0.7798
+S4Bnew specificity        5     0.3678    0.6615 0.0585    0.5469    0.7762
+S4Bnew          f1        5     0.3678    0.6500 0.0447    0.5625    0.7375
+
+=== CONFUSION COUNTS at the validation threshold (tp = pneumonia found, fn = missed, fp = false alarms, tn) ===
+ setup    level  seed  threshold  tp  fn  fp  tn
+    S2     seed    42    0.21469  47  12  36  29
+    S2     seed    43    0.48182  42  17  35  30
+    S2     seed    44    0.05749  47  12  40  25
+    S2     seed    45    0.28617  42  17  29  36
+    S2     seed    46    0.18595  51   8  43  22
+ S2new     seed    42    0.63522  40  19  25  40
+ S2new     seed    43    0.55206  41  18  21  44
+ S2new     seed    44    0.48377  46  13  32  33
+ S2new     seed    45    0.30075  46  13  28  37
+ S2new     seed    46    0.64064  36  23  24  41
+   S4B     seed    42    0.14609  47  12  29  36
+   S4B     seed    43    0.25534  42  17  25  40
+   S4B     seed    44    0.25983  42  17  25  40
+   S4B     seed    45    0.18477  46  13  36  29
+   S4B     seed    46    0.39327  42  17  31  34
+S4Bnew     seed    42    0.20307  47  12  30  35
+S4Bnew     seed    43    0.25534  41  18  19  46
+S4Bnew     seed    44    0.62521  34  25  17  48
+S4Bnew     seed    45    0.25683  43  16  28  37
+S4Bnew     seed    46    0.29992  43  16  27  38
+    S2 ensemble    -1    0.21714  48  11  42  23
+ S2new ensemble    -1    0.51353  42  17  26  39
+   S4B ensemble    -1    0.46874  40  19  21  44
+S4Bnew ensemble    -1    0.36780  39  20  22  43
+
+Reference (descriptive only, no per-image predictions published): Chehade et al. (2025) AUC 0.8387 +/- 0.014 (mean +/- SD over ten random splits, balanced ~135-image test sets)
+
+=== DELONG (ensemble AUC, difference = first - second, Holm over 2 declared comparisons) ===
+setup_a setup_b  auc_a  auc_b    diff  ci_lower  ci_upper       z  p_value  p_holm  significant_holm_0.05
+     S2   S2new 0.7246 0.7369 -0.0123   -0.0486    0.0241 -0.6603    0.509     1.0                  False
+    S4B  S4Bnew 0.7351 0.7377 -0.0026   -0.0359    0.0307 -0.1535    0.878     1.0                  False
+
+=== ANOVA ACROSS SEEDS (training randomness; n = seeds per setup; per declared pair, Holm per metric) ===
+     metric setup_a setup_b  n_a  n_b  mean_a  mean_b    diff       F  p_value  eta_squared  p_holm
+        auc      S2   S2new    5    5  0.7063  0.7235 -0.0172  1.5285   0.2514       0.1604  0.5028
+        auc     S4B  S4Bnew    5    5  0.7267  0.7325 -0.0058  0.3130   0.5912       0.0377  0.5912
+   accuracy      S2   S2new    5    5  0.5984  0.6516 -0.0532 12.5172   0.0076       0.6101  0.0153
+   accuracy     S4B  S4Bnew    5    5  0.6419  0.6645 -0.0226  1.8148   0.2148       0.1849  0.2148
+  precision      S2   S2new    5    5  0.5572  0.6176 -0.0604 14.8342   0.0049       0.6496  0.0097
+  precision     S4B  S4Bnew    5    5  0.6017  0.6361 -0.0344  2.5874   0.1464       0.2444  0.1464
+     recall      S2   S2new    5    5  0.7763  0.7085  0.0678  2.4316   0.1575       0.2331  0.3151
+     recall     S4B  S4Bnew    5    5  0.7424  0.7051  0.0373  0.8345   0.3877       0.0945  0.3877
+specificity      S2   S2new    5    5  0.4369  0.6000 -0.1631 12.2664   0.0081       0.6053  0.0161
+specificity     S4B  S4Bnew    5    5  0.5508  0.6277 -0.0769  2.2769   0.1698       0.2216  0.1698
+         f1      S2   S2new    5    5  0.6473  0.6582 -0.0110  0.3911   0.5492       0.0466  1.0000
+         f1     S4B  S4Bnew    5    5  0.6637  0.6653 -0.0016  0.0098   0.9235       0.0012  1.0000
+
+=== ANOVA ACROSS BOOTSTRAP RESAMPLES (test-set sampling noise; read eta-squared, resamples overlap) ===
+     metric setup_a setup_b         F  p_value  eta_squared  mean_a  mean_b
+        auc      S2   S2new   37.5454   0.0000       0.0184  0.7240  0.7363
+        auc     S4B  S4Bnew    1.3222   0.2503       0.0007  0.7347  0.7370
+   accuracy      S2   S2new 1891.5097   0.0000       0.4863  0.5739  0.6523
+   accuracy     S4B  S4Bnew   82.8013   0.0000       0.0398  0.6772  0.6605
+  precision      S2   S2new 2883.1618   0.0000       0.5907  0.5348  0.6179
+  precision     S4B  S4Bnew   74.4753   0.0000       0.0359  0.6566  0.6395
+     recall      S2   S2new 1803.7192   0.0000       0.4744  0.8137  0.7109
+     recall     S4B  S4Bnew   39.5092   0.0000       0.0194  0.6784  0.6616
+specificity      S2   S2new 8164.3103   0.0000       0.8034  0.3562  0.5991
+specificity     S4B  S4Bnew   40.9840   0.0000       0.0201  0.6761  0.6596
+         f1      S2   S2new   86.4491   0.0000       0.0415  0.6449  0.6602
+         f1     S4B  S4Bnew   74.4265   0.0000       0.0359  0.6661  0.6491
+
+Files written to supplementary_test_for_downsampling/5_new_training_and_classification/evaluation_124_old_vs_new
+
+===== 2026-11-23 05:31:16 | DONE

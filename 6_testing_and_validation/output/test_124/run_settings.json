@@ -1,38 +1,16 @@
 {
   "setups": {
-    "S1": "results\\densenet121_stylegan2-ada\\final\\cbam_all",
-    "S3": "results\\convnextv2_stylegan2-ada\\final\\cbam_all",
-    "S4A": "results\\convnextv2_cyclegan\\run_A\\final\\cbam_all",
-    "S4B": "results\\convnextv2_cyclegan\\run_B\\final\\cbam_all"
+    "S2": "5_training_and_classification/s2_densenet121_cyclegan/output/run_B/final/cbam_all",
+    "S4B": "5_training_and_classification/s4_convnextv2_cyclegan/output/run_B/final/cbam_all"
   },
   "pairs": [
     [
-      "S1",
-      "S3"
-    ],
-    [
-      "S1",
-      "S4A"
-    ],
-    [
-      "S1",
-      "S4B"
-    ],
-    [
-      "S3",
-      "S4A"
-    ],
-    [
-      "S3",
-      "S4B"
-    ],
-    [
-      "S4A",
+      "S2",
       "S4B"
     ]
   ],
-  "declared": false,
-  "subset": "data\\2-processed\\2B-input_for_cyclegan\\labels\\test_balanced_124.csv",
+  "declared": true,
+  "subset": "3_downsampling_branch/output/labels/test_balanced_124.csv",
   "n_test": 124,
   "n_pos": 59,
   "boot": 1000,

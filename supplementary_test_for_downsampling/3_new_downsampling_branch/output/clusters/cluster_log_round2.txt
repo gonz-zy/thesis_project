@@ -1,0 +1,47 @@
+label split:
+manual              a   c
+cls        half          
+No Finding report   6  44
+           select   6  44
+Pneumonia  report  21  29
+           select  22  28
+
+Pneumonia  C0_hog_full          sizes 142/180 AP 0.80/0.18  select BA 0.622 agr 0.620  same-as-old 1.00  62.5s
+Pneumonia  Q1_scalars_q         sizes 164/158 AP 0.67/0.23  select BA 0.541 agr 0.540  same-as-old 0.71  0.1s
+Pneumonia  Q2_scalars_q_vr      sizes 114/208 AP 0.35/0.51  select BA 0.503 agr 0.520  same-as-old 0.57  0.1s
+Pneumonia  Q3_pca20_scalars_q   sizes 167/155 AP 0.67/0.22  select BA 0.541 agr 0.540  same-as-old 0.70  3.1s
+Pneumonia  Q4_pca20_scalars_q_vr sizes 205/117 AP 0.52/0.34  select BA 0.515 agr 0.500  same-as-old 0.58  0.1s
+No Finding C0_hog_full          sizes 191/163 AP 0.05/0.23  select BA 0.500 agr 0.500  same-as-old 1.00  70.0s
+No Finding Q1_scalars_q         sizes 177/177 AP 0.20/0.06  select BA 0.629 agr 0.600  same-as-old 0.82  0.1s
+No Finding Q2_scalars_q_vr      sizes 166/188 AP 0.11/0.15  select BA 0.595 agr 0.540  same-as-old 0.77  0.1s
+No Finding Q3_pca20_scalars_q   sizes 179/175 AP 0.20/0.06  select BA 0.606 agr 0.560  same-as-old 0.83  3.3s
+No Finding Q4_pca20_scalars_q_vr sizes 180/174 AP 0.13/0.14  select BA 0.583 agr 0.520  same-as-old 0.81  0.1s
+
+            candidate  select_balanced_accuracy  min_share  eligible
+          C0_hog_full                    0.5609     0.4410      True
+         Q1_scalars_q                    0.5847     0.4907      True
+      Q2_scalars_q_vr                    0.5490     0.3540      True
+   Q3_pca20_scalars_q                    0.5733     0.4814      True
+Q4_pca20_scalars_q_vr                    0.5490     0.3634      True
+
+CHOSEN (round 2): Q1_scalars_q
+
+Pneumonia REPORT half (n=50, 21 artifact marks): agreement 70% [95% CI 56-81], weighted 71%, balanced acc 0.715, Fisher p 0.0037   (original clustering: 65%)
+No Finding REPORT half (n=50, 6 artifact marks): agreement 58% [95% CI 44-71], weighted 59%, balanced acc 0.689, Fisher p 0.1895   (original clustering: 56%)
+
+view position per cluster:
+View Position             AP   PA  AP_share
+Finding Labels domain                      
+No Finding     artifact   36  141     0.203
+               clean      11  166     0.062
+Pneumonia      artifact  110   54     0.671
+               clean      36  122     0.228
+
+by split:
+domain      artifact  clean
+split                      
+test              50     74
+train            262    225
+validation        29     36
+
+wrote supplementary_test_for_downsampling\3_new_downsampling_branch\output\clusters\clustered_676.csv

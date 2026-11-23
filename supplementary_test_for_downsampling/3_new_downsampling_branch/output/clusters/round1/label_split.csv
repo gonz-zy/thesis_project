@@ -1,0 +1,201 @@
+image,cls,orig_cluster,manual,half
+00001182_004.png,Pneumonia,0,c,report
+00018843_000.png,Pneumonia,0,c,report
+00000061_015.png,Pneumonia,0,a,select
+00028076_000.png,Pneumonia,0,c,select
+00027320_010.png,Pneumonia,0,c,select
+00021710_002.png,Pneumonia,0,a,report
+00026938_000.png,Pneumonia,0,a,select
+00022952_003.png,Pneumonia,0,c,select
+00016705_002.png,Pneumonia,0,a,select
+00014603_006.png,Pneumonia,0,c,report
+00019275_001.png,Pneumonia,0,c,report
+00015977_002.png,Pneumonia,0,c,report
+00011973_015.png,Pneumonia,0,c,report
+00026629_006.png,Pneumonia,0,c,report
+00014234_000.png,Pneumonia,0,c,report
+00029889_000.png,Pneumonia,0,a,select
+00020405_030.png,Pneumonia,0,a,select
+00005274_011.png,Pneumonia,0,c,report
+00027415_064.png,Pneumonia,0,a,report
+00027648_005.png,Pneumonia,0,c,report
+00006260_001.png,Pneumonia,0,c,select
+00009903_000.png,Pneumonia,0,a,report
+00005069_001.png,Pneumonia,0,a,report
+00026580_000.png,Pneumonia,0,c,report
+00025776_000.png,Pneumonia,0,c,report
+00001582_021.png,Pneumonia,1,a,report
+00010544_007.png,Pneumonia,1,a,select
+00022815_043.png,Pneumonia,1,a,report
+00026806_000.png,Pneumonia,1,c,report
+00013930_001.png,Pneumonia,1,c,report
+00011553_006.png,Pneumonia,1,a,report
+00000218_001.png,Pneumonia,1,c,select
+00014436_008.png,Pneumonia,1,c,select
+00015018_003.png,Pneumonia,1,a,report
+00018198_004.png,Pneumonia,1,a,report
+00013678_006.png,Pneumonia,1,c,report
+00021201_036.png,Pneumonia,1,a,report
+00003950_002.png,Pneumonia,1,c,report
+00015338_015.png,Pneumonia,1,a,report
+00007444_003.png,Pneumonia,1,c,select
+00000798_025.png,Pneumonia,1,a,report
+00000893_000.png,Pneumonia,1,c,select
+00005778_001.png,Pneumonia,1,c,report
+00008470_008.png,Pneumonia,1,a,report
+00018996_002.png,Pneumonia,1,a,report
+00003523_011.png,Pneumonia,1,a,select
+00000193_019.png,Pneumonia,1,c,report
+00001247_011.png,Pneumonia,1,c,select
+00006289_005.png,Pneumonia,1,c,report
+00008397_016.png,Pneumonia,1,c,select
+00024002_000.png,No Finding,0,c,report
+00030516_000.png,No Finding,0,c,report
+00022304_000.png,No Finding,0,c,report
+00012886_000.png,No Finding,0,c,report
+00020318_005.png,No Finding,0,c,select
+00010545_001.png,No Finding,0,c,select
+00022207_000.png,No Finding,0,c,report
+00016022_000.png,No Finding,0,c,select
+00029997_000.png,No Finding,0,c,report
+00012865_002.png,No Finding,0,c,select
+00020280_000.png,No Finding,0,c,report
+00013709_001.png,No Finding,0,c,report
+00026952_000.png,No Finding,0,c,report
+00017517_000.png,No Finding,0,c,report
+00019163_000.png,No Finding,0,c,report
+00020151_000.png,No Finding,0,c,report
+00021026_000.png,No Finding,0,c,report
+00013486_000.png,No Finding,0,c,select
+00001211_000.png,No Finding,0,c,select
+00010668_000.png,No Finding,0,c,report
+00011142_000.png,No Finding,0,c,select
+00021263_000.png,No Finding,0,c,select
+00016204_000.png,No Finding,0,c,report
+00020393_000.png,No Finding,0,c,select
+00027281_000.png,No Finding,0,c,select
+00014515_000.png,No Finding,1,c,select
+00023960_000.png,No Finding,1,c,report
+00007512_000.png,No Finding,1,c,select
+00003150_000.png,No Finding,1,c,report
+00012456_000.png,No Finding,1,c,select
+00007396_000.png,No Finding,1,c,report
+00014271_000.png,No Finding,1,c,select
+00020629_000.png,No Finding,1,c,report
+00002307_000.png,No Finding,1,c,select
+00002673_000.png,No Finding,1,c,select
+00005284_000.png,No Finding,1,c,report
+00005928_000.png,No Finding,1,c,select
+00008107_000.png,No Finding,1,a,report
+00026418_000.png,No Finding,1,c,report
+00009367_000.png,No Finding,1,a,select
+00008488_000.png,No Finding,1,c,select
+00030143_000.png,No Finding,1,c,select
+00007485_004.png,No Finding,1,a,report
+00026050_002.png,No Finding,1,a,select
+00005055_000.png,No Finding,1,c,select
+00001153_001.png,No Finding,1,c,select
+00022855_000.png,No Finding,1,c,select
+00006489_000.png,No Finding,1,c,report
+00007460_000.png,No Finding,1,a,report
+00001412_000.png,No Finding,1,c,select
+00016936_000.png,Pneumonia,0,c,select
+00022436_000.png,Pneumonia,0,c,report
+00017405_013.png,Pneumonia,0,a,report
+00003510_008.png,Pneumonia,0,a,report
+00013997_000.png,Pneumonia,0,a,select
+00001317_002.png,Pneumonia,0,c,select
+00013611_001.png,Pneumonia,0,c,select
+00001529_005.png,Pneumonia,0,c,select
+00020845_002.png,Pneumonia,0,a,select
+00011472_001.png,Pneumonia,0,c,report
+00020928_000.png,Pneumonia,0,c,report
+00009323_005.png,Pneumonia,0,c,report
+00005567_017.png,Pneumonia,0,c,select
+00016011_011.png,Pneumonia,0,c,select
+00010375_000.png,Pneumonia,0,c,select
+00012733_000.png,Pneumonia,0,c,select
+00021243_001.png,Pneumonia,0,c,report
+00017659_000.png,Pneumonia,0,c,select
+00000165_001.png,Pneumonia,0,c,select
+00003640_004.png,Pneumonia,0,c,select
+00016705_003.png,Pneumonia,0,a,select
+00001749_003.png,Pneumonia,0,c,select
+00022965_004.png,Pneumonia,0,c,report
+00021016_000.png,Pneumonia,0,c,report
+00022201_000.png,Pneumonia,0,c,select
+00013992_005.png,Pneumonia,1,a,report
+00019707_017.png,Pneumonia,1,a,select
+00013615_024.png,Pneumonia,1,a,select
+00003064_026.png,Pneumonia,1,c,select
+00010509_003.png,Pneumonia,1,a,report
+00028873_017.png,Pneumonia,1,a,report
+00006997_000.png,Pneumonia,1,a,report
+00017254_000.png,Pneumonia,1,a,select
+00011386_000.png,Pneumonia,1,c,report
+00028301_000.png,Pneumonia,1,c,select
+00021571_000.png,Pneumonia,1,a,select
+00026729_000.png,Pneumonia,1,c,report
+00001946_007.png,Pneumonia,1,c,select
+00012094_011.png,Pneumonia,1,a,select
+00000963_007.png,Pneumonia,1,c,select
+00013272_005.png,Pneumonia,1,a,select
+00006985_002.png,Pneumonia,1,a,select
+00026374_004.png,Pneumonia,1,a,select
+00017138_068.png,Pneumonia,1,a,select
+00003535_025.png,Pneumonia,1,c,report
+00010531_012.png,Pneumonia,1,a,select
+00010773_017.png,Pneumonia,1,a,select
+00001749_002.png,Pneumonia,1,c,select
+00014022_102.png,Pneumonia,1,a,select
+00021201_037.png,Pneumonia,1,a,report
+00015145_000.png,No Finding,0,c,select
+00027609_000.png,No Finding,0,c,select
+00022335_001.png,No Finding,0,c,select
+00000526_000.png,No Finding,0,c,select
+00010790_000.png,No Finding,0,a,select
+00015168_000.png,No Finding,0,c,report
+00020278_000.png,No Finding,0,c,select
+00015727_000.png,No Finding,0,c,report
+00011436_009.png,No Finding,0,c,report
+00001809_000.png,No Finding,0,c,select
+00026640_000.png,No Finding,0,c,report
+00001403_000.png,No Finding,0,c,report
+00028272_000.png,No Finding,0,c,select
+00024431_000.png,No Finding,0,c,select
+00021359_000.png,No Finding,0,c,select
+00029551_001.png,No Finding,0,a,select
+00024194_000.png,No Finding,0,c,report
+00027827_000.png,No Finding,0,c,report
+00015735_000.png,No Finding,0,c,report
+00005623_000.png,No Finding,0,c,report
+00028208_002.png,No Finding,0,a,select
+00005865_000.png,No Finding,0,c,select
+00027889_000.png,No Finding,0,c,select
+00005047_000.png,No Finding,0,c,report
+00024926_000.png,No Finding,0,c,select
+00000222_000.png,No Finding,1,c,select
+00001642_000.png,No Finding,1,c,report
+00010089_000.png,No Finding,1,c,report
+00008058_001.png,No Finding,1,c,select
+00005916_000.png,No Finding,1,a,report
+00001640_000.png,No Finding,1,c,select
+00008347_000.png,No Finding,1,c,report
+00005746_000.png,No Finding,1,c,report
+00013721_000.png,No Finding,1,a,report
+00010376_000.png,No Finding,1,c,select
+00002678_000.png,No Finding,1,c,report
+00015203_000.png,No Finding,1,c,select
+00000860_000.png,No Finding,1,c,select
+00005767_000.png,No Finding,1,c,select
+00002982_000.png,No Finding,1,c,report
+00024755_000.png,No Finding,1,c,report
+00006599_000.png,No Finding,1,c,report
+00006898_000.png,No Finding,1,c,report
+00004915_001.png,No Finding,1,a,report
+00003296_001.png,No Finding,1,c,report
+00008820_000.png,No Finding,1,c,report
+00015600_001.png,No Finding,1,a,select
+00005453_000.png,No Finding,1,c,select
+00007967_000.png,No Finding,1,c,select
+00004689_000.png,No Finding,1,c,report

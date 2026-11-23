@@ -1,0 +1,53 @@
+label split:
+manual              a   c
+cls        half          
+No Finding report   6  44
+           select   6  44
+Pneumonia  report  21  29
+           select  22  28
+
+Pneumonia  C0_hog_full          sizes 142/180 AP 0.80/0.18  select BA 0.622 agr 0.620  same-as-old 1.00  63.2s
+Pneumonia  C1_scalars           sizes  16/306 AP 0.94/0.43  select BA 0.505 agr 0.560  same-as-old 0.60  0.1s
+Pneumonia  C2_scalars_vr        sizes  18/304 AP 0.83/0.43  select BA 0.505 agr 0.560  same-as-old 0.60  0.1s
+Pneumonia  C3_pca20_scalars     sizes  17/305 AP 0.94/0.43  select BA 0.505 agr 0.560  same-as-old 0.61  3.1s
+Pneumonia  C4_pca20_scalars_vr  sizes  17/305 AP 0.88/0.43  select BA 0.505 agr 0.560  same-as-old 0.60  0.1s
+Pneumonia  C5_pca50_scalars     sizes  15/307 AP 0.93/0.43  select BA 0.505 agr 0.560  same-as-old 0.60  3.5s
+Pneumonia  C6_pca50_scalars_vr  sizes  17/305 AP 0.88/0.43  select BA 0.505 agr 0.560  same-as-old 0.60  0.1s
+No Finding C0_hog_full          sizes 191/163 AP 0.05/0.23  select BA 0.500 agr 0.500  same-as-old 1.00  70.4s
+No Finding C1_scalars           sizes 307/47  AP 0.13/0.13  select BA 0.557 agr 0.220  same-as-old 0.54  0.1s
+No Finding C2_scalars_vr        sizes 309/45  AP 0.13/0.13  select BA 0.557 agr 0.220  same-as-old 0.53  0.1s
+No Finding C3_pca20_scalars     sizes 187/167 AP 0.21/0.04  select BA 0.667 agr 0.540  same-as-old 0.87  3.4s
+No Finding C4_pca20_scalars_vr  sizes 284/70  AP 0.14/0.10  select BA 0.591 agr 0.280  same-as-old 0.60  0.1s
+No Finding C5_pca50_scalars     sizes 189/165 AP 0.21/0.04  select BA 0.667 agr 0.540  same-as-old 0.86  3.7s
+No Finding C6_pca50_scalars_vr  sizes 300/54  AP 0.13/0.13  select BA 0.580 agr 0.260  same-as-old 0.55  0.1s
+
+          candidate  select_balanced_accuracy  min_share  eligible
+        C0_hog_full                    0.5609     0.4410      True
+         C1_scalars                    0.5308     0.0497     False
+      C2_scalars_vr                    0.5308     0.0559     False
+   C3_pca20_scalars                    0.5858     0.0528     False
+C4_pca20_scalars_vr                    0.5479     0.0528     False
+   C5_pca50_scalars                    0.5858     0.0466     False
+C6_pca50_scalars_vr                    0.5422     0.0528     False
+
+CHOSEN: C0_hog_full
+
+Pneumonia REPORT half (n=50, 21 artifact marks): agreement 68% [95% CI 54-79], weighted 69%, balanced acc 0.685, Fisher p 0.0209   (original clustering: 65%)
+No Finding REPORT half (n=50, 6 artifact marks): agreement 38% [95% CI 26-52], weighted 35%, balanced acc 0.216, Fisher p 0.0223   (original clustering: 56%)
+
+view position per cluster:
+View Position             AP   PA  AP_share
+Finding Labels domain                      
+No Finding     artifact   10  181     0.052
+               clean      37  126     0.227
+Pneumonia      artifact  113   29     0.796
+               clean      33  147     0.183
+
+by split:
+domain      artifact  clean
+split                      
+test              69     55
+train            240    247
+validation        24     41
+
+wrote supplementary_test_for_downsampling\3_new_downsampling_branch\output\clusters\clustered_676.csv

@@ -1,0 +1,9 @@
+{
+  "mean": 0.48982964717864774,
+  "std": 0.2944321047549555,
+  "n": 487,
+  "n_pixels": 24435712,
+  "std_of_image_means": 0.027884360736014333,
+  "source_csv": "supplementary_test_for_downsampling/5_no_cyclegan_1024_to_256_to_224/images/manifest.csv",
+  "split": "train"
+}

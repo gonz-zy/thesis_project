@@ -1,0 +1,28 @@
+{
+  "setups": {
+    "S1": "results\\densenet121_stylegan2-ada\\final\\cbam_all",
+    "S3": "results\\convnextv2_stylegan2-ada\\final\\cbam_all",
+    "S4A": "results\\convnextv2_cyclegan\\run_A\\final\\cbam_all",
+    "S4B": "results\\convnextv2_cyclegan\\run_B\\final\\cbam_all"
+  },
+  "pairs": [
+    [
+      "S1",
+      "S3"
+    ],
+    [
+      "S3",
+      "S4A"
+    ],
+    [
+      "S3",
+      "S4B"
+    ]
+  ],
+  "declared": true,
+  "subset": null,
+  "n_test": 12262,
+  "n_pos": 59,
+  "boot": 1000,
+  "boot_seed": 42
+}

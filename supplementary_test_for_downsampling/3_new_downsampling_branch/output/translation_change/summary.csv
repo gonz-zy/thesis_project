@@ -1,0 +1,2 @@
+candidate,n_artifact_images,mae_all_mean,mean_shift_mean,mae_centre_mean,mae_centre_median,mae_centre_p90,mae_centre_max,mae_border_mean,ssim_centre_mean,ssim_centre_min,n_centre_gt10,n_centre_gt20,mae_centre_pneumonia,mae_centre_nofinding,p_pneumonia_vs_nofinding
+cleaned,341,8.5123,-6.4377,5.3215,4.6062,6.5896,49.8856,11.5933,0.9723,0.7617,12,7,5.2652,5.3737,0.0448

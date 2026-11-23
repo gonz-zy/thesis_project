@@ -1,0 +1,5 @@
+Finding Labels,domain,AP,PA,AP_share
+No Finding,artifact,10,181,0.052
+No Finding,clean,37,126,0.227
+Pneumonia,artifact,113,29,0.796
+Pneumonia,clean,33,147,0.183

@@ -1,0 +1,129 @@
+{
+  "round": 2,
+  "chosen": "Q1_scalars_q",
+  "protocol": "see docstring of cluster_kmeans_v2.py",
+  "seed": 42,
+  "min_share": 0.1,
+  "candidates": [
+    {
+      "candidate": "C0_hog_full",
+      "select_balanced_accuracy": 0.5608766233766234,
+      "min_share": 0.4409937888198758,
+      "eligible": true
+    },
+    {
+      "candidate": "Q1_scalars_q",
+      "select_balanced_accuracy": 0.5846861471861471,
+      "min_share": 0.4906832298136646,
+      "eligible": true
+    },
+    {
+      "candidate": "Q2_scalars_q_vr",
+      "select_balanced_accuracy": 0.5489718614718615,
+      "min_share": 0.35403726708074534,
+      "eligible": true
+    },
+    {
+      "candidate": "Q3_pca20_scalars_q",
+      "select_balanced_accuracy": 0.5733225108225107,
+      "min_share": 0.4813664596273292,
+      "eligible": true
+    },
+    {
+      "candidate": "Q4_pca20_scalars_q_vr",
+      "select_balanced_accuracy": 0.5489718614718615,
+      "min_share": 0.36335403726708076,
+      "eligible": true
+    }
+  ],
+  "artifact_cluster": {
+    "Pneumonia": 1,
+    "No Finding": 1
+  },
+  "report": {
+    "Pneumonia": {
+      "report_half": {
+        "agreement": 0.7,
+        "sensitivity": 0.8095238095238095,
+        "specificity": 0.6206896551724138,
+        "balanced_accuracy": 0.7151067323481117,
+        "n": 50,
+        "n_artifact_marks": 21,
+        "n_agree": 35
+      },
+      "agreement_ci95": [
+        0.562493877226366,
+        0.8089661091039063
+      ],
+      "fisher_p": 0.003729619054846963,
+      "contingency_artifact_then_clean": [
+        [
+          17,
+          11
+        ],
+        [
+          4,
+          18
+        ]
+      ],
+      "weighted_agreement": 0.7118012422360248,
+      "all_200_marks_optimistic": {
+        "agreement": 0.62,
+        "sensitivity": 0.6744186046511628,
+        "specificity": 0.5789473684210527,
+        "balanced_accuracy": 0.6266829865361077,
+        "n": 100,
+        "n_artifact_marks": 43,
+        "n_agree": 62
+      },
+      "original_agreement_reported_in_thesis": 0.65
+    },
+    "No Finding": {
+      "report_half": {
+        "agreement": 0.58,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.5454545454545454,
+        "balanced_accuracy": 0.6893939393939394,
+        "n": 50,
+        "n_artifact_marks": 6,
+        "n_agree": 29
+      },
+      "agreement_ci95": [
+        0.4423319668777783,
+        0.7062520276543307
+      ],
+      "fisher_p": 0.1894630192502533,
+      "contingency_artifact_then_clean": [
+        [
+          5,
+          20
+        ],
+        [
+          1,
+          24
+        ]
+      ],
+      "weighted_agreement": 0.5942372881355934,
+      "all_200_marks_optimistic": {
+        "agreement": 0.59,
+        "sensitivity": 0.75,
+        "specificity": 0.5681818181818182,
+        "balanced_accuracy": 0.6590909090909092,
+        "n": 100,
+        "n_artifact_marks": 12,
+        "n_agree": 59
+      },
+      "original_agreement_reported_in_thesis": 0.56
+    }
+  },
+  "sizes": {
+    "artifact": {
+      "No Finding": 177,
+      "Pneumonia": 164
+    },
+    "clean": {
+      "No Finding": 177,
+      "Pneumonia": 158
+    }
+  }
+}

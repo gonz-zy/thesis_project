@@ -1,0 +1,9 @@
+{
+  "mean": 0.47622814645654055,
+  "std": 0.30118044616926876,
+  "n": 487,
+  "n_pixels": 24435712,
+  "std_of_image_means": 0.027527149929375293,
+  "source_csv": "supplementary_test_for_downsampling/3_new_downsampling_branch/output/cleaned/cleaned_manifest.csv",
+  "split": "train"
+}
