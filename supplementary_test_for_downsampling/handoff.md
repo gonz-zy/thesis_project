@@ -11,8 +11,8 @@ Main-study reference (CycleGAN, CBAM after every block): **Setup 2 DenseNet 0.72
 | 1 | Corrected K-Means (new clustering + new CycleGAN) | done |
 | 2 | Without CycleGAN (two resize paths) | done |
 | 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | done |
-| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (5 of 6 done) |
-| 3c | Chehade CBAM — comparisons | queued |
+| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | done |
+| 3c | Chehade CBAM — comparisons | done (16:54) |
 
 ---
 
@@ -176,3 +176,64 @@ optimum lr 1.80e-4, floor 0.16; best top-3 validation AUC 0.785 (trial 17, 0 div
 
 **Analysis:** no difference anywhere: CBAM placement, recipe, and (vs 3b-1, CycleGAN images 0.725) the CycleGAN —
 all three DenseNet CBAM-last runs land at 0.725-0.742.
+
+## 3b-6. CBAM last, our recipe — ConvNeXt V2, no CycleGAN (1024->224) (finished 16:54)
+Search optimum lr 3.89e-5, floor 0.03 (best top-3 validation AUC 0.823, trial 8, 0 diverged).
+
+| ConvNeXt V2, no CycleGAN (1024->224) | CBAM after every stage | CBAM last only | Full Chehade recipe |
+|---|---|---|---|
+| Test AUC (95% CI) | 0.748 (0.662-0.833) | 0.728 (0.640-0.817) | 0.713 (0.625-0.801) |
+| Mean AUC of the 5 seeds | 0.725 | 0.724 | 0.704 |
+| Accuracy / recall / specificity | 0.669 / 0.559 / 0.769 | 0.653 / 0.729 / 0.585 | 0.653 / 0.746 / 0.569 |
+
+- CBAM everywhere vs last: DeLong p = 0.22, seed ANOVA p = 0.98. CBAM last vs Chehade recipe: p = 0.58, ANOVA p = 0.16.
+- Per seed: test 0.71-0.74, validation 0.74-0.82.
+
+---
+
+## 3c. Chehade CBAM — all comparisons (folder `5_chehade_cbam/evaluation/`, Holm within each family)
+
+**All 18 test AUCs (124 images, five-seed ensemble):**
+
+| Network / recipe | CycleGAN | No CycleGAN 1024->256->224 | No CycleGAN 1024->224 |
+|---|---|---|---|
+| DenseNet, CBAM everywhere (our recipe) | 0.725 | 0.713 | 0.725 |
+| DenseNet, CBAM last (our recipe) | 0.725 | **0.742** | 0.725 |
+| DenseNet, full Chehade recipe | 0.694 | 0.715 | 0.717 |
+| ConvNeXt, CBAM everywhere (our recipe) | 0.735 | 0.728 | **0.748** |
+| ConvNeXt, CBAM last (our recipe) | 0.701 | 0.726 | 0.728 |
+| ConvNeXt, full Chehade recipe | 0.694 | 0.694 | 0.713 |
+
+Range: 0.694-0.748. Every 95% CI is about +/-0.09 wide, so all 18 overlap heavily.
+
+| Comparison family (folder) | Pairs | DeLong p (raw) | Smallest Holm p | Significant? |
+|---|---|---|---|---|
+| DenseNet vs ConvNeXt, CBAM last (`densenet_vs_convnext_cbam_last`) | 3 | 0.38-0.87 | 1.0 | no |
+| DenseNet vs ConvNeXt, Chehade recipe (`densenet_vs_convnext_chehade`) | 3 | 0.50-0.99 | 1.0 | no |
+| CBAM everywhere vs CBAM last (`cbam_all_vs_cbam_last`) | 6 | 0.09-1.0 | 0.54 | no |
+| Our recipe vs Chehade recipe, both CBAM last (`our_recipe_vs_chehade`) | 6 | 0.13-0.82 | 0.79 | no (seed ANOVA: smallest Holm p 0.08) |
+| With vs without CycleGAN (`with_vs_without_cyclegan`) | 8 | 0.19-1.0 | 1.0 | no |
+
+Note on the per-seed results in 3a / 3b-4: "our recipe beats Chehade's for ConvNeXt" was significant when only 2
+pairs were corrected together; inside the planned 6-pair family it is not (seed ANOVA raw p 0.014-0.031, Holm 0.08-0.15).
+It is a consistent direction (our recipe is higher in all 6 pairs: +0.008 to +0.034), not a significant effect.
+
+**Overall conclusions of supplementary tests 1-3 (for the thesis discussion):**
+1. **CycleGAN:** adds nothing measurable. In 10 of 12 with/without pairs (tests 2 and 3) the version without CycleGAN
+   is equal or higher; no pair is significant. The KID check explains why: the translation pushes the artifact and clean
+   groups apart instead of together. This contradicts Chehade's +3.98 points.
+2. **CBAM placement:** one CBAM at the end (Chehade) vs one after every block (ours) makes no consistent difference:
+   the sign flips between runs (-0.034 to +0.029), never significant.
+3. **Classifier recipe:** Chehade's frozen-backbone recipe is never better than ours; it is lower in all 6 pairs
+   (by 0.008-0.034), not significant after correction.
+4. **Architecture:** DenseNet-121 and ConvNeXt V2 are tied in every setting (all p >= 0.38), as in the main study.
+5. **Clustering:** a better clustering (test 1) changes nothing downstream.
+6. **What limits performance** is the data: 487 training images (all models overfit within ~5-15 epochs), a 65-image
+   validation set that cannot rank settings (validation-to-test drop 0.03-0.13), and a 124-image test set whose 95% CI
+   is +/-0.09. Every configuration we tried — 24 in total across tests 1-3 plus the main study — lands at 0.69-0.75.
+7. **The gap to Chehade's 0.8387** is not explained by any part of the pipeline we could reproduce (clustering,
+   CycleGAN, CBAM placement, classifier recipe, image resizing). What remains is what we could not reproduce or they
+   did not report: their split (10 random, apparently image-level) vs our single fixed patient-level split, the exact
+   feature, lung-mask and CycleGAN settings, and their unusually small reported SD (1.4% over ~135-image test sets).
+
+Possible next step (not run): Chehade's ten random splits (patient-level, 70/10/20), ~10-11 h — see the chat notes.

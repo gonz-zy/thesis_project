@@ -1,0 +1,56 @@
+{
+  "setups": {
+    "D_last_GAN": "supplementary_test_for_downsampling/5_chehade_cbam/cbam_last_our_recipe/s2_densenet121/output/cyclegan/run_B/final/cbam_last",
+    "D_last_N256": "supplementary_test_for_downsampling/5_chehade_cbam/cbam_last_our_recipe/s2_densenet121/output/nocyclegan_1024_to_256_to_224/run_B/final/cbam_last",
+    "D_last_N224": "supplementary_test_for_downsampling/5_chehade_cbam/cbam_last_our_recipe/s2_densenet121/output/nocyclegan_1024_to_224/run_B/final/cbam_last",
+    "C_last_GAN": "supplementary_test_for_downsampling/5_chehade_cbam/cbam_last_our_recipe/s4_convnextv2/output/cyclegan/run_B/final/cbam_last",
+    "C_last_N256": "supplementary_test_for_downsampling/5_chehade_cbam/cbam_last_our_recipe/s4_convnextv2/output/nocyclegan_1024_to_256_to_224/run_B/final/cbam_last",
+    "C_last_N224": "supplementary_test_for_downsampling/5_chehade_cbam/cbam_last_our_recipe/s4_convnextv2/output/nocyclegan_1024_to_224/run_B/final/cbam_last",
+    "D_chh_GAN": "supplementary_test_for_downsampling/5_chehade_cbam/full_chehade_classifier/s2_densenet121/output/cyclegan/run_B/final/cbam_last",
+    "D_chh_N256": "supplementary_test_for_downsampling/5_chehade_cbam/full_chehade_classifier/s2_densenet121/output/nocyclegan_1024_to_256_to_224/run_B/final/cbam_last",
+    "D_chh_N224": "supplementary_test_for_downsampling/5_chehade_cbam/full_chehade_classifier/s2_densenet121/output/nocyclegan_1024_to_224/run_B/final/cbam_last",
+    "C_chh_GAN": "supplementary_test_for_downsampling/5_chehade_cbam/full_chehade_classifier/s4_convnextv2/output/cyclegan/run_B/final/cbam_last",
+    "C_chh_N256": "supplementary_test_for_downsampling/5_chehade_cbam/full_chehade_classifier/s4_convnextv2/output/nocyclegan_1024_to_256_to_224/run_B/final/cbam_last",
+    "C_chh_N224": "supplementary_test_for_downsampling/5_chehade_cbam/full_chehade_classifier/s4_convnextv2/output/nocyclegan_1024_to_224/run_B/final/cbam_last"
+  },
+  "pairs": [
+    [
+      "D_last_GAN",
+      "D_last_N256"
+    ],
+    [
+      "D_last_GAN",
+      "D_last_N224"
+    ],
+    [
+      "C_last_GAN",
+      "C_last_N256"
+    ],
+    [
+      "C_last_GAN",
+      "C_last_N224"
+    ],
+    [
+      "D_chh_GAN",
+      "D_chh_N256"
+    ],
+    [
+      "D_chh_GAN",
+      "D_chh_N224"
+    ],
+    [
+      "C_chh_GAN",
+      "C_chh_N256"
+    ],
+    [
+      "C_chh_GAN",
+      "C_chh_N224"
+    ]
+  ],
+  "declared": true,
+  "subset": "3_downsampling_branch/output/labels/test_balanced_124.csv",
+  "n_test": 124,
+  "n_pos": 59,
+  "boot": 1000,
+  "boot_seed": 42
+}

@@ -110,3 +110,13 @@ Test AUC, 124 images, five-seed ensemble (95% CI); main-study runs with CycleGAN
 **Conclusion:** removing the CycleGAN changes test AUC by at most 0.013, in either direction, for both networks and
 both image paths. The cleaning step adds nothing measurable, which agrees with the KID check (cleaning made the
 artifact and clean groups less alike). The resize path (one step or through 256) does not matter either.
+
+---
+
+# Supplementary test 3: Chehade-style CBAM (folder `5_chehade_cbam/`, run 2026-11-23 13:29-16:54)
+One CBAM on the last block (as Chehade et al.), on 3 image sets (CycleGAN; no CycleGAN 1024->256->224; no CycleGAN
+1024->224) x 2 networks, with two recipes: `cbam_last_our_recipe/` (full fine-tuning, 20-trial search, seeds 42-46) and
+`full_chehade_classifier/` (frozen lower layers, dense 1024/512 + dropout 0.5, fixed lr 1e-4, inputs in [0, 1], seeds
+42-46). Script: `5_chehade_cbam/run_chehade_cbam.sh`; comparisons: `5_chehade_cbam/evaluation/`.
+**Results and the full analysis: `handoff.md` (sections 3a-3c).** Short version: all 18 test AUCs lie between 0.694
+and 0.748; no comparison (CBAM placement, recipe, network, with vs without CycleGAN) is significant.

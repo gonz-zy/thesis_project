@@ -1,0 +1,27 @@
+{
+  "run": "B",
+  "cbam": "last",
+  "lr": 3.887860512049007e-05,
+  "min_lr_ratio": 0.03240225756607851,
+  "objective_top3_val_auc": 0.8227387729285263,
+  "best_trial": 8,
+  "n_complete": 20,
+  "n_diverged": 0,
+  "search_seed": 100,
+  "sampler": "TPE",
+  "n_startup_trials": 5,
+  "epoch_cap": 50,
+  "patience": 5,
+  "val_set": "validation_small_65",
+  "search_space": {
+    "lr": [
+      1e-05,
+      0.0003,
+      "log"
+    ],
+    "min_lr_ratio": [
+      0.0,
+      0.5
+    ]
+  }
+}

@@ -37,3 +37,1289 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 ===== 2026-11-23 15:59:03 | our recipe, CBAM last | s2_densenet121 | nocyclegan_1024_to_224 | search + seeds 42-46
 
 ===== 2026-11-23 16:23:15 | our recipe, CBAM last | s4_convnextv2 | nocyclegan_1024_to_224 | search + seeds 42-46
+
+===== 2026-11-23 16:54:29 | evaluation -> densenet_vs_convnext_cbam_last
+Test set: 124 images, 59 pneumonia / 65 No Finding   (subset test_balanced_124.csv)
+Declared comparisons (Holm over exactly these): D_last_GAN - C_last_GAN, D_last_N256 - C_last_N256, D_last_N224 - C_last_N224
+
+=== PER-SEED TEST METRICS ===
+      setup  seed  threshold    auc  accuracy  precision  recall  specificity     f1
+ C_last_GAN    42     0.2894 0.6883    0.6290     0.6000  0.6610       0.6000 0.6290
+ C_last_GAN    43     0.5417 0.6901    0.5887     0.5714  0.5424       0.6308 0.5565
+ C_last_GAN    44     0.2878 0.7202    0.6613     0.6133  0.7797       0.5538 0.6866
+ C_last_GAN    45     0.4007 0.7213    0.6532     0.6143  0.7288       0.5846 0.6667
+ C_last_GAN    46     0.0402 0.7110    0.6129     0.5679  0.7797       0.4615 0.6571
+C_last_N224    42     0.7432 0.7063    0.6452     0.6154  0.6780       0.6154 0.6452
+C_last_N224    43     0.1907 0.7197    0.6694     0.6452  0.6780       0.6615 0.6612
+C_last_N224    44     0.1067 0.7395    0.6290     0.5802  0.7966       0.4769 0.6714
+C_last_N224    45     0.1471 0.7274    0.6532     0.6053  0.7797       0.5385 0.6815
+C_last_N224    46     0.2878 0.7279    0.6613     0.6349  0.6780       0.6462 0.6557
+C_last_N256    42     0.2365 0.7117    0.6371     0.6029  0.6949       0.5846 0.6457
+C_last_N256    43     0.0346 0.7253    0.6371     0.5875  0.7966       0.4923 0.6763
+C_last_N256    44     0.1394 0.7246    0.5887     0.5455  0.8136       0.3846 0.6531
+C_last_N256    45     0.1251 0.7362    0.6613     0.6269  0.7119       0.6154 0.6667
+C_last_N256    46     0.3863 0.7164    0.6452     0.6056  0.7288       0.5692 0.6615
+ D_last_GAN    42     0.5114 0.6970    0.6371     0.6061  0.6780       0.6000 0.6400
+ D_last_GAN    43     0.6514 0.7317    0.6452     0.6027  0.7458       0.5538 0.6667
+ D_last_GAN    44     0.2838 0.6962    0.6048     0.5568  0.8305       0.4000 0.6667
+ D_last_GAN    45     0.2689 0.7228    0.5887     0.5426  0.8644       0.3385 0.6667
+ D_last_GAN    46     0.0940 0.7070    0.6210     0.5732  0.7966       0.4615 0.6667
+D_last_N224    42     0.2365 0.6909    0.5806     0.5443  0.7288       0.4462 0.6232
+D_last_N224    43     0.4997 0.7327    0.6855     0.7000  0.5932       0.7692 0.6422
+D_last_N224    44     0.4292 0.7518    0.6532     0.6081  0.7627       0.5538 0.6767
+D_last_N224    45     0.1192 0.7306    0.5968     0.5464  0.8983       0.3231 0.6795
+D_last_N224    46     0.3115 0.6917    0.6210     0.5909  0.6610       0.5846 0.6240
+D_last_N256    42     0.5569 0.7435    0.6774     0.7111  0.5424       0.8000 0.6154
+D_last_N256    43     0.3024 0.7176    0.6532     0.6053  0.7797       0.5385 0.6815
+D_last_N256    44     0.3621 0.7300    0.6210     0.5789  0.7458       0.5077 0.6519
+D_last_N256    45     0.3032 0.7356    0.6210     0.5769  0.7627       0.4923 0.6569
+D_last_N256    46     0.4467 0.7190    0.6855     0.6923  0.6102       0.7538 0.6486
+
+=== ENSEMBLE (mean of seeds), stratified bootstrap x1000, CI = estimate +/- 1.96 SD ===
+      setup      metric  n_seeds  threshold  estimate     sd  ci_lower  ci_upper
+ D_last_GAN         auc        5     0.4369    0.7246 0.0456    0.6353    0.8140
+ D_last_GAN    accuracy        5     0.4369    0.6129 0.0441    0.5265    0.6993
+ D_last_GAN   precision        5     0.4369    0.5821 0.0421    0.4996    0.6646
+ D_last_GAN      recall        5     0.4369    0.6610 0.0625    0.5385    0.7836
+ D_last_GAN specificity        5     0.4369    0.5692 0.0606    0.4505    0.6880
+ D_last_GAN          f1        5     0.4369    0.6190 0.0455    0.5299    0.7082
+ C_last_GAN         auc        5     0.3226    0.7012 0.0466    0.6098    0.7926
+ C_last_GAN    accuracy        5     0.3226    0.5806 0.0441    0.4943    0.6670
+ C_last_GAN   precision        5     0.3226    0.5522 0.0417    0.4705    0.6340
+ C_last_GAN      recall        5     0.3226    0.6271 0.0616    0.5064    0.7478
+ C_last_GAN specificity        5     0.3226    0.5385 0.0594    0.4220    0.6549
+ C_last_GAN          f1        5     0.3226    0.5873 0.0458    0.4975    0.6771
+D_last_N256         auc        5     0.4375    0.7421 0.0443    0.6553    0.8290
+D_last_N256    accuracy        5     0.4375    0.6694 0.0417    0.5876    0.7511
+D_last_N256   precision        5     0.4375    0.6324 0.0409    0.5521    0.7126
+D_last_N256      recall        5     0.4375    0.7288 0.0583    0.6145    0.8431
+D_last_N256 specificity        5     0.4375    0.6154 0.0602    0.4975    0.7333
+D_last_N256          f1        5     0.4375    0.6772 0.0414    0.5959    0.7584
+C_last_N256         auc        5     0.2374    0.7265 0.0453    0.6378    0.8152
+C_last_N256    accuracy        5     0.2374    0.6613 0.0411    0.5808    0.7418
+C_last_N256   precision        5     0.2374    0.6349 0.0424    0.5517    0.7181
+C_last_N256      recall        5     0.2374    0.6780 0.0612    0.5580    0.7979
+C_last_N256 specificity        5     0.2374    0.6462 0.0572    0.5341    0.7583
+C_last_N256          f1        5     0.2374    0.6557 0.0441    0.5693    0.7422
+D_last_N224         auc        5     0.3194    0.7246 0.0451    0.6363    0.8130
+D_last_N224    accuracy        5     0.3194    0.6452 0.0410    0.5648    0.7255
+D_last_N224   precision        5     0.3194    0.6027 0.0366    0.5311    0.6744
+D_last_N224      recall        5     0.3194    0.7458 0.0582    0.6318    0.8598
+D_last_N224 specificity        5     0.3194    0.5538 0.0594    0.4375    0.6702
+D_last_N224          f1        5     0.3194    0.6667 0.0394    0.5894    0.7439
+C_last_N224         auc        5     0.2900    0.7283 0.0450    0.6400    0.8166
+C_last_N224    accuracy        5     0.2900    0.6532 0.0400    0.5748    0.7317
+C_last_N224   precision        5     0.2900    0.6143 0.0379    0.5401    0.6885
+C_last_N224      recall        5     0.2900    0.7288 0.0566    0.6179    0.8397
+C_last_N224 specificity        5     0.2900    0.5846 0.0585    0.4700    0.6992
+C_last_N224          f1        5     0.2900    0.6667 0.0394    0.5895    0.7438
+
+=== CONFUSION COUNTS at the validation threshold (tp = pneumonia found, fn = missed, fp = false alarms, tn) ===
+      setup    level  seed  threshold  tp  fn  fp  tn
+ D_last_GAN     seed    42    0.51141  40  19  26  39
+ D_last_GAN     seed    43    0.65135  44  15  29  36
+ D_last_GAN     seed    44    0.28378  49  10  39  26
+ D_last_GAN     seed    45    0.26894  51   8  43  22
+ D_last_GAN     seed    46    0.09401  47  12  35  30
+ C_last_GAN     seed    42    0.28937  39  20  26  39
+ C_last_GAN     seed    43    0.54165  32  27  24  41
+ C_last_GAN     seed    44    0.28777  46  13  29  36
+ C_last_GAN     seed    45    0.40075  43  16  27  38
+ C_last_GAN     seed    46    0.04024  46  13  35  30
+D_last_N256     seed    42    0.55688  32  27  13  52
+D_last_N256     seed    43    0.30239  46  13  30  35
+D_last_N256     seed    44    0.36207  44  15  32  33
+D_last_N256     seed    45    0.30322  45  14  33  32
+D_last_N256     seed    46    0.44674  36  23  16  49
+C_last_N256     seed    42    0.23652  41  18  27  38
+C_last_N256     seed    43    0.03462  47  12  33  32
+C_last_N256     seed    44    0.13940  48  11  40  25
+C_last_N256     seed    45    0.12507  42  17  25  40
+C_last_N256     seed    46    0.38630  43  16  28  37
+D_last_N224     seed    42    0.23652  43  16  36  29
+D_last_N224     seed    43    0.49968  35  24  15  50
+D_last_N224     seed    44    0.42919  45  14  29  36
+D_last_N224     seed    45    0.11920  53   6  44  21
+D_last_N224     seed    46    0.31153  39  20  27  38
+C_last_N224     seed    42    0.74317  40  19  25  40
+C_last_N224     seed    43    0.19072  40  19  22  43
+C_last_N224     seed    44    0.10669  47  12  34  31
+C_last_N224     seed    45    0.14706  46  13  30  35
+C_last_N224     seed    46    0.28777  40  19  23  42
+ D_last_GAN ensemble    -1    0.43689  39  20  28  37
+ C_last_GAN ensemble    -1    0.32258  37  22  30  35
+D_last_N256 ensemble    -1    0.43750  43  16  25  40
+C_last_N256 ensemble    -1    0.23736  40  19  23  42
+D_last_N224 ensemble    -1    0.31944  44  15  29  36
+C_last_N224 ensemble    -1    0.28998  43  16  27  38
+
+Reference (descriptive only, no per-image predictions published): Chehade et al. (2025) AUC 0.8387 +/- 0.014 (mean +/- SD over ten random splits, balanced ~135-image test sets)
+
+=== DELONG (ensemble AUC, difference = first - second, Holm over 3 declared comparisons) ===
+    setup_a     setup_b  auc_a  auc_b    diff  ci_lower  ci_upper       z  p_value  p_holm  significant_holm_0.05
+ D_last_GAN  C_last_GAN 0.7246 0.7012  0.0235   -0.0291    0.0760  0.8749   0.3816     1.0                  False
+D_last_N256 C_last_N256 0.7421 0.7265  0.0156   -0.0256    0.0569  0.7440   0.4569     1.0                  False
+D_last_N224 C_last_N224 0.7246 0.7283 -0.0037   -0.0472    0.0399 -0.1643   0.8695     1.0                  False
+
+=== ANOVA ACROSS SEEDS (training randomness; n = seeds per setup; per declared pair, Holm per metric) ===
+     metric     setup_a     setup_b  n_a  n_b  mean_a  mean_b    diff      F  p_value  eta_squared  p_holm
+        auc  D_last_GAN  C_last_GAN    5    5  0.7110  0.7062  0.0048 0.2275   0.6462       0.0276  1.0000
+        auc D_last_N256 C_last_N256    5    5  0.7292  0.7229  0.0063 0.9419   0.3602       0.1053  1.0000
+        auc D_last_N224 C_last_N224    5    5  0.7195  0.7241 -0.0046 0.1205   0.7374       0.0148  1.0000
+   accuracy  D_last_GAN  C_last_GAN    5    5  0.6194  0.6290 -0.0097 0.3318   0.5804       0.0398  0.7966
+   accuracy D_last_N256 C_last_N256    5    5  0.6516  0.6339  0.0177 0.9490   0.3585       0.1060  0.7966
+   accuracy D_last_N224 C_last_N224    5    5  0.6274  0.6516 -0.0242 1.4331   0.2655       0.1519  0.7966
+  precision  D_last_GAN  C_last_GAN    5    5  0.5763  0.5934 -0.0171 1.1444   0.3159       0.1251  0.7545
+  precision D_last_N256 C_last_N256    5    5  0.6329  0.5937  0.0392 1.5278   0.2515       0.1604  0.7545
+  precision D_last_N224 C_last_N224    5    5  0.5979  0.6162 -0.0183 0.3562   0.5671       0.0426  0.7545
+     recall  D_last_GAN  C_last_GAN    5    5  0.7831  0.6983  0.0847 2.3408   0.1646       0.2264  0.4937
+     recall D_last_N256 C_last_N256    5    5  0.6881  0.7492 -0.0610 1.3361   0.2811       0.1431  0.5622
+     recall D_last_N224 C_last_N224    5    5  0.7288  0.7220  0.0068 0.0136   0.9100       0.0017  0.9100
+specificity  D_last_GAN  C_last_GAN    5    5  0.4708  0.5662 -0.0954 2.8902   0.1275       0.2654  0.3826
+specificity D_last_N256 C_last_N256    5    5  0.6185  0.5292  0.0892 1.3244   0.2830       0.1420  0.5661
+specificity D_last_N224 C_last_N224    5    5  0.5354  0.5877 -0.0523 0.4059   0.5419       0.0483  0.5661
+         f1  D_last_GAN  C_last_GAN    5    5  0.6613  0.6392  0.0221 0.9060   0.3691       0.1017  1.0000
+         f1 D_last_N256 C_last_N256    5    5  0.6509  0.6606 -0.0098 0.6826   0.4326       0.0786  1.0000
+         f1 D_last_N224 C_last_N224    5    5  0.6491  0.6630 -0.0139 1.0084   0.3447       0.1119  1.0000
+
+=== ANOVA ACROSS BOOTSTRAP RESAMPLES (test-set sampling noise; read eta-squared, resamples overlap) ===
+     metric     setup_a     setup_b        F  p_value  eta_squared  mean_a  mean_b
+        auc  D_last_GAN  C_last_GAN 128.1331   0.0000       0.0603  0.7247  0.7014
+        auc D_last_N256 C_last_N256  54.9573   0.0000       0.0268  0.7416  0.7268
+        auc D_last_N224 C_last_N224   4.8156   0.0283       0.0024  0.7241  0.7285
+   accuracy  D_last_GAN  C_last_GAN 280.9765   0.0000       0.1233  0.6134  0.5804
+   accuracy D_last_N256 C_last_N256  13.6210   0.0002       0.0068  0.6686  0.6618
+   accuracy D_last_N224 C_last_N224  21.5927   0.0000       0.0107  0.6447  0.6531
+  precision  D_last_GAN  C_last_GAN 271.8932   0.0000       0.1198  0.5834  0.5525
+  precision D_last_N256 C_last_N256   2.7522   0.0973       0.0014  0.6329  0.6360
+  precision D_last_N224 C_last_N224  52.4158   0.0000       0.0256  0.6031  0.6151
+     recall  D_last_GAN  C_last_GAN 152.3273   0.0000       0.0708  0.6612  0.6269
+     recall D_last_N256 C_last_N256 316.3765   0.0000       0.1367  0.7276  0.6800
+     recall D_last_N224 C_last_N224  44.0637   0.0000       0.0216  0.7458  0.7287
+specificity  D_last_GAN  C_last_GAN 141.6427   0.0000       0.0662  0.5700  0.5381
+specificity D_last_N256 C_last_N256 131.8066   0.0000       0.0619  0.6151  0.6452
+specificity D_last_N224 C_last_N224 143.1295   0.0000       0.0668  0.5530  0.5845
+         f1  D_last_GAN  C_last_GAN 251.2826   0.0000       0.1117  0.6189  0.5865
+         f1 D_last_N256 C_last_N256 107.1026   0.0000       0.0509  0.6759  0.6561
+         f1 D_last_N224 C_last_N224   0.0143   0.9048       0.0000  0.6660  0.6662
+
+Files written to supplementary_test_for_downsampling/5_chehade_cbam/evaluation/densenet_vs_convnext_cbam_last
+
+===== 2026-11-23 16:54:32 | evaluation -> densenet_vs_convnext_chehade
+Test set: 124 images, 59 pneumonia / 65 No Finding   (subset test_balanced_124.csv)
+Declared comparisons (Holm over exactly these): D_chh_GAN - C_chh_GAN, D_chh_N256 - C_chh_N256, D_chh_N224 - C_chh_N224
+
+=== PER-SEED TEST METRICS ===
+     setup  seed  threshold    auc  accuracy  precision  recall  specificity     f1
+ C_chh_GAN    42     0.1432 0.7051    0.6371     0.5972  0.7288       0.5538 0.6565
+ C_chh_GAN    43     0.0511 0.6820    0.5887     0.5556  0.6780       0.5077 0.6107
+ C_chh_GAN    44     0.5870 0.6746    0.6129     0.6222  0.4746       0.7385 0.5385
+ C_chh_GAN    45     0.2967 0.6718    0.6452     0.6087  0.7119       0.5846 0.6562
+ C_chh_GAN    46     0.0827 0.6527    0.5806     0.5493  0.6610       0.5077 0.6000
+C_chh_N224    42     0.1321 0.7339    0.6935     0.6438  0.7966       0.6000 0.7121
+C_chh_N224    43     0.2173 0.6892    0.5726     0.5429  0.6441       0.5077 0.5891
+C_chh_N224    44     0.0076 0.7254    0.6290     0.5844  0.7627       0.5077 0.6618
+C_chh_N224    45     0.4598 0.7014    0.6452     0.5974  0.7797       0.5231 0.6765
+C_chh_N224    46     0.0567 0.6708    0.5887     0.5465  0.7966       0.4000 0.6483
+C_chh_N256    42     0.1339 0.7117    0.5968     0.5506  0.8305       0.3846 0.6622
+C_chh_N256    43     0.5646 0.7145    0.6532     0.6481  0.5932       0.7077 0.6195
+C_chh_N256    44     0.0311 0.6729    0.5887     0.5465  0.7966       0.4000 0.6483
+C_chh_N256    45     0.1801 0.6737    0.6129     0.5753  0.7119       0.5231 0.6364
+C_chh_N256    46     0.2539 0.6699    0.6210     0.5909  0.6610       0.5846 0.6240
+ D_chh_GAN    42     0.2323 0.7029    0.6048     0.5781  0.6271       0.5846 0.6016
+ D_chh_GAN    43     0.4311 0.6580    0.6048     0.5926  0.5424       0.6615 0.5664
+ D_chh_GAN    44     0.4426 0.7266    0.6694     0.6406  0.6949       0.6462 0.6667
+ D_chh_GAN    45     0.3603 0.6990    0.6129     0.5873  0.6271       0.6000 0.6066
+ D_chh_GAN    46     0.1432 0.6476    0.5968     0.5570  0.7458       0.4615 0.6377
+D_chh_N224    42     0.2451 0.7231    0.6290     0.5765  0.8305       0.4462 0.6806
+D_chh_N224    43     0.3024 0.7134    0.6452     0.6190  0.6610       0.6308 0.6393
+D_chh_N224    44     0.3693 0.7227    0.6532     0.6143  0.7288       0.5846 0.6667
+D_chh_N224    45     0.4666 0.6798    0.6048     0.5833  0.5932       0.6154 0.5882
+D_chh_N224    46     0.0511 0.6897    0.6452     0.5974  0.7797       0.5231 0.6765
+D_chh_N256    42     0.2187 0.7023    0.6371     0.6129  0.6441       0.6308 0.6281
+D_chh_N256    43     0.4475 0.7121    0.6290     0.6066  0.6271       0.6308 0.6167
+D_chh_N256    44     0.2214 0.7266    0.6694     0.6125  0.8305       0.5231 0.7050
+D_chh_N256    45     0.4467 0.6862    0.6290     0.6000  0.6610       0.6000 0.6290
+D_chh_N256    46     0.0164 0.7104    0.6048     0.5556  0.8475       0.3846 0.6711
+
+=== ENSEMBLE (mean of seeds), stratified bootstrap x1000, CI = estimate +/- 1.96 SD ===
+     setup      metric  n_seeds  threshold  estimate     sd  ci_lower  ci_upper
+ D_chh_GAN         auc        5     0.3454    0.6944 0.0469    0.6024    0.7864
+ D_chh_GAN    accuracy        5     0.3454    0.6452 0.0434    0.5600    0.7303
+ D_chh_GAN   precision        5     0.3454    0.6087 0.0416    0.5272    0.6902
+ D_chh_GAN      recall        5     0.3454    0.7119 0.0578    0.5985    0.8252
+ D_chh_GAN specificity        5     0.3454    0.5846 0.0614    0.4643    0.7049
+ D_chh_GAN          f1        5     0.3454    0.6562 0.0424    0.5732    0.7393
+ C_chh_GAN         auc        5     0.2932    0.6941 0.0469    0.6022    0.7860
+ C_chh_GAN    accuracy        5     0.2932    0.6210 0.0430    0.5366    0.7053
+ C_chh_GAN   precision        5     0.2932    0.6034 0.0469    0.5115    0.6954
+ C_chh_GAN      recall        5     0.2932    0.5932 0.0642    0.4674    0.7191
+ C_chh_GAN specificity        5     0.2932    0.6462 0.0574    0.5336    0.7587
+ C_chh_GAN          f1        5     0.2932    0.5983 0.0495    0.5012    0.6954
+D_chh_N256         auc        5     0.2428    0.7147 0.0446    0.6273    0.8021
+D_chh_N256    accuracy        5     0.2428    0.6532 0.0414    0.5721    0.7344
+D_chh_N256   precision        5     0.2428    0.6081 0.0371    0.5355    0.6808
+D_chh_N256      recall        5     0.2428    0.7627 0.0545    0.6560    0.8695
+D_chh_N256 specificity        5     0.2428    0.5538 0.0608    0.4346    0.6731
+D_chh_N256          f1        5     0.2428    0.6767 0.0381    0.6020    0.7514
+C_chh_N256         auc        5     0.2691    0.6939 0.0465    0.6027    0.7850
+C_chh_N256    accuracy        5     0.2691    0.6371 0.0407    0.5574    0.7168
+C_chh_N256   precision        5     0.2691    0.6000 0.0377    0.5261    0.6739
+C_chh_N256      recall        5     0.2691    0.7119 0.0578    0.5986    0.8252
+C_chh_N256 specificity        5     0.2691    0.5692 0.0585    0.4547    0.6838
+C_chh_N256          f1        5     0.2691    0.6512 0.0402    0.5724    0.7299
+D_chh_N224         auc        5     0.2460    0.7173 0.0441    0.6309    0.8038
+D_chh_N224    accuracy        5     0.2460    0.6290 0.0398    0.5509    0.7071
+D_chh_N224   precision        5     0.2460    0.5823 0.0330    0.5176    0.6470
+D_chh_N224      recall        5     0.2460    0.7797 0.0530    0.6757    0.8836
+D_chh_N224 specificity        5     0.2460    0.4923 0.0593    0.3761    0.6085
+D_chh_N224          f1        5     0.2460    0.6667 0.0355    0.5971    0.7362
+C_chh_N224         auc        5     0.2154    0.7129 0.0448    0.6251    0.8008
+C_chh_N224    accuracy        5     0.2154    0.6532 0.0406    0.5737    0.7328
+C_chh_N224   precision        5     0.2154    0.6111 0.0372    0.5381    0.6841
+C_chh_N224      recall        5     0.2154    0.7458 0.0556    0.6369    0.8547
+C_chh_N224 specificity        5     0.2154    0.5692 0.0597    0.4522    0.6862
+C_chh_N224          f1        5     0.2154    0.6718 0.0386    0.5961    0.7474
+
+=== CONFUSION COUNTS at the validation threshold (tp = pneumonia found, fn = missed, fp = false alarms, tn) ===
+     setup    level  seed  threshold  tp  fn  fp  tn
+ D_chh_GAN     seed    42    0.23231  37  22  27  38
+ D_chh_GAN     seed    43    0.43111  32  27  22  43
+ D_chh_GAN     seed    44    0.44264  41  18  23  42
+ D_chh_GAN     seed    45    0.36026  37  22  26  39
+ D_chh_GAN     seed    46    0.14319  44  15  35  30
+ C_chh_GAN     seed    42    0.14319  43  16  29  36
+ C_chh_GAN     seed    43    0.05108  40  19  32  33
+ C_chh_GAN     seed    44    0.58700  28  31  17  48
+ C_chh_GAN     seed    45    0.29665  42  17  27  38
+ C_chh_GAN     seed    46    0.08270  39  20  32  33
+D_chh_N256     seed    42    0.21867  38  21  24  41
+D_chh_N256     seed    43    0.44746  37  22  24  41
+D_chh_N256     seed    44    0.22135  49  10  31  34
+D_chh_N256     seed    45    0.44674  39  20  26  39
+D_chh_N256     seed    46    0.01640  50   9  40  25
+C_chh_N256     seed    42    0.13387  49  10  40  25
+C_chh_N256     seed    43    0.56458  35  24  19  46
+C_chh_N256     seed    44    0.03114  47  12  39  26
+C_chh_N256     seed    45    0.18011  42  17  31  34
+C_chh_N256     seed    46    0.25386  39  20  27  38
+D_chh_N224     seed    42    0.24509  49  10  36  29
+D_chh_N224     seed    43    0.30239  39  20  24  41
+D_chh_N224     seed    44    0.36932  43  16  27  38
+D_chh_N224     seed    45    0.46660  35  24  25  40
+D_chh_N224     seed    46    0.05108  46  13  31  34
+C_chh_N224     seed    42    0.13207  47  12  26  39
+C_chh_N224     seed    43    0.21734  38  21  32  33
+C_chh_N224     seed    44    0.00758  45  14  32  33
+C_chh_N224     seed    45    0.45980  46  13  31  34
+C_chh_N224     seed    46    0.05665  47  12  39  26
+ D_chh_GAN ensemble    -1    0.34542  42  17  27  38
+ C_chh_GAN ensemble    -1    0.29322  35  24  23  42
+D_chh_N256 ensemble    -1    0.24279  45  14  29  36
+C_chh_N256 ensemble    -1    0.26910  42  17  28  37
+D_chh_N224 ensemble    -1    0.24597  46  13  33  32
+C_chh_N224 ensemble    -1    0.21543  44  15  28  37
+
+Reference (descriptive only, no per-image predictions published): Chehade et al. (2025) AUC 0.8387 +/- 0.014 (mean +/- SD over ten random splits, balanced ~135-image test sets)
+
+=== DELONG (ensemble AUC, difference = first - second, Holm over 3 declared comparisons) ===
+   setup_a    setup_b  auc_a  auc_b   diff  ci_lower  ci_upper      z  p_value  p_holm  significant_holm_0.05
+ D_chh_GAN  C_chh_GAN 0.6944 0.6941 0.0003   -0.0630    0.0635 0.0081   0.9936     1.0                  False
+D_chh_N256 C_chh_N256 0.7147 0.6939 0.0209   -0.0391    0.0808 0.6816   0.4955     1.0                  False
+D_chh_N224 C_chh_N224 0.7173 0.7129 0.0044   -0.0600    0.0688 0.1349   0.8927     1.0                  False
+
+=== ANOVA ACROSS SEEDS (training randomness; n = seeds per setup; per declared pair, Holm per metric) ===
+     metric    setup_a    setup_b  n_a  n_b  mean_a  mean_b    diff      F  p_value  eta_squared  p_holm
+        auc  D_chh_GAN  C_chh_GAN    5    5  0.6868  0.6772  0.0096 0.3161   0.5893       0.0380  1.0000
+        auc D_chh_N256 C_chh_N256    5    5  0.7075  0.6885  0.0190 2.4914   0.1531       0.2375  0.4594
+        auc D_chh_N224 C_chh_N224    5    5  0.7057  0.7041  0.0016 0.0119   0.9159       0.0015  1.0000
+   accuracy  D_chh_GAN  C_chh_GAN    5    5  0.6177  0.6129  0.0048 0.0698   0.7984       0.0086  1.0000
+   accuracy D_chh_N256 C_chh_N256    5    5  0.6339  0.6145  0.0194 1.6000   0.2415       0.1667  0.7245
+   accuracy D_chh_N224 C_chh_N224    5    5  0.6355  0.6258  0.0097 0.1756   0.6862       0.0215  1.0000
+  precision  D_chh_GAN  C_chh_GAN    5    5  0.5911  0.5866  0.0045 0.0510   0.8271       0.0063  1.0000
+  precision D_chh_N256 C_chh_N256    5    5  0.5975  0.5823  0.0152 0.5108   0.4951       0.0600  1.0000
+  precision D_chh_N224 C_chh_N224    5    5  0.5981  0.5830  0.0151 0.5536   0.4781       0.0647  1.0000
+     recall  D_chh_GAN  C_chh_GAN    5    5  0.6475  0.6508 -0.0034 0.0035   0.9542       0.0004  1.0000
+     recall D_chh_N256 C_chh_N256    5    5  0.7220  0.7186  0.0034 0.0027   0.9596       0.0003  1.0000
+     recall D_chh_N224 C_chh_N224    5    5  0.7186  0.7559 -0.0373 0.5366   0.4848       0.0629  1.0000
+specificity  D_chh_GAN  C_chh_GAN    5    5  0.5908  0.5785  0.0123 0.0495   0.8295       0.0062  1.0000
+specificity D_chh_N256 C_chh_N256    5    5  0.5538  0.5200  0.0338 0.1980   0.6681       0.0242  1.0000
+specificity D_chh_N224 C_chh_N224    5    5  0.5600  0.5077  0.0523 1.2620   0.2938       0.1363  0.8815
+         f1  D_chh_GAN  C_chh_GAN    5    5  0.6158  0.6124  0.0034 0.0152   0.9051       0.0019  1.0000
+         f1 D_chh_N256 C_chh_N256    5    5  0.6500  0.6381  0.0119 0.4232   0.5336       0.0502  1.0000
+         f1 D_chh_N224 C_chh_N224    5    5  0.6503  0.6576 -0.0073 0.0764   0.7893       0.0095  1.0000
+
+=== ANOVA ACROSS BOOTSTRAP RESAMPLES (test-set sampling noise; read eta-squared, resamples overlap) ===
+     metric    setup_a    setup_b         F  p_value  eta_squared  mean_a  mean_b
+        auc  D_chh_GAN  C_chh_GAN    0.0048   0.9448       0.0000  0.6946  0.6948
+        auc D_chh_N256 C_chh_N256   93.9140   0.0000       0.0449  0.7147  0.6949
+        auc D_chh_N224 C_chh_N224    3.6736   0.0554       0.0018  0.7172  0.7134
+   accuracy  D_chh_GAN  C_chh_GAN  165.9161   0.0000       0.0767  0.6455  0.6206
+   accuracy D_chh_N256 C_chh_N256   56.1267   0.0000       0.0273  0.6527  0.6389
+   accuracy D_chh_N224 C_chh_N224  182.0642   0.0000       0.0835  0.6291  0.6534
+  precision  D_chh_GAN  C_chh_GAN   10.0430   0.0016       0.0050  0.6100  0.6038
+  precision D_chh_N256 C_chh_N256   13.6611   0.0002       0.0068  0.6084  0.6022
+  precision D_chh_N224 C_chh_N224  339.3301   0.0000       0.1452  0.5830  0.6120
+     recall  D_chh_GAN  C_chh_GAN 1902.8488   0.0000       0.4878  0.7123  0.5931
+     recall D_chh_N256 C_chh_N256  370.4545   0.0000       0.1564  0.7637  0.7154
+     recall D_chh_N224 C_chh_N224  188.4020   0.0000       0.0862  0.7807  0.7474
+specificity  D_chh_GAN  C_chh_GAN  521.0771   0.0000       0.2069  0.5848  0.6455
+specificity D_chh_N256 C_chh_N256   43.7478   0.0000       0.0214  0.5519  0.5695
+specificity D_chh_N224 C_chh_N224  828.0665   0.0000       0.2930  0.4915  0.5681
+         f1  D_chh_GAN  C_chh_GAN  823.9878   0.0000       0.2920  0.6563  0.5971
+         f1 D_chh_N256 C_chh_N256  179.0231   0.0000       0.0822  0.6765  0.6531
+         f1 D_chh_N224 C_chh_N224    9.9480   0.0016       0.0050  0.6669  0.6721
+
+Files written to supplementary_test_for_downsampling/5_chehade_cbam/evaluation/densenet_vs_convnext_chehade
+
+===== 2026-11-23 16:54:35 | evaluation -> cbam_all_vs_cbam_last
+Test set: 124 images, 59 pneumonia / 65 No Finding   (subset test_balanced_124.csv)
+Declared comparisons (Holm over exactly these): D_all_GAN - D_last_GAN, D_all_N256 - D_last_N256, D_all_N224 - D_last_N224, C_all_GAN - C_last_GAN, C_all_N256 - C_last_N256, C_all_N224 - C_last_N224
+
+=== PER-SEED TEST METRICS ===
+      setup  seed  threshold    auc  accuracy  precision  recall  specificity     f1
+  C_all_GAN    42     0.1461 0.7326    0.6694     0.6184  0.7966       0.5538 0.6963
+  C_all_GAN    43     0.2553 0.7403    0.6613     0.6269  0.7119       0.6154 0.6667
+  C_all_GAN    44     0.2598 0.7302    0.6613     0.6269  0.7119       0.6154 0.6667
+  C_all_GAN    45     0.1848 0.7029    0.6048     0.5610  0.7797       0.4462 0.6525
+  C_all_GAN    46     0.3933 0.7274    0.6129     0.5753  0.7119       0.5231 0.6364
+ C_all_N224    42     0.1824 0.7160    0.6129     0.5753  0.7119       0.5231 0.6364
+ C_all_N224    43     0.2878 0.7136    0.5887     0.5444  0.8305       0.3692 0.6577
+ C_all_N224    44     0.0518 0.7047    0.6290     0.5915  0.7119       0.5538 0.6462
+ C_all_N224    45     0.1919 0.7167    0.6048     0.5735  0.6610       0.5538 0.6142
+ C_all_N224    46     0.0518 0.7716    0.6935     0.6364  0.8305       0.5692 0.7206
+ C_all_N256    42     0.3355 0.7291    0.6613     0.6349  0.6780       0.6462 0.6557
+ C_all_N256    43     0.3486 0.7306    0.6129     0.5663  0.7966       0.4462 0.6620
+ C_all_N256    44     0.5842 0.7129    0.6532     0.6739  0.5254       0.7692 0.5905
+ C_all_N256    45     0.2200 0.7179    0.6048     0.5676  0.7119       0.5077 0.6316
+ C_all_N256    46     0.1277 0.7568    0.7258     0.7049  0.7288       0.7231 0.7167
+ C_last_GAN    42     0.2894 0.6883    0.6290     0.6000  0.6610       0.6000 0.6290
+ C_last_GAN    43     0.5417 0.6901    0.5887     0.5714  0.5424       0.6308 0.5565
+ C_last_GAN    44     0.2878 0.7202    0.6613     0.6133  0.7797       0.5538 0.6866
+ C_last_GAN    45     0.4007 0.7213    0.6532     0.6143  0.7288       0.5846 0.6667
+ C_last_GAN    46     0.0402 0.7110    0.6129     0.5679  0.7797       0.4615 0.6571
+C_last_N224    42     0.7432 0.7063    0.6452     0.6154  0.6780       0.6154 0.6452
+C_last_N224    43     0.1907 0.7197    0.6694     0.6452  0.6780       0.6615 0.6612
+C_last_N224    44     0.1067 0.7395    0.6290     0.5802  0.7966       0.4769 0.6714
+C_last_N224    45     0.1471 0.7274    0.6532     0.6053  0.7797       0.5385 0.6815
+C_last_N224    46     0.2878 0.7279    0.6613     0.6349  0.6780       0.6462 0.6557
+C_last_N256    42     0.2365 0.7117    0.6371     0.6029  0.6949       0.5846 0.6457
+C_last_N256    43     0.0346 0.7253    0.6371     0.5875  0.7966       0.4923 0.6763
+C_last_N256    44     0.1394 0.7246    0.5887     0.5455  0.8136       0.3846 0.6531
+C_last_N256    45     0.1251 0.7362    0.6613     0.6269  0.7119       0.6154 0.6667
+C_last_N256    46     0.3863 0.7164    0.6452     0.6056  0.7288       0.5692 0.6615
+  D_all_GAN    42     0.2147 0.7229    0.6129     0.5663  0.7966       0.4462 0.6620
+  D_all_GAN    43     0.4818 0.6979    0.5806     0.5455  0.7119       0.4615 0.6176
+  D_all_GAN    44     0.0575 0.6926    0.5806     0.5402  0.7966       0.3846 0.6438
+  D_all_GAN    45     0.2862 0.6945    0.6290     0.5915  0.7119       0.5538 0.6462
+  D_all_GAN    46     0.1859 0.7236    0.5887     0.5426  0.8644       0.3385 0.6667
+ D_all_N224    42     0.3337 0.6944    0.6290     0.5942  0.6949       0.5692 0.6406
+ D_all_N224    43     0.6183 0.7124    0.6694     0.6364  0.7119       0.6308 0.6720
+ D_all_N224    44     0.4654 0.7378    0.6613     0.6164  0.7627       0.5692 0.6818
+ D_all_N224    45     0.4554 0.6398    0.5968     0.5672  0.6441       0.5538 0.6032
+ D_all_N224    46     0.4144 0.7190    0.6532     0.6429  0.6102       0.6923 0.6261
+ D_all_N256    42     0.3268 0.7207    0.6048     0.5641  0.7458       0.4769 0.6423
+ D_all_N256    43     0.5477 0.6945    0.6210     0.5857  0.6949       0.5538 0.6357
+ D_all_N256    44     0.0804 0.7360    0.5323     0.5049  0.8814       0.2154 0.6420
+ D_all_N256    45     0.4349 0.6575    0.6048     0.5676  0.7119       0.5077 0.6316
+ D_all_N256    46     0.3191 0.7046    0.6694     0.6875  0.5593       0.7692 0.6168
+ D_last_GAN    42     0.5114 0.6970    0.6371     0.6061  0.6780       0.6000 0.6400
+ D_last_GAN    43     0.6514 0.7317    0.6452     0.6027  0.7458       0.5538 0.6667
+ D_last_GAN    44     0.2838 0.6962    0.6048     0.5568  0.8305       0.4000 0.6667
+ D_last_GAN    45     0.2689 0.7228    0.5887     0.5426  0.8644       0.3385 0.6667
+ D_last_GAN    46     0.0940 0.7070    0.6210     0.5732  0.7966       0.4615 0.6667
+D_last_N224    42     0.2365 0.6909    0.5806     0.5443  0.7288       0.4462 0.6232
+D_last_N224    43     0.4997 0.7327    0.6855     0.7000  0.5932       0.7692 0.6422
+D_last_N224    44     0.4292 0.7518    0.6532     0.6081  0.7627       0.5538 0.6767
+D_last_N224    45     0.1192 0.7306    0.5968     0.5464  0.8983       0.3231 0.6795
+D_last_N224    46     0.3115 0.6917    0.6210     0.5909  0.6610       0.5846 0.6240
+D_last_N256    42     0.5569 0.7435    0.6774     0.7111  0.5424       0.8000 0.6154
+D_last_N256    43     0.3024 0.7176    0.6532     0.6053  0.7797       0.5385 0.6815
+D_last_N256    44     0.3621 0.7300    0.6210     0.5789  0.7458       0.5077 0.6519
+D_last_N256    45     0.3032 0.7356    0.6210     0.5769  0.7627       0.4923 0.6569
+D_last_N256    46     0.4467 0.7190    0.6855     0.6923  0.6102       0.7538 0.6486
+
+=== ENSEMBLE (mean of seeds), stratified bootstrap x1000, CI = estimate +/- 1.96 SD ===
+      setup      metric  n_seeds  threshold  estimate     sd  ci_lower  ci_upper
+  D_all_GAN         auc        5     0.2171    0.7246 0.0457    0.6351    0.8142
+  D_all_GAN    accuracy        5     0.2171    0.5726 0.0393    0.4955    0.6497
+  D_all_GAN   precision        5     0.2171    0.5333 0.0279    0.4786    0.5881
+  D_all_GAN      recall        5     0.2171    0.8136 0.0508    0.7141    0.9130
+  D_all_GAN specificity        5     0.2171    0.3538 0.0604    0.2355    0.4722
+  D_all_GAN          f1        5     0.2171    0.6443 0.0319    0.5817    0.7069
+ D_last_GAN         auc        5     0.4369    0.7246 0.0456    0.6353    0.8140
+ D_last_GAN    accuracy        5     0.4369    0.6129 0.0441    0.5265    0.6993
+ D_last_GAN   precision        5     0.4369    0.5821 0.0421    0.4996    0.6646
+ D_last_GAN      recall        5     0.4369    0.6610 0.0625    0.5385    0.7836
+ D_last_GAN specificity        5     0.4369    0.5692 0.0606    0.4505    0.6880
+ D_last_GAN          f1        5     0.4369    0.6190 0.0455    0.5299    0.7082
+ D_all_N256         auc        5     0.2630    0.7132 0.0476    0.6200    0.8064
+ D_all_N256    accuracy        5     0.2630    0.5403 0.0396    0.4627    0.6179
+ D_all_N256   precision        5     0.2630    0.5111 0.0277    0.4568    0.5654
+ D_all_N256      recall        5     0.2630    0.7797 0.0542    0.6734    0.8859
+ D_all_N256 specificity        5     0.2630    0.3231 0.0587    0.2080    0.4382
+ D_all_N256          f1        5     0.2630    0.6174 0.0334    0.5519    0.6830
+D_last_N256         auc        5     0.4375    0.7421 0.0443    0.6553    0.8290
+D_last_N256    accuracy        5     0.4375    0.6694 0.0417    0.5876    0.7511
+D_last_N256   precision        5     0.4375    0.6324 0.0409    0.5521    0.7126
+D_last_N256      recall        5     0.4375    0.7288 0.0583    0.6145    0.8431
+D_last_N256 specificity        5     0.4375    0.6154 0.0602    0.4975    0.7333
+D_last_N256          f1        5     0.4375    0.6772 0.0414    0.5959    0.7584
+ D_all_N224         auc        5     0.3673    0.7254 0.0444    0.6384    0.8124
+ D_all_N224    accuracy        5     0.3673    0.6452 0.0393    0.5680    0.7223
+ D_all_N224   precision        5     0.3673    0.5949 0.0332    0.5298    0.6600
+ D_all_N224      recall        5     0.3673    0.7966 0.0526    0.6934    0.8998
+ D_all_N224 specificity        5     0.3673    0.5077 0.0605    0.3892    0.6262
+ D_all_N224          f1        5     0.3673    0.6812 0.0348    0.6129    0.7494
+D_last_N224         auc        5     0.3194    0.7246 0.0451    0.6363    0.8130
+D_last_N224    accuracy        5     0.3194    0.6452 0.0410    0.5648    0.7255
+D_last_N224   precision        5     0.3194    0.6027 0.0366    0.5311    0.6744
+D_last_N224      recall        5     0.3194    0.7458 0.0582    0.6318    0.8598
+D_last_N224 specificity        5     0.3194    0.5538 0.0594    0.4375    0.6702
+D_last_N224          f1        5     0.3194    0.6667 0.0394    0.5894    0.7439
+  C_all_GAN         auc        5     0.4687    0.7351 0.0443    0.6483    0.8219
+  C_all_GAN    accuracy        5     0.4687    0.6774 0.0403    0.5984    0.7565
+  C_all_GAN   precision        5     0.4687    0.6557 0.0436    0.5702    0.7413
+  C_all_GAN      recall        5     0.4687    0.6780 0.0590    0.5623    0.7936
+  C_all_GAN specificity        5     0.4687    0.6769 0.0565    0.5662    0.7876
+  C_all_GAN          f1        5     0.4687    0.6667 0.0434    0.5815    0.7518
+ C_last_GAN         auc        5     0.3226    0.7012 0.0466    0.6098    0.7926
+ C_last_GAN    accuracy        5     0.3226    0.5806 0.0441    0.4943    0.6670
+ C_last_GAN   precision        5     0.3226    0.5522 0.0417    0.4705    0.6340
+ C_last_GAN      recall        5     0.3226    0.6271 0.0616    0.5064    0.7478
+ C_last_GAN specificity        5     0.3226    0.5385 0.0594    0.4220    0.6549
+ C_last_GAN          f1        5     0.3226    0.5873 0.0458    0.4975    0.6771
+ C_all_N256         auc        5     0.3034    0.7283 0.0455    0.6392    0.8174
+ C_all_N256    accuracy        5     0.3034    0.6371 0.0429    0.5531    0.7211
+ C_all_N256   precision        5     0.3034    0.6061 0.0424    0.5230    0.6891
+ C_all_N256      recall        5     0.3034    0.6780 0.0612    0.5580    0.7979
+ C_all_N256 specificity        5     0.3034    0.6000 0.0607    0.4810    0.7190
+ C_all_N256          f1        5     0.3034    0.6400 0.0441    0.5535    0.7265
+C_last_N256         auc        5     0.2374    0.7265 0.0453    0.6378    0.8152
+C_last_N256    accuracy        5     0.2374    0.6613 0.0411    0.5808    0.7418
+C_last_N256   precision        5     0.2374    0.6349 0.0424    0.5517    0.7181
+C_last_N256      recall        5     0.2374    0.6780 0.0612    0.5580    0.7979
+C_last_N256 specificity        5     0.2374    0.6462 0.0572    0.5341    0.7583
+C_last_N256          f1        5     0.2374    0.6557 0.0441    0.5693    0.7422
+ C_all_N224         auc        5     0.3980    0.7476 0.0435    0.6623    0.8328
+ C_all_N224    accuracy        5     0.3980    0.6694 0.0398    0.5913    0.7475
+ C_all_N224   precision        5     0.3980    0.6875 0.0539    0.5818    0.7932
+ C_all_N224      recall        5     0.3980    0.5593 0.0630    0.4359    0.6827
+ C_all_N224 specificity        5     0.3980    0.7692 0.0528    0.6658    0.8726
+ C_all_N224          f1        5     0.3980    0.6168 0.0512    0.5165    0.7171
+C_last_N224         auc        5     0.2900    0.7283 0.0450    0.6400    0.8166
+C_last_N224    accuracy        5     0.2900    0.6532 0.0400    0.5748    0.7317
+C_last_N224   precision        5     0.2900    0.6143 0.0379    0.5401    0.6885
+C_last_N224      recall        5     0.2900    0.7288 0.0566    0.6179    0.8397
+C_last_N224 specificity        5     0.2900    0.5846 0.0585    0.4700    0.6992
+C_last_N224          f1        5     0.2900    0.6667 0.0394    0.5895    0.7438
+
+=== CONFUSION COUNTS at the validation threshold (tp = pneumonia found, fn = missed, fp = false alarms, tn) ===
+      setup    level  seed  threshold  tp  fn  fp  tn
+  D_all_GAN     seed    42    0.21469  47  12  36  29
+  D_all_GAN     seed    43    0.48182  42  17  35  30
+  D_all_GAN     seed    44    0.05749  47  12  40  25
+  D_all_GAN     seed    45    0.28617  42  17  29  36
+  D_all_GAN     seed    46    0.18595  51   8  43  22
+ D_last_GAN     seed    42    0.51141  40  19  26  39
+ D_last_GAN     seed    43    0.65135  44  15  29  36
+ D_last_GAN     seed    44    0.28378  49  10  39  26
+ D_last_GAN     seed    45    0.26894  51   8  43  22
+ D_last_GAN     seed    46    0.09401  47  12  35  30
+ D_all_N256     seed    42    0.32681  44  15  34  31
+ D_all_N256     seed    43    0.54771  41  18  29  36
+ D_all_N256     seed    44    0.08036  52   7  51  14
+ D_all_N256     seed    45    0.43494  42  17  32  33
+ D_all_N256     seed    46    0.31912  33  26  15  50
+D_last_N256     seed    42    0.55688  32  27  13  52
+D_last_N256     seed    43    0.30239  46  13  30  35
+D_last_N256     seed    44    0.36207  44  15  32  33
+D_last_N256     seed    45    0.30322  45  14  33  32
+D_last_N256     seed    46    0.44674  36  23  16  49
+ D_all_N224     seed    42    0.33372  41  18  28  37
+ D_all_N224     seed    43    0.61832  42  17  24  41
+ D_all_N224     seed    44    0.46539  45  14  28  37
+ D_all_N224     seed    45    0.45544  38  21  29  36
+ D_all_N224     seed    46    0.41442  36  23  20  45
+D_last_N224     seed    42    0.23652  43  16  36  29
+D_last_N224     seed    43    0.49968  35  24  15  50
+D_last_N224     seed    44    0.42919  45  14  29  36
+D_last_N224     seed    45    0.11920  53   6  44  21
+D_last_N224     seed    46    0.31153  39  20  27  38
+  C_all_GAN     seed    42    0.14609  47  12  29  36
+  C_all_GAN     seed    43    0.25534  42  17  25  40
+  C_all_GAN     seed    44    0.25983  42  17  25  40
+  C_all_GAN     seed    45    0.18477  46  13  36  29
+  C_all_GAN     seed    46    0.39327  42  17  31  34
+ C_last_GAN     seed    42    0.28937  39  20  26  39
+ C_last_GAN     seed    43    0.54165  32  27  24  41
+ C_last_GAN     seed    44    0.28777  46  13  29  36
+ C_last_GAN     seed    45    0.40075  43  16  27  38
+ C_last_GAN     seed    46    0.04024  46  13  35  30
+ C_all_N256     seed    42    0.33546  40  19  23  42
+ C_all_N256     seed    43    0.34865  47  12  36  29
+ C_all_N256     seed    44    0.58415  31  28  15  50
+ C_all_N256     seed    45    0.22001  42  17  32  33
+ C_all_N256     seed    46    0.12765  43  16  18  47
+C_last_N256     seed    42    0.23652  41  18  27  38
+C_last_N256     seed    43    0.03462  47  12  33  32
+C_last_N256     seed    44    0.13940  48  11  40  25
+C_last_N256     seed    45    0.12507  42  17  25  40
+C_last_N256     seed    46    0.38630  43  16  28  37
+ C_all_N224     seed    42    0.18243  42  17  31  34
+ C_all_N224     seed    43    0.28777  49  10  41  24
+ C_all_N224     seed    44    0.05185  42  17  29  36
+ C_all_N224     seed    45    0.19193  39  20  29  36
+ C_all_N224     seed    46    0.05185  49  10  28  37
+C_last_N224     seed    42    0.74317  40  19  25  40
+C_last_N224     seed    43    0.19072  40  19  22  43
+C_last_N224     seed    44    0.10669  47  12  34  31
+C_last_N224     seed    45    0.14706  46  13  30  35
+C_last_N224     seed    46    0.28777  40  19  23  42
+  D_all_GAN ensemble    -1    0.21714  48  11  42  23
+ D_last_GAN ensemble    -1    0.43689  39  20  28  37
+ D_all_N256 ensemble    -1    0.26296  46  13  44  21
+D_last_N256 ensemble    -1    0.43750  43  16  25  40
+ D_all_N224 ensemble    -1    0.36733  47  12  32  33
+D_last_N224 ensemble    -1    0.31944  44  15  29  36
+  C_all_GAN ensemble    -1    0.46874  40  19  21  44
+ C_last_GAN ensemble    -1    0.32258  37  22  30  35
+ C_all_N256 ensemble    -1    0.30339  40  19  26  39
+C_last_N256 ensemble    -1    0.23736  40  19  23  42
+ C_all_N224 ensemble    -1    0.39805  33  26  15  50
+C_last_N224 ensemble    -1    0.28998  43  16  27  38
+
+Reference (descriptive only, no per-image predictions published): Chehade et al. (2025) AUC 0.8387 +/- 0.014 (mean +/- SD over ten random splits, balanced ~135-image test sets)
+
+=== DELONG (ensemble AUC, difference = first - second, Holm over 6 declared comparisons) ===
+   setup_a     setup_b  auc_a  auc_b    diff  ci_lower  ci_upper       z  p_value  p_holm  significant_holm_0.05
+ D_all_GAN  D_last_GAN 0.7246 0.7246  0.0000   -0.0359    0.0359  0.0000   1.0000  1.0000                  False
+D_all_N256 D_last_N256 0.7132 0.7421 -0.0289   -0.0624    0.0045 -1.6959   0.0899  0.5394                  False
+D_all_N224 D_last_N224 0.7254 0.7246  0.0008   -0.0273    0.0289  0.0546   0.9565  1.0000                  False
+ C_all_GAN  C_last_GAN 0.7351 0.7012  0.0339   -0.0127    0.0805  1.4252   0.1541  0.7706                  False
+C_all_N256 C_last_N256 0.7283 0.7265  0.0018   -0.0212    0.0249  0.1552   0.8767  1.0000                  False
+C_all_N224 C_last_N224 0.7476 0.7283  0.0193   -0.0112    0.0498  1.2386   0.2155  0.8619                  False
+
+=== ANOVA ACROSS SEEDS (training randomness; n = seeds per setup; per declared pair, Holm per metric) ===
+     metric    setup_a     setup_b  n_a  n_b  mean_a  mean_b    diff      F  p_value  eta_squared  p_holm
+        auc  D_all_GAN  D_last_GAN    5    5  0.7063  0.7110 -0.0046 0.2186   0.6526       0.0266  1.0000
+        auc D_all_N256 D_last_N256    5    5  0.7027  0.7292 -0.0265 3.4817   0.0990       0.3032  0.4951
+        auc D_all_N224 D_last_N224    5    5  0.7007  0.7195 -0.0189 0.8327   0.3882       0.0943  1.0000
+        auc  C_all_GAN  C_last_GAN    5    5  0.7267  0.7062  0.0205 4.6105   0.0641       0.3656  0.3843
+        auc C_all_N256 C_last_N256    5    5  0.7295  0.7229  0.0066 0.5752   0.4700       0.0671  1.0000
+        auc C_all_N224 C_last_N224    5    5  0.7245  0.7241  0.0004 0.0008   0.9785       0.0001  1.0000
+   accuracy  D_all_GAN  D_last_GAN    5    5  0.5984  0.6194 -0.0210 2.1948   0.1768       0.2153  0.8838
+   accuracy D_all_N256 D_last_N256    5    5  0.6065  0.6516 -0.0452 3.0506   0.1188       0.2761  0.7131
+   accuracy D_all_N224 D_last_N224    5    5  0.6419  0.6274  0.0145 0.3951   0.5471       0.0471  1.0000
+   accuracy  C_all_GAN  C_last_GAN    5    5  0.6419  0.6290  0.0129 0.4604   0.5166       0.0544  1.0000
+   accuracy C_all_N256 C_last_N256    5    5  0.6516  0.6339  0.0177 0.5149   0.4934       0.0605  1.0000
+   accuracy C_all_N224 C_last_N224    5    5  0.6258  0.6516 -0.0258 1.7655   0.2206       0.1808  0.8838
+  precision  D_all_GAN  D_last_GAN    5    5  0.5572  0.5763 -0.0191 1.4484   0.2632       0.1533  1.0000
+  precision D_all_N256 D_last_N256    5    5  0.5819  0.6329 -0.0510 1.5242   0.2520       0.1600  1.0000
+  precision D_all_N224 D_last_N224    5    5  0.6114  0.5979  0.0135 0.1813   0.6815       0.0222  1.0000
+  precision  C_all_GAN  C_last_GAN    5    5  0.6017  0.5934  0.0083 0.2334   0.6420       0.0283  1.0000
+  precision C_all_N256 C_last_N256    5    5  0.6295  0.5937  0.0358 1.3366   0.2810       0.1432  1.0000
+  precision C_all_N224 C_last_N224    5    5  0.5842  0.6162 -0.0319 2.8553   0.1295       0.2630  0.7773
+     recall  D_all_GAN  D_last_GAN    5    5  0.7763  0.7831 -0.0068 0.0240   0.8808       0.0030  1.0000
+     recall D_all_N256 D_last_N256    5    5  0.7186  0.6881  0.0305 0.1904   0.6741       0.0232  1.0000
+     recall D_all_N224 D_last_N224    5    5  0.6847  0.7288 -0.0441 0.5798   0.4683       0.0676  1.0000
+     recall  C_all_GAN  C_last_GAN    5    5  0.7424  0.6983  0.0441 0.8264   0.3899       0.0936  1.0000
+     recall C_all_N256 C_last_N256    5    5  0.6881  0.7492 -0.0610 1.4400   0.2645       0.1525  1.0000
+     recall C_all_N224 C_last_N224    5    5  0.7492  0.7220  0.0271 0.3821   0.5537       0.0456  1.0000
+specificity  D_all_GAN  D_last_GAN    5    5  0.4369  0.4708 -0.0338 0.3139   0.5906       0.0378  1.0000
+specificity D_all_N256 D_last_N256    5    5  0.5046  0.6185 -0.1138 1.0679   0.3317       0.1178  1.0000
+specificity D_all_N224 D_last_N224    5    5  0.6031  0.5354  0.0677 0.7395   0.4148       0.0846  1.0000
+specificity  C_all_GAN  C_last_GAN    5    5  0.5508  0.5662 -0.0154 0.1285   0.7292       0.0158  1.0000
+specificity C_all_N256 C_last_N256    5    5  0.6185  0.5292  0.0892 1.4376   0.2648       0.1523  1.0000
+specificity C_all_N224 C_last_N224    5    5  0.5138  0.5877 -0.0738 2.1138   0.1841       0.2090  1.0000
+         f1  D_all_GAN  D_last_GAN    5    5  0.6473  0.6613 -0.0141 1.9319   0.2020       0.1945  1.0000
+         f1 D_all_N256 D_last_N256    5    5  0.6337  0.6509 -0.0172 2.2081   0.1756       0.2163  1.0000
+         f1 D_all_N224 D_last_N224    5    5  0.6447  0.6491 -0.0044 0.0528   0.8240       0.0066  1.0000
+         f1  C_all_GAN  C_last_GAN    5    5  0.6637  0.6392  0.0245 0.9837   0.3503       0.1095  1.0000
+         f1 C_all_N256 C_last_N256    5    5  0.6513  0.6606 -0.0094 0.1931   0.6719       0.0236  1.0000
+         f1 C_all_N224 C_last_N224    5    5  0.6550  0.6630 -0.0080 0.1778   0.6844       0.0217  1.0000
+
+=== ANOVA ACROSS BOOTSTRAP RESAMPLES (test-set sampling noise; read eta-squared, resamples overlap) ===
+     metric    setup_a     setup_b          F  p_value  eta_squared  mean_a  mean_b
+        auc  D_all_GAN  D_last_GAN     0.1129   0.7369       0.0001  0.7240  0.7247
+        auc D_all_N256 D_last_N256   192.6007   0.0000       0.0879  0.7131  0.7416
+        auc D_all_N224 D_last_N224     0.5129   0.4740       0.0003  0.7255  0.7241
+        auc  C_all_GAN  C_last_GAN   268.6333   0.0000       0.1185  0.7347  0.7014
+        auc C_all_N256 C_last_N256     0.7072   0.4005       0.0004  0.7285  0.7268
+        auc C_all_N224 C_last_N224    94.4005   0.0000       0.0451  0.7477  0.7285
+   accuracy  D_all_GAN  D_last_GAN   447.5174   0.0000       0.1830  0.5739  0.6134
+   accuracy D_all_N256 D_last_N256  4995.2384   0.0000       0.7143  0.5401  0.6686
+   accuracy D_all_N224 D_last_N224     0.1705   0.6797       0.0001  0.6454  0.6447
+   accuracy  C_all_GAN  C_last_GAN  2625.6072   0.0000       0.5679  0.6772  0.5804
+   accuracy C_all_N256 C_last_N256   148.8607   0.0000       0.0693  0.6389  0.6618
+   accuracy C_all_N224 C_last_N224    81.6148   0.0000       0.0392  0.6693  0.6531
+  precision  D_all_GAN  D_last_GAN   924.5730   0.0000       0.3164  0.5348  0.5834
+  precision D_all_N256 D_last_N256  6057.2910   0.0000       0.7520  0.5113  0.6329
+  precision D_all_N224 D_last_N224    20.3543   0.0000       0.0101  0.5960  0.6031
+  precision  C_all_GAN  C_last_GAN  2973.8260   0.0000       0.5981  0.6566  0.5525
+  precision C_all_N256 C_last_N256   207.7581   0.0000       0.0942  0.6087  0.6360
+  precision C_all_N224 C_last_N224  1228.0739   0.0000       0.3807  0.6882  0.6151
+     recall  D_all_GAN  D_last_GAN  3584.3057   0.0000       0.6421  0.8137  0.6612
+     recall D_all_N256 D_last_N256   408.1290   0.0000       0.1696  0.7784  0.7276
+     recall D_all_N224 D_last_N224   424.0751   0.0000       0.1751  0.7969  0.7458
+     recall  C_all_GAN  C_last_GAN   363.6833   0.0000       0.1540  0.6784  0.6269
+     recall C_all_N256 C_last_N256     0.0002   0.9901       0.0000  0.6801  0.6800
+     recall C_all_N224 C_last_N224  3913.4248   0.0000       0.6620  0.5613  0.7287
+specificity  D_all_GAN  D_last_GAN  6246.2571   0.0000       0.7576  0.3562  0.5700
+specificity D_all_N256 D_last_N256 12004.5604   0.0000       0.8573  0.3238  0.6151
+specificity D_all_N224 D_last_N224   281.3895   0.0000       0.1234  0.5080  0.5530
+specificity  C_all_GAN  C_last_GAN  2831.7826   0.0000       0.5863  0.6761  0.5381
+specificity C_all_N256 C_last_N256   274.7241   0.0000       0.1209  0.6015  0.6452
+specificity C_all_N224 C_last_N224  5387.1531   0.0000       0.7295  0.7673  0.5845
+         f1  D_all_GAN  D_last_GAN   219.8575   0.0000       0.0991  0.6449  0.6189
+         f1 D_all_N256 D_last_N256  1236.8129   0.0000       0.3823  0.6167  0.6759
+         f1 D_all_N224 D_last_N224    83.9120   0.0000       0.0403  0.6813  0.6660
+         f1  C_all_GAN  C_last_GAN  1590.9080   0.0000       0.4433  0.6661  0.5865
+         f1 C_all_N256 C_last_N256    56.4005   0.0000       0.0275  0.6413  0.6561
+         f1 C_all_N224 C_last_N224   593.3764   0.0000       0.2290  0.6165  0.6662
+
+Files written to supplementary_test_for_downsampling/5_chehade_cbam/evaluation/cbam_all_vs_cbam_last
+
+===== 2026-11-23 16:54:41 | evaluation -> our_recipe_vs_chehade
+Test set: 124 images, 59 pneumonia / 65 No Finding   (subset test_balanced_124.csv)
+Declared comparisons (Holm over exactly these): D_last_GAN - D_chh_GAN, D_last_N256 - D_chh_N256, D_last_N224 - D_chh_N224, C_last_GAN - C_chh_GAN, C_last_N256 - C_chh_N256, C_last_N224 - C_chh_N224
+
+=== PER-SEED TEST METRICS ===
+      setup  seed  threshold    auc  accuracy  precision  recall  specificity     f1
+  C_chh_GAN    42     0.1432 0.7051    0.6371     0.5972  0.7288       0.5538 0.6565
+  C_chh_GAN    43     0.0511 0.6820    0.5887     0.5556  0.6780       0.5077 0.6107
+  C_chh_GAN    44     0.5870 0.6746    0.6129     0.6222  0.4746       0.7385 0.5385
+  C_chh_GAN    45     0.2967 0.6718    0.6452     0.6087  0.7119       0.5846 0.6562
+  C_chh_GAN    46     0.0827 0.6527    0.5806     0.5493  0.6610       0.5077 0.6000
+ C_chh_N224    42     0.1321 0.7339    0.6935     0.6438  0.7966       0.6000 0.7121
+ C_chh_N224    43     0.2173 0.6892    0.5726     0.5429  0.6441       0.5077 0.5891
+ C_chh_N224    44     0.0076 0.7254    0.6290     0.5844  0.7627       0.5077 0.6618
+ C_chh_N224    45     0.4598 0.7014    0.6452     0.5974  0.7797       0.5231 0.6765
+ C_chh_N224    46     0.0567 0.6708    0.5887     0.5465  0.7966       0.4000 0.6483
+ C_chh_N256    42     0.1339 0.7117    0.5968     0.5506  0.8305       0.3846 0.6622
+ C_chh_N256    43     0.5646 0.7145    0.6532     0.6481  0.5932       0.7077 0.6195
+ C_chh_N256    44     0.0311 0.6729    0.5887     0.5465  0.7966       0.4000 0.6483
+ C_chh_N256    45     0.1801 0.6737    0.6129     0.5753  0.7119       0.5231 0.6364
+ C_chh_N256    46     0.2539 0.6699    0.6210     0.5909  0.6610       0.5846 0.6240
+ C_last_GAN    42     0.2894 0.6883    0.6290     0.6000  0.6610       0.6000 0.6290
+ C_last_GAN    43     0.5417 0.6901    0.5887     0.5714  0.5424       0.6308 0.5565
+ C_last_GAN    44     0.2878 0.7202    0.6613     0.6133  0.7797       0.5538 0.6866
+ C_last_GAN    45     0.4007 0.7213    0.6532     0.6143  0.7288       0.5846 0.6667
+ C_last_GAN    46     0.0402 0.7110    0.6129     0.5679  0.7797       0.4615 0.6571
+C_last_N224    42     0.7432 0.7063    0.6452     0.6154  0.6780       0.6154 0.6452
+C_last_N224    43     0.1907 0.7197    0.6694     0.6452  0.6780       0.6615 0.6612
+C_last_N224    44     0.1067 0.7395    0.6290     0.5802  0.7966       0.4769 0.6714
+C_last_N224    45     0.1471 0.7274    0.6532     0.6053  0.7797       0.5385 0.6815
+C_last_N224    46     0.2878 0.7279    0.6613     0.6349  0.6780       0.6462 0.6557
+C_last_N256    42     0.2365 0.7117    0.6371     0.6029  0.6949       0.5846 0.6457
+C_last_N256    43     0.0346 0.7253    0.6371     0.5875  0.7966       0.4923 0.6763
+C_last_N256    44     0.1394 0.7246    0.5887     0.5455  0.8136       0.3846 0.6531
+C_last_N256    45     0.1251 0.7362    0.6613     0.6269  0.7119       0.6154 0.6667
+C_last_N256    46     0.3863 0.7164    0.6452     0.6056  0.7288       0.5692 0.6615
+  D_chh_GAN    42     0.2323 0.7029    0.6048     0.5781  0.6271       0.5846 0.6016
+  D_chh_GAN    43     0.4311 0.6580    0.6048     0.5926  0.5424       0.6615 0.5664
+  D_chh_GAN    44     0.4426 0.7266    0.6694     0.6406  0.6949       0.6462 0.6667
+  D_chh_GAN    45     0.3603 0.6990    0.6129     0.5873  0.6271       0.6000 0.6066
+  D_chh_GAN    46     0.1432 0.6476    0.5968     0.5570  0.7458       0.4615 0.6377
+ D_chh_N224    42     0.2451 0.7231    0.6290     0.5765  0.8305       0.4462 0.6806
+ D_chh_N224    43     0.3024 0.7134    0.6452     0.6190  0.6610       0.6308 0.6393
+ D_chh_N224    44     0.3693 0.7227    0.6532     0.6143  0.7288       0.5846 0.6667
+ D_chh_N224    45     0.4666 0.6798    0.6048     0.5833  0.5932       0.6154 0.5882
+ D_chh_N224    46     0.0511 0.6897    0.6452     0.5974  0.7797       0.5231 0.6765
+ D_chh_N256    42     0.2187 0.7023    0.6371     0.6129  0.6441       0.6308 0.6281
+ D_chh_N256    43     0.4475 0.7121    0.6290     0.6066  0.6271       0.6308 0.6167
+ D_chh_N256    44     0.2214 0.7266    0.6694     0.6125  0.8305       0.5231 0.7050
+ D_chh_N256    45     0.4467 0.6862    0.6290     0.6000  0.6610       0.6000 0.6290
+ D_chh_N256    46     0.0164 0.7104    0.6048     0.5556  0.8475       0.3846 0.6711
+ D_last_GAN    42     0.5114 0.6970    0.6371     0.6061  0.6780       0.6000 0.6400
+ D_last_GAN    43     0.6514 0.7317    0.6452     0.6027  0.7458       0.5538 0.6667
+ D_last_GAN    44     0.2838 0.6962    0.6048     0.5568  0.8305       0.4000 0.6667
+ D_last_GAN    45     0.2689 0.7228    0.5887     0.5426  0.8644       0.3385 0.6667
+ D_last_GAN    46     0.0940 0.7070    0.6210     0.5732  0.7966       0.4615 0.6667
+D_last_N224    42     0.2365 0.6909    0.5806     0.5443  0.7288       0.4462 0.6232
+D_last_N224    43     0.4997 0.7327    0.6855     0.7000  0.5932       0.7692 0.6422
+D_last_N224    44     0.4292 0.7518    0.6532     0.6081  0.7627       0.5538 0.6767
+D_last_N224    45     0.1192 0.7306    0.5968     0.5464  0.8983       0.3231 0.6795
+D_last_N224    46     0.3115 0.6917    0.6210     0.5909  0.6610       0.5846 0.6240
+D_last_N256    42     0.5569 0.7435    0.6774     0.7111  0.5424       0.8000 0.6154
+D_last_N256    43     0.3024 0.7176    0.6532     0.6053  0.7797       0.5385 0.6815
+D_last_N256    44     0.3621 0.7300    0.6210     0.5789  0.7458       0.5077 0.6519
+D_last_N256    45     0.3032 0.7356    0.6210     0.5769  0.7627       0.4923 0.6569
+D_last_N256    46     0.4467 0.7190    0.6855     0.6923  0.6102       0.7538 0.6486
+
+=== ENSEMBLE (mean of seeds), stratified bootstrap x1000, CI = estimate +/- 1.96 SD ===
+      setup      metric  n_seeds  threshold  estimate     sd  ci_lower  ci_upper
+ D_last_GAN         auc        5     0.4369    0.7246 0.0456    0.6353    0.8140
+ D_last_GAN    accuracy        5     0.4369    0.6129 0.0441    0.5265    0.6993
+ D_last_GAN   precision        5     0.4369    0.5821 0.0421    0.4996    0.6646
+ D_last_GAN      recall        5     0.4369    0.6610 0.0625    0.5385    0.7836
+ D_last_GAN specificity        5     0.4369    0.5692 0.0606    0.4505    0.6880
+ D_last_GAN          f1        5     0.4369    0.6190 0.0455    0.5299    0.7082
+  D_chh_GAN         auc        5     0.3454    0.6944 0.0469    0.6024    0.7864
+  D_chh_GAN    accuracy        5     0.3454    0.6452 0.0434    0.5600    0.7303
+  D_chh_GAN   precision        5     0.3454    0.6087 0.0416    0.5272    0.6902
+  D_chh_GAN      recall        5     0.3454    0.7119 0.0578    0.5985    0.8252
+  D_chh_GAN specificity        5     0.3454    0.5846 0.0614    0.4643    0.7049
+  D_chh_GAN          f1        5     0.3454    0.6562 0.0424    0.5732    0.7393
+D_last_N256         auc        5     0.4375    0.7421 0.0443    0.6553    0.8290
+D_last_N256    accuracy        5     0.4375    0.6694 0.0417    0.5876    0.7511
+D_last_N256   precision        5     0.4375    0.6324 0.0409    0.5521    0.7126
+D_last_N256      recall        5     0.4375    0.7288 0.0583    0.6145    0.8431
+D_last_N256 specificity        5     0.4375    0.6154 0.0602    0.4975    0.7333
+D_last_N256          f1        5     0.4375    0.6772 0.0414    0.5959    0.7584
+ D_chh_N256         auc        5     0.2428    0.7147 0.0446    0.6273    0.8021
+ D_chh_N256    accuracy        5     0.2428    0.6532 0.0414    0.5721    0.7344
+ D_chh_N256   precision        5     0.2428    0.6081 0.0371    0.5355    0.6808
+ D_chh_N256      recall        5     0.2428    0.7627 0.0545    0.6560    0.8695
+ D_chh_N256 specificity        5     0.2428    0.5538 0.0608    0.4346    0.6731
+ D_chh_N256          f1        5     0.2428    0.6767 0.0381    0.6020    0.7514
+D_last_N224         auc        5     0.3194    0.7246 0.0451    0.6363    0.8130
+D_last_N224    accuracy        5     0.3194    0.6452 0.0410    0.5648    0.7255
+D_last_N224   precision        5     0.3194    0.6027 0.0366    0.5311    0.6744
+D_last_N224      recall        5     0.3194    0.7458 0.0582    0.6318    0.8598
+D_last_N224 specificity        5     0.3194    0.5538 0.0594    0.4375    0.6702
+D_last_N224          f1        5     0.3194    0.6667 0.0394    0.5894    0.7439
+ D_chh_N224         auc        5     0.2460    0.7173 0.0441    0.6309    0.8038
+ D_chh_N224    accuracy        5     0.2460    0.6290 0.0398    0.5509    0.7071
+ D_chh_N224   precision        5     0.2460    0.5823 0.0330    0.5176    0.6470
+ D_chh_N224      recall        5     0.2460    0.7797 0.0530    0.6757    0.8836
+ D_chh_N224 specificity        5     0.2460    0.4923 0.0593    0.3761    0.6085
+ D_chh_N224          f1        5     0.2460    0.6667 0.0355    0.5971    0.7362
+ C_last_GAN         auc        5     0.3226    0.7012 0.0466    0.6098    0.7926
+ C_last_GAN    accuracy        5     0.3226    0.5806 0.0441    0.4943    0.6670
+ C_last_GAN   precision        5     0.3226    0.5522 0.0417    0.4705    0.6340
+ C_last_GAN      recall        5     0.3226    0.6271 0.0616    0.5064    0.7478
+ C_last_GAN specificity        5     0.3226    0.5385 0.0594    0.4220    0.6549
+ C_last_GAN          f1        5     0.3226    0.5873 0.0458    0.4975    0.6771
+  C_chh_GAN         auc        5     0.2932    0.6941 0.0469    0.6022    0.7860
+  C_chh_GAN    accuracy        5     0.2932    0.6210 0.0430    0.5366    0.7053
+  C_chh_GAN   precision        5     0.2932    0.6034 0.0469    0.5115    0.6954
+  C_chh_GAN      recall        5     0.2932    0.5932 0.0642    0.4674    0.7191
+  C_chh_GAN specificity        5     0.2932    0.6462 0.0574    0.5336    0.7587
+  C_chh_GAN          f1        5     0.2932    0.5983 0.0495    0.5012    0.6954
+C_last_N256         auc        5     0.2374    0.7265 0.0453    0.6378    0.8152
+C_last_N256    accuracy        5     0.2374    0.6613 0.0411    0.5808    0.7418
+C_last_N256   precision        5     0.2374    0.6349 0.0424    0.5517    0.7181
+C_last_N256      recall        5     0.2374    0.6780 0.0612    0.5580    0.7979
+C_last_N256 specificity        5     0.2374    0.6462 0.0572    0.5341    0.7583
+C_last_N256          f1        5     0.2374    0.6557 0.0441    0.5693    0.7422
+ C_chh_N256         auc        5     0.2691    0.6939 0.0465    0.6027    0.7850
+ C_chh_N256    accuracy        5     0.2691    0.6371 0.0407    0.5574    0.7168
+ C_chh_N256   precision        5     0.2691    0.6000 0.0377    0.5261    0.6739
+ C_chh_N256      recall        5     0.2691    0.7119 0.0578    0.5986    0.8252
+ C_chh_N256 specificity        5     0.2691    0.5692 0.0585    0.4547    0.6838
+ C_chh_N256          f1        5     0.2691    0.6512 0.0402    0.5724    0.7299
+C_last_N224         auc        5     0.2900    0.7283 0.0450    0.6400    0.8166
+C_last_N224    accuracy        5     0.2900    0.6532 0.0400    0.5748    0.7317
+C_last_N224   precision        5     0.2900    0.6143 0.0379    0.5401    0.6885
+C_last_N224      recall        5     0.2900    0.7288 0.0566    0.6179    0.8397
+C_last_N224 specificity        5     0.2900    0.5846 0.0585    0.4700    0.6992
+C_last_N224          f1        5     0.2900    0.6667 0.0394    0.5895    0.7438
+ C_chh_N224         auc        5     0.2154    0.7129 0.0448    0.6251    0.8008
+ C_chh_N224    accuracy        5     0.2154    0.6532 0.0406    0.5737    0.7328
+ C_chh_N224   precision        5     0.2154    0.6111 0.0372    0.5381    0.6841
+ C_chh_N224      recall        5     0.2154    0.7458 0.0556    0.6369    0.8547
+ C_chh_N224 specificity        5     0.2154    0.5692 0.0597    0.4522    0.6862
+ C_chh_N224          f1        5     0.2154    0.6718 0.0386    0.5961    0.7474
+
+=== CONFUSION COUNTS at the validation threshold (tp = pneumonia found, fn = missed, fp = false alarms, tn) ===
+      setup    level  seed  threshold  tp  fn  fp  tn
+ D_last_GAN     seed    42    0.51141  40  19  26  39
+ D_last_GAN     seed    43    0.65135  44  15  29  36
+ D_last_GAN     seed    44    0.28378  49  10  39  26
+ D_last_GAN     seed    45    0.26894  51   8  43  22
+ D_last_GAN     seed    46    0.09401  47  12  35  30
+  D_chh_GAN     seed    42    0.23231  37  22  27  38
+  D_chh_GAN     seed    43    0.43111  32  27  22  43
+  D_chh_GAN     seed    44    0.44264  41  18  23  42
+  D_chh_GAN     seed    45    0.36026  37  22  26  39
+  D_chh_GAN     seed    46    0.14319  44  15  35  30
+D_last_N256     seed    42    0.55688  32  27  13  52
+D_last_N256     seed    43    0.30239  46  13  30  35
+D_last_N256     seed    44    0.36207  44  15  32  33
+D_last_N256     seed    45    0.30322  45  14  33  32
+D_last_N256     seed    46    0.44674  36  23  16  49
+ D_chh_N256     seed    42    0.21867  38  21  24  41
+ D_chh_N256     seed    43    0.44746  37  22  24  41
+ D_chh_N256     seed    44    0.22135  49  10  31  34
+ D_chh_N256     seed    45    0.44674  39  20  26  39
+ D_chh_N256     seed    46    0.01640  50   9  40  25
+D_last_N224     seed    42    0.23652  43  16  36  29
+D_last_N224     seed    43    0.49968  35  24  15  50
+D_last_N224     seed    44    0.42919  45  14  29  36
+D_last_N224     seed    45    0.11920  53   6  44  21
+D_last_N224     seed    46    0.31153  39  20  27  38
+ D_chh_N224     seed    42    0.24509  49  10  36  29
+ D_chh_N224     seed    43    0.30239  39  20  24  41
+ D_chh_N224     seed    44    0.36932  43  16  27  38
+ D_chh_N224     seed    45    0.46660  35  24  25  40
+ D_chh_N224     seed    46    0.05108  46  13  31  34
+ C_last_GAN     seed    42    0.28937  39  20  26  39
+ C_last_GAN     seed    43    0.54165  32  27  24  41
+ C_last_GAN     seed    44    0.28777  46  13  29  36
+ C_last_GAN     seed    45    0.40075  43  16  27  38
+ C_last_GAN     seed    46    0.04024  46  13  35  30
+  C_chh_GAN     seed    42    0.14319  43  16  29  36
+  C_chh_GAN     seed    43    0.05108  40  19  32  33
+  C_chh_GAN     seed    44    0.58700  28  31  17  48
+  C_chh_GAN     seed    45    0.29665  42  17  27  38
+  C_chh_GAN     seed    46    0.08270  39  20  32  33
+C_last_N256     seed    42    0.23652  41  18  27  38
+C_last_N256     seed    43    0.03462  47  12  33  32
+C_last_N256     seed    44    0.13940  48  11  40  25
+C_last_N256     seed    45    0.12507  42  17  25  40
+C_last_N256     seed    46    0.38630  43  16  28  37
+ C_chh_N256     seed    42    0.13387  49  10  40  25
+ C_chh_N256     seed    43    0.56458  35  24  19  46
+ C_chh_N256     seed    44    0.03114  47  12  39  26
+ C_chh_N256     seed    45    0.18011  42  17  31  34
+ C_chh_N256     seed    46    0.25386  39  20  27  38
+C_last_N224     seed    42    0.74317  40  19  25  40
+C_last_N224     seed    43    0.19072  40  19  22  43
+C_last_N224     seed    44    0.10669  47  12  34  31
+C_last_N224     seed    45    0.14706  46  13  30  35
+C_last_N224     seed    46    0.28777  40  19  23  42
+ C_chh_N224     seed    42    0.13207  47  12  26  39
+ C_chh_N224     seed    43    0.21734  38  21  32  33
+ C_chh_N224     seed    44    0.00758  45  14  32  33
+ C_chh_N224     seed    45    0.45980  46  13  31  34
+ C_chh_N224     seed    46    0.05665  47  12  39  26
+ D_last_GAN ensemble    -1    0.43689  39  20  28  37
+  D_chh_GAN ensemble    -1    0.34542  42  17  27  38
+D_last_N256 ensemble    -1    0.43750  43  16  25  40
+ D_chh_N256 ensemble    -1    0.24279  45  14  29  36
+D_last_N224 ensemble    -1    0.31944  44  15  29  36
+ D_chh_N224 ensemble    -1    0.24597  46  13  33  32
+ C_last_GAN ensemble    -1    0.32258  37  22  30  35
+  C_chh_GAN ensemble    -1    0.29322  35  24  23  42
+C_last_N256 ensemble    -1    0.23736  40  19  23  42
+ C_chh_N256 ensemble    -1    0.26910  42  17  28  37
+C_last_N224 ensemble    -1    0.28998  43  16  27  38
+ C_chh_N224 ensemble    -1    0.21543  44  15  28  37
+
+Reference (descriptive only, no per-image predictions published): Chehade et al. (2025) AUC 0.8387 +/- 0.014 (mean +/- SD over ten random splits, balanced ~135-image test sets)
+
+=== DELONG (ensemble AUC, difference = first - second, Holm over 6 declared comparisons) ===
+    setup_a    setup_b  auc_a  auc_b   diff  ci_lower  ci_upper      z  p_value  p_holm  significant_holm_0.05
+ D_last_GAN  D_chh_GAN 0.7246 0.6944 0.0302   -0.0264    0.0869 1.0461   0.2955    1.00                  False
+D_last_N256 D_chh_N256 0.7421 0.7147 0.0274   -0.0264    0.0812 0.9979   0.3183    1.00                  False
+D_last_N224 D_chh_N224 0.7246 0.7173 0.0073   -0.0460    0.0606 0.2684   0.7884    1.00                  False
+ C_last_GAN  C_chh_GAN 0.7012 0.6941 0.0070   -0.0534    0.0675 0.2283   0.8194    1.00                  False
+C_last_N256 C_chh_N256 0.7265 0.6939 0.0326   -0.0098    0.0750 1.5076   0.1317    0.79                  False
+C_last_N224 C_chh_N224 0.7283 0.7129 0.0154   -0.0387    0.0695 0.5573   0.5773    1.00                  False
+
+=== ANOVA ACROSS SEEDS (training randomness; n = seeds per setup; per declared pair, Holm per metric) ===
+     metric     setup_a    setup_b  n_a  n_b  mean_a  mean_b    diff      F  p_value  eta_squared  p_holm
+        auc  D_last_GAN  D_chh_GAN    5    5  0.7110  0.6868  0.0241 2.1782   0.1782       0.2140  0.4712
+        auc D_last_N256 D_chh_N256    5    5  0.7292  0.7075  0.0216 6.8671   0.0306       0.4619  0.1531
+        auc D_last_N224 D_chh_N224    5    5  0.7195  0.7057  0.0138 0.8434   0.3853       0.0954  0.4712
+        auc  C_last_GAN  C_chh_GAN    5    5  0.7062  0.6772  0.0289 6.7867   0.0314       0.4590  0.1531
+        auc C_last_N256 C_chh_N256    5    5  0.7229  0.6885  0.0343 9.9169   0.0136       0.5535  0.0817
+        auc C_last_N224 C_chh_N224    5    5  0.7241  0.7041  0.0200 2.4376   0.1571       0.2335  0.4712
+   accuracy  D_last_GAN  D_chh_GAN    5    5  0.6194  0.6177  0.0016 0.0093   0.9255       0.0012  1.0000
+   accuracy D_last_N256 D_chh_N256    5    5  0.6516  0.6339  0.0177 1.0756   0.3300       0.1185  1.0000
+   accuracy D_last_N224 D_chh_N224    5    5  0.6274  0.6355 -0.0081 0.1497   0.7089       0.0184  1.0000
+   accuracy  C_last_GAN  C_chh_GAN    5    5  0.6290  0.6129  0.0161 0.7692   0.4060       0.0877  1.0000
+   accuracy C_last_N256 C_chh_N256    5    5  0.6339  0.6145  0.0194 1.3714   0.2753       0.1463  1.0000
+   accuracy C_last_N224 C_chh_N224    5    5  0.6516  0.6258  0.0258 1.3128   0.2850       0.1410  1.0000
+  precision  D_last_GAN  D_chh_GAN    5    5  0.5763  0.5911 -0.0149 0.6379   0.4475       0.0739  1.0000
+  precision D_last_N256 D_chh_N256    5    5  0.6329  0.5975  0.0354 1.3362   0.2811       0.1431  1.0000
+  precision D_last_N224 D_chh_N224    5    5  0.5979  0.5981 -0.0002 0.0000   0.9957       0.0000  1.0000
+  precision  C_last_GAN  C_chh_GAN    5    5  0.5934  0.5866  0.0068 0.1479   0.7105       0.0182  1.0000
+  precision C_last_N256 C_chh_N256    5    5  0.5937  0.5823  0.0114 0.2483   0.6317       0.0301  1.0000
+  precision C_last_N224 C_chh_N224    5    5  0.6162  0.5830  0.0332 2.3302   0.1654       0.2256  0.9924
+     recall  D_last_GAN  D_chh_GAN    5    5  0.7831  0.6475  0.1356 8.1218   0.0215       0.5038  0.1289
+     recall D_last_N256 D_chh_N256    5    5  0.6881  0.7220 -0.0339 0.2528   0.6286       0.0306  1.0000
+     recall D_last_N224 D_chh_N224    5    5  0.7288  0.7186  0.0102 0.0234   0.8821       0.0029  1.0000
+     recall  C_last_GAN  C_chh_GAN    5    5  0.6983  0.6508  0.0475 0.5521   0.4787       0.0646  1.0000
+     recall C_last_N256 C_chh_N256    5    5  0.7492  0.7186  0.0305 0.3812   0.5541       0.0455  1.0000
+     recall C_last_N224 C_chh_N224    5    5  0.7220  0.7559 -0.0339 0.7380   0.4153       0.0845  1.0000
+specificity  D_last_GAN  D_chh_GAN    5    5  0.4708  0.5908 -0.1200 4.0506   0.0790       0.3361  0.4737
+specificity D_last_N256 D_chh_N256    5    5  0.6185  0.5538  0.0646 0.6452   0.4450       0.0746  1.0000
+specificity D_last_N224 D_chh_N224    5    5  0.5354  0.5600 -0.0246 0.0908   0.7709       0.0112  1.0000
+specificity  C_last_GAN  C_chh_GAN    5    5  0.5662  0.5785 -0.0123 0.0571   0.8171       0.0071  1.0000
+specificity C_last_N256 C_chh_N256    5    5  0.5292  0.5200  0.0092 0.0160   0.9025       0.0020  1.0000
+specificity C_last_N224 C_chh_N224    5    5  0.5877  0.5077  0.0800 2.8644   0.1290       0.2637  0.6451
+         f1  D_last_GAN  D_chh_GAN    5    5  0.6613  0.6158  0.0456 6.5206   0.0340       0.4491  0.2039
+         f1 D_last_N256 D_chh_N256    5    5  0.6509  0.6500  0.0009 0.0019   0.9660       0.0002  1.0000
+         f1 D_last_N224 D_chh_N224    5    5  0.6491  0.6503 -0.0011 0.0029   0.9581       0.0004  1.0000
+         f1  C_last_GAN  C_chh_GAN    5    5  0.6392  0.6124  0.0268 0.7278   0.4184       0.0834  1.0000
+         f1 C_last_N256 C_chh_N256    5    5  0.6606  0.6381  0.0226 5.6861   0.0442       0.4155  0.2212
+         f1 C_last_N224 C_chh_N224    5    5  0.6630  0.6576  0.0054 0.0664   0.8032       0.0082  1.0000
+
+=== ANOVA ACROSS BOOTSTRAP RESAMPLES (test-set sampling noise; read eta-squared, resamples overlap) ===
+     metric     setup_a    setup_b         F  p_value  eta_squared  mean_a  mean_b
+        auc  D_last_GAN  D_chh_GAN  211.1167   0.0000       0.0956  0.7247  0.6946
+        auc D_last_N256 D_chh_N256  183.6073   0.0000       0.0842  0.7416  0.7147
+        auc D_last_N224 D_chh_N224   11.8067   0.0006       0.0059  0.7241  0.7172
+        auc  C_last_GAN  C_chh_GAN    9.8832   0.0017       0.0049  0.7014  0.6948
+        auc C_last_N256 C_chh_N256  240.6730   0.0000       0.1075  0.7268  0.6949
+        auc C_last_N224 C_chh_N224   56.3848   0.0000       0.0274  0.7285  0.7134
+   accuracy  D_last_GAN  D_chh_GAN  268.4492   0.0000       0.1184  0.6134  0.6455
+   accuracy D_last_N256 D_chh_N256   73.3245   0.0000       0.0354  0.6686  0.6527
+   accuracy D_last_N224 D_chh_N224   74.2162   0.0000       0.0358  0.6447  0.6291
+   accuracy  C_last_GAN  C_chh_GAN  426.0140   0.0000       0.1757  0.5804  0.6206
+   accuracy C_last_N256 C_chh_N256  156.0032   0.0000       0.0724  0.6618  0.6389
+   accuracy C_last_N224 C_chh_N224    0.0231   0.8791       0.0000  0.6531  0.6534
+  precision  D_last_GAN  D_chh_GAN  203.4345   0.0000       0.0924  0.5834  0.6100
+  precision D_last_N256 D_chh_N256  197.7757   0.0000       0.0901  0.6329  0.6084
+  precision D_last_N224 D_chh_N224  166.5875   0.0000       0.0770  0.6031  0.5830
+  precision  C_last_GAN  C_chh_GAN  667.3799   0.0000       0.2504  0.5525  0.6038
+  precision C_last_N256 C_chh_N256  355.3972   0.0000       0.1510  0.6360  0.6022
+  precision C_last_N224 C_chh_N224    3.5661   0.0591       0.0018  0.6151  0.6120
+     recall  D_last_GAN  D_chh_GAN  360.2992   0.0000       0.1528  0.6612  0.7123
+     recall D_last_N256 D_chh_N256  205.4189   0.0000       0.0932  0.7276  0.7637
+     recall D_last_N224 D_chh_N224  197.1404   0.0000       0.0898  0.7458  0.7807
+     recall  C_last_GAN  C_chh_GAN  144.5504   0.0000       0.0675  0.6269  0.5931
+     recall C_last_N256 C_chh_N256  176.6913   0.0000       0.0812  0.6800  0.7154
+     recall C_last_N224 C_chh_N224   55.2747   0.0000       0.0269  0.7287  0.7474
+specificity  D_last_GAN  D_chh_GAN   29.3858   0.0000       0.0145  0.5700  0.5848
+specificity D_last_N256 D_chh_N256  545.3180   0.0000       0.2144  0.6151  0.5519
+specificity D_last_N224 D_chh_N224  536.1367   0.0000       0.2116  0.5530  0.4915
+specificity  C_last_GAN  C_chh_GAN 1689.1414   0.0000       0.4581  0.5381  0.6455
+specificity C_last_N256 C_chh_N256  856.2991   0.0000       0.3000  0.6452  0.5695
+specificity C_last_N224 C_chh_N224   38.5260   0.0000       0.0189  0.5845  0.5681
+         f1  D_last_GAN  D_chh_GAN  362.8608   0.0000       0.1537  0.6189  0.6563
+         f1 D_last_N256 D_chh_N256    0.0893   0.7651       0.0000  0.6759  0.6765
+         f1 D_last_N224 D_chh_N224    0.2448   0.6208       0.0001  0.6660  0.6669
+         f1  C_last_GAN  C_chh_GAN   24.8491   0.0000       0.0123  0.5865  0.5971
+         f1 C_last_N256 C_chh_N256    2.6866   0.1014       0.0013  0.6561  0.6531
+         f1 C_last_N224 C_chh_N224   11.2568   0.0008       0.0056  0.6662  0.6721
+
+Files written to supplementary_test_for_downsampling/5_chehade_cbam/evaluation/our_recipe_vs_chehade
+
+===== 2026-11-23 16:54:46 | evaluation -> with_vs_without_cyclegan
+Test set: 124 images, 59 pneumonia / 65 No Finding   (subset test_balanced_124.csv)
+Declared comparisons (Holm over exactly these): D_last_GAN - D_last_N256, D_last_GAN - D_last_N224, C_last_GAN - C_last_N256, C_last_GAN - C_last_N224, D_chh_GAN - D_chh_N256, D_chh_GAN - D_chh_N224, C_chh_GAN - C_chh_N256, C_chh_GAN - C_chh_N224
+
+=== PER-SEED TEST METRICS ===
+      setup  seed  threshold    auc  accuracy  precision  recall  specificity     f1
+  C_chh_GAN    42     0.1432 0.7051    0.6371     0.5972  0.7288       0.5538 0.6565
+  C_chh_GAN    43     0.0511 0.6820    0.5887     0.5556  0.6780       0.5077 0.6107
+  C_chh_GAN    44     0.5870 0.6746    0.6129     0.6222  0.4746       0.7385 0.5385
+  C_chh_GAN    45     0.2967 0.6718    0.6452     0.6087  0.7119       0.5846 0.6562
+  C_chh_GAN    46     0.0827 0.6527    0.5806     0.5493  0.6610       0.5077 0.6000
+ C_chh_N224    42     0.1321 0.7339    0.6935     0.6438  0.7966       0.6000 0.7121
+ C_chh_N224    43     0.2173 0.6892    0.5726     0.5429  0.6441       0.5077 0.5891
+ C_chh_N224    44     0.0076 0.7254    0.6290     0.5844  0.7627       0.5077 0.6618
+ C_chh_N224    45     0.4598 0.7014    0.6452     0.5974  0.7797       0.5231 0.6765
+ C_chh_N224    46     0.0567 0.6708    0.5887     0.5465  0.7966       0.4000 0.6483
+ C_chh_N256    42     0.1339 0.7117    0.5968     0.5506  0.8305       0.3846 0.6622
+ C_chh_N256    43     0.5646 0.7145    0.6532     0.6481  0.5932       0.7077 0.6195
+ C_chh_N256    44     0.0311 0.6729    0.5887     0.5465  0.7966       0.4000 0.6483
+ C_chh_N256    45     0.1801 0.6737    0.6129     0.5753  0.7119       0.5231 0.6364
+ C_chh_N256    46     0.2539 0.6699    0.6210     0.5909  0.6610       0.5846 0.6240
+ C_last_GAN    42     0.2894 0.6883    0.6290     0.6000  0.6610       0.6000 0.6290
+ C_last_GAN    43     0.5417 0.6901    0.5887     0.5714  0.5424       0.6308 0.5565
+ C_last_GAN    44     0.2878 0.7202    0.6613     0.6133  0.7797       0.5538 0.6866
+ C_last_GAN    45     0.4007 0.7213    0.6532     0.6143  0.7288       0.5846 0.6667
+ C_last_GAN    46     0.0402 0.7110    0.6129     0.5679  0.7797       0.4615 0.6571
+C_last_N224    42     0.7432 0.7063    0.6452     0.6154  0.6780       0.6154 0.6452
+C_last_N224    43     0.1907 0.7197    0.6694     0.6452  0.6780       0.6615 0.6612
+C_last_N224    44     0.1067 0.7395    0.6290     0.5802  0.7966       0.4769 0.6714
+C_last_N224    45     0.1471 0.7274    0.6532     0.6053  0.7797       0.5385 0.6815
+C_last_N224    46     0.2878 0.7279    0.6613     0.6349  0.6780       0.6462 0.6557
+C_last_N256    42     0.2365 0.7117    0.6371     0.6029  0.6949       0.5846 0.6457
+C_last_N256    43     0.0346 0.7253    0.6371     0.5875  0.7966       0.4923 0.6763
+C_last_N256    44     0.1394 0.7246    0.5887     0.5455  0.8136       0.3846 0.6531
+C_last_N256    45     0.1251 0.7362    0.6613     0.6269  0.7119       0.6154 0.6667
+C_last_N256    46     0.3863 0.7164    0.6452     0.6056  0.7288       0.5692 0.6615
+  D_chh_GAN    42     0.2323 0.7029    0.6048     0.5781  0.6271       0.5846 0.6016
+  D_chh_GAN    43     0.4311 0.6580    0.6048     0.5926  0.5424       0.6615 0.5664
+  D_chh_GAN    44     0.4426 0.7266    0.6694     0.6406  0.6949       0.6462 0.6667
+  D_chh_GAN    45     0.3603 0.6990    0.6129     0.5873  0.6271       0.6000 0.6066
+  D_chh_GAN    46     0.1432 0.6476    0.5968     0.5570  0.7458       0.4615 0.6377
+ D_chh_N224    42     0.2451 0.7231    0.6290     0.5765  0.8305       0.4462 0.6806
+ D_chh_N224    43     0.3024 0.7134    0.6452     0.6190  0.6610       0.6308 0.6393
+ D_chh_N224    44     0.3693 0.7227    0.6532     0.6143  0.7288       0.5846 0.6667
+ D_chh_N224    45     0.4666 0.6798    0.6048     0.5833  0.5932       0.6154 0.5882
+ D_chh_N224    46     0.0511 0.6897    0.6452     0.5974  0.7797       0.5231 0.6765
+ D_chh_N256    42     0.2187 0.7023    0.6371     0.6129  0.6441       0.6308 0.6281
+ D_chh_N256    43     0.4475 0.7121    0.6290     0.6066  0.6271       0.6308 0.6167
+ D_chh_N256    44     0.2214 0.7266    0.6694     0.6125  0.8305       0.5231 0.7050
+ D_chh_N256    45     0.4467 0.6862    0.6290     0.6000  0.6610       0.6000 0.6290
+ D_chh_N256    46     0.0164 0.7104    0.6048     0.5556  0.8475       0.3846 0.6711
+ D_last_GAN    42     0.5114 0.6970    0.6371     0.6061  0.6780       0.6000 0.6400
+ D_last_GAN    43     0.6514 0.7317    0.6452     0.6027  0.7458       0.5538 0.6667
+ D_last_GAN    44     0.2838 0.6962    0.6048     0.5568  0.8305       0.4000 0.6667
+ D_last_GAN    45     0.2689 0.7228    0.5887     0.5426  0.8644       0.3385 0.6667
+ D_last_GAN    46     0.0940 0.7070    0.6210     0.5732  0.7966       0.4615 0.6667
+D_last_N224    42     0.2365 0.6909    0.5806     0.5443  0.7288       0.4462 0.6232
+D_last_N224    43     0.4997 0.7327    0.6855     0.7000  0.5932       0.7692 0.6422
+D_last_N224    44     0.4292 0.7518    0.6532     0.6081  0.7627       0.5538 0.6767
+D_last_N224    45     0.1192 0.7306    0.5968     0.5464  0.8983       0.3231 0.6795
+D_last_N224    46     0.3115 0.6917    0.6210     0.5909  0.6610       0.5846 0.6240
+D_last_N256    42     0.5569 0.7435    0.6774     0.7111  0.5424       0.8000 0.6154
+D_last_N256    43     0.3024 0.7176    0.6532     0.6053  0.7797       0.5385 0.6815
+D_last_N256    44     0.3621 0.7300    0.6210     0.5789  0.7458       0.5077 0.6519
+D_last_N256    45     0.3032 0.7356    0.6210     0.5769  0.7627       0.4923 0.6569
+D_last_N256    46     0.4467 0.7190    0.6855     0.6923  0.6102       0.7538 0.6486
+
+=== ENSEMBLE (mean of seeds), stratified bootstrap x1000, CI = estimate +/- 1.96 SD ===
+      setup      metric  n_seeds  threshold  estimate     sd  ci_lower  ci_upper
+ D_last_GAN         auc        5     0.4369    0.7246 0.0456    0.6353    0.8140
+ D_last_GAN    accuracy        5     0.4369    0.6129 0.0441    0.5265    0.6993
+ D_last_GAN   precision        5     0.4369    0.5821 0.0421    0.4996    0.6646
+ D_last_GAN      recall        5     0.4369    0.6610 0.0625    0.5385    0.7836
+ D_last_GAN specificity        5     0.4369    0.5692 0.0606    0.4505    0.6880
+ D_last_GAN          f1        5     0.4369    0.6190 0.0455    0.5299    0.7082
+D_last_N256         auc        5     0.4375    0.7421 0.0443    0.6553    0.8290
+D_last_N256    accuracy        5     0.4375    0.6694 0.0417    0.5876    0.7511
+D_last_N256   precision        5     0.4375    0.6324 0.0409    0.5521    0.7126
+D_last_N256      recall        5     0.4375    0.7288 0.0583    0.6145    0.8431
+D_last_N256 specificity        5     0.4375    0.6154 0.0602    0.4975    0.7333
+D_last_N256          f1        5     0.4375    0.6772 0.0414    0.5959    0.7584
+D_last_N224         auc        5     0.3194    0.7246 0.0451    0.6363    0.8130
+D_last_N224    accuracy        5     0.3194    0.6452 0.0410    0.5648    0.7255
+D_last_N224   precision        5     0.3194    0.6027 0.0366    0.5311    0.6744
+D_last_N224      recall        5     0.3194    0.7458 0.0582    0.6318    0.8598
+D_last_N224 specificity        5     0.3194    0.5538 0.0594    0.4375    0.6702
+D_last_N224          f1        5     0.3194    0.6667 0.0394    0.5894    0.7439
+ C_last_GAN         auc        5     0.3226    0.7012 0.0466    0.6098    0.7926
+ C_last_GAN    accuracy        5     0.3226    0.5806 0.0441    0.4943    0.6670
+ C_last_GAN   precision        5     0.3226    0.5522 0.0417    0.4705    0.6340
+ C_last_GAN      recall        5     0.3226    0.6271 0.0616    0.5064    0.7478
+ C_last_GAN specificity        5     0.3226    0.5385 0.0594    0.4220    0.6549
+ C_last_GAN          f1        5     0.3226    0.5873 0.0458    0.4975    0.6771
+C_last_N256         auc        5     0.2374    0.7265 0.0453    0.6378    0.8152
+C_last_N256    accuracy        5     0.2374    0.6613 0.0411    0.5808    0.7418
+C_last_N256   precision        5     0.2374    0.6349 0.0424    0.5517    0.7181
+C_last_N256      recall        5     0.2374    0.6780 0.0612    0.5580    0.7979
+C_last_N256 specificity        5     0.2374    0.6462 0.0572    0.5341    0.7583
+C_last_N256          f1        5     0.2374    0.6557 0.0441    0.5693    0.7422
+C_last_N224         auc        5     0.2900    0.7283 0.0450    0.6400    0.8166
+C_last_N224    accuracy        5     0.2900    0.6532 0.0400    0.5748    0.7317
+C_last_N224   precision        5     0.2900    0.6143 0.0379    0.5401    0.6885
+C_last_N224      recall        5     0.2900    0.7288 0.0566    0.6179    0.8397
+C_last_N224 specificity        5     0.2900    0.5846 0.0585    0.4700    0.6992
+C_last_N224          f1        5     0.2900    0.6667 0.0394    0.5895    0.7438
+  D_chh_GAN         auc        5     0.3454    0.6944 0.0469    0.6024    0.7864
+  D_chh_GAN    accuracy        5     0.3454    0.6452 0.0434    0.5600    0.7303
+  D_chh_GAN   precision        5     0.3454    0.6087 0.0416    0.5272    0.6902
+  D_chh_GAN      recall        5     0.3454    0.7119 0.0578    0.5985    0.8252
+  D_chh_GAN specificity        5     0.3454    0.5846 0.0614    0.4643    0.7049
+  D_chh_GAN          f1        5     0.3454    0.6562 0.0424    0.5732    0.7393
+ D_chh_N256         auc        5     0.2428    0.7147 0.0446    0.6273    0.8021
+ D_chh_N256    accuracy        5     0.2428    0.6532 0.0414    0.5721    0.7344
+ D_chh_N256   precision        5     0.2428    0.6081 0.0371    0.5355    0.6808
+ D_chh_N256      recall        5     0.2428    0.7627 0.0545    0.6560    0.8695
+ D_chh_N256 specificity        5     0.2428    0.5538 0.0608    0.4346    0.6731
+ D_chh_N256          f1        5     0.2428    0.6767 0.0381    0.6020    0.7514
+ D_chh_N224         auc        5     0.2460    0.7173 0.0441    0.6309    0.8038
+ D_chh_N224    accuracy        5     0.2460    0.6290 0.0398    0.5509    0.7071
+ D_chh_N224   precision        5     0.2460    0.5823 0.0330    0.5176    0.6470
+ D_chh_N224      recall        5     0.2460    0.7797 0.0530    0.6757    0.8836
+ D_chh_N224 specificity        5     0.2460    0.4923 0.0593    0.3761    0.6085
+ D_chh_N224          f1        5     0.2460    0.6667 0.0355    0.5971    0.7362
+  C_chh_GAN         auc        5     0.2932    0.6941 0.0469    0.6022    0.7860
+  C_chh_GAN    accuracy        5     0.2932    0.6210 0.0430    0.5366    0.7053
+  C_chh_GAN   precision        5     0.2932    0.6034 0.0469    0.5115    0.6954
+  C_chh_GAN      recall        5     0.2932    0.5932 0.0642    0.4674    0.7191
+  C_chh_GAN specificity        5     0.2932    0.6462 0.0574    0.5336    0.7587
+  C_chh_GAN          f1        5     0.2932    0.5983 0.0495    0.5012    0.6954
+ C_chh_N256         auc        5     0.2691    0.6939 0.0465    0.6027    0.7850
+ C_chh_N256    accuracy        5     0.2691    0.6371 0.0407    0.5574    0.7168
+ C_chh_N256   precision        5     0.2691    0.6000 0.0377    0.5261    0.6739
+ C_chh_N256      recall        5     0.2691    0.7119 0.0578    0.5986    0.8252
+ C_chh_N256 specificity        5     0.2691    0.5692 0.0585    0.4547    0.6838
+ C_chh_N256          f1        5     0.2691    0.6512 0.0402    0.5724    0.7299
+ C_chh_N224         auc        5     0.2154    0.7129 0.0448    0.6251    0.8008
+ C_chh_N224    accuracy        5     0.2154    0.6532 0.0406    0.5737    0.7328
+ C_chh_N224   precision        5     0.2154    0.6111 0.0372    0.5381    0.6841
+ C_chh_N224      recall        5     0.2154    0.7458 0.0556    0.6369    0.8547
+ C_chh_N224 specificity        5     0.2154    0.5692 0.0597    0.4522    0.6862
+ C_chh_N224          f1        5     0.2154    0.6718 0.0386    0.5961    0.7474
+
+=== CONFUSION COUNTS at the validation threshold (tp = pneumonia found, fn = missed, fp = false alarms, tn) ===
+      setup    level  seed  threshold  tp  fn  fp  tn
+ D_last_GAN     seed    42    0.51141  40  19  26  39
+ D_last_GAN     seed    43    0.65135  44  15  29  36
+ D_last_GAN     seed    44    0.28378  49  10  39  26
+ D_last_GAN     seed    45    0.26894  51   8  43  22
+ D_last_GAN     seed    46    0.09401  47  12  35  30
+D_last_N256     seed    42    0.55688  32  27  13  52
+D_last_N256     seed    43    0.30239  46  13  30  35
+D_last_N256     seed    44    0.36207  44  15  32  33
+D_last_N256     seed    45    0.30322  45  14  33  32
+D_last_N256     seed    46    0.44674  36  23  16  49
+D_last_N224     seed    42    0.23652  43  16  36  29
+D_last_N224     seed    43    0.49968  35  24  15  50
+D_last_N224     seed    44    0.42919  45  14  29  36
+D_last_N224     seed    45    0.11920  53   6  44  21
+D_last_N224     seed    46    0.31153  39  20  27  38
+ C_last_GAN     seed    42    0.28937  39  20  26  39
+ C_last_GAN     seed    43    0.54165  32  27  24  41
+ C_last_GAN     seed    44    0.28777  46  13  29  36
+ C_last_GAN     seed    45    0.40075  43  16  27  38
+ C_last_GAN     seed    46    0.04024  46  13  35  30
+C_last_N256     seed    42    0.23652  41  18  27  38
+C_last_N256     seed    43    0.03462  47  12  33  32
+C_last_N256     seed    44    0.13940  48  11  40  25
+C_last_N256     seed    45    0.12507  42  17  25  40
+C_last_N256     seed    46    0.38630  43  16  28  37
+C_last_N224     seed    42    0.74317  40  19  25  40
+C_last_N224     seed    43    0.19072  40  19  22  43
+C_last_N224     seed    44    0.10669  47  12  34  31
+C_last_N224     seed    45    0.14706  46  13  30  35
+C_last_N224     seed    46    0.28777  40  19  23  42
+  D_chh_GAN     seed    42    0.23231  37  22  27  38
+  D_chh_GAN     seed    43    0.43111  32  27  22  43
+  D_chh_GAN     seed    44    0.44264  41  18  23  42
+  D_chh_GAN     seed    45    0.36026  37  22  26  39
+  D_chh_GAN     seed    46    0.14319  44  15  35  30
+ D_chh_N256     seed    42    0.21867  38  21  24  41
+ D_chh_N256     seed    43    0.44746  37  22  24  41
+ D_chh_N256     seed    44    0.22135  49  10  31  34
+ D_chh_N256     seed    45    0.44674  39  20  26  39
+ D_chh_N256     seed    46    0.01640  50   9  40  25
+ D_chh_N224     seed    42    0.24509  49  10  36  29
+ D_chh_N224     seed    43    0.30239  39  20  24  41
+ D_chh_N224     seed    44    0.36932  43  16  27  38
+ D_chh_N224     seed    45    0.46660  35  24  25  40
+ D_chh_N224     seed    46    0.05108  46  13  31  34
+  C_chh_GAN     seed    42    0.14319  43  16  29  36
+  C_chh_GAN     seed    43    0.05108  40  19  32  33
+  C_chh_GAN     seed    44    0.58700  28  31  17  48
+  C_chh_GAN     seed    45    0.29665  42  17  27  38
+  C_chh_GAN     seed    46    0.08270  39  20  32  33
+ C_chh_N256     seed    42    0.13387  49  10  40  25
+ C_chh_N256     seed    43    0.56458  35  24  19  46
+ C_chh_N256     seed    44    0.03114  47  12  39  26
+ C_chh_N256     seed    45    0.18011  42  17  31  34
+ C_chh_N256     seed    46    0.25386  39  20  27  38
+ C_chh_N224     seed    42    0.13207  47  12  26  39
+ C_chh_N224     seed    43    0.21734  38  21  32  33
+ C_chh_N224     seed    44    0.00758  45  14  32  33
+ C_chh_N224     seed    45    0.45980  46  13  31  34
+ C_chh_N224     seed    46    0.05665  47  12  39  26
+ D_last_GAN ensemble    -1    0.43689  39  20  28  37
+D_last_N256 ensemble    -1    0.43750  43  16  25  40
+D_last_N224 ensemble    -1    0.31944  44  15  29  36
+ C_last_GAN ensemble    -1    0.32258  37  22  30  35
+C_last_N256 ensemble    -1    0.23736  40  19  23  42
+C_last_N224 ensemble    -1    0.28998  43  16  27  38
+  D_chh_GAN ensemble    -1    0.34542  42  17  27  38
+ D_chh_N256 ensemble    -1    0.24279  45  14  29  36
+ D_chh_N224 ensemble    -1    0.24597  46  13  33  32
+  C_chh_GAN ensemble    -1    0.29322  35  24  23  42
+ C_chh_N256 ensemble    -1    0.26910  42  17  28  37
+ C_chh_N224 ensemble    -1    0.21543  44  15  28  37
+
+Reference (descriptive only, no per-image predictions published): Chehade et al. (2025) AUC 0.8387 +/- 0.014 (mean +/- SD over ten random splits, balanced ~135-image test sets)
+
+=== DELONG (ensemble AUC, difference = first - second, Holm over 8 declared comparisons) ===
+   setup_a     setup_b  auc_a  auc_b    diff  ci_lower  ci_upper       z  p_value  p_holm  significant_holm_0.05
+D_last_GAN D_last_N256 0.7246 0.7421 -0.0175   -0.0587    0.0238 -0.8300   0.4065     1.0                  False
+D_last_GAN D_last_N224 0.7246 0.7246  0.0000   -0.0418    0.0418  0.0000   1.0000     1.0                  False
+C_last_GAN C_last_N256 0.7012 0.7265 -0.0253   -0.0632    0.0126 -1.3078   0.1910     1.0                  False
+C_last_GAN C_last_N224 0.7012 0.7283 -0.0271   -0.0693    0.0151 -1.2602   0.2076     1.0                  False
+ D_chh_GAN  D_chh_N256 0.6944 0.7147 -0.0203   -0.0584    0.0177 -1.0467   0.2953     1.0                  False
+ D_chh_GAN  D_chh_N224 0.6944 0.7173 -0.0229   -0.0626    0.0167 -1.1335   0.2570     1.0                  False
+ C_chh_GAN  C_chh_N256 0.6941 0.6939  0.0003   -0.0416    0.0421  0.0122   0.9903     1.0                  False
+ C_chh_GAN  C_chh_N224 0.6941 0.7129 -0.0188   -0.0630    0.0255 -0.8314   0.4058     1.0                  False
+
+=== ANOVA ACROSS SEEDS (training randomness; n = seeds per setup; per declared pair, Holm per metric) ===
+     metric    setup_a     setup_b  n_a  n_b  mean_a  mean_b    diff      F  p_value  eta_squared  p_holm
+        auc D_last_GAN D_last_N256    5    5  0.7110  0.7292 -0.0182 4.4687   0.0675       0.3584  0.5397
+        auc D_last_GAN D_last_N224    5    5  0.7110  0.7195 -0.0086 0.3744   0.5576       0.0447  0.9433
+        auc C_last_GAN C_last_N256    5    5  0.7062  0.7229 -0.0167 4.0492   0.0790       0.3361  0.5530
+        auc C_last_GAN C_last_N224    5    5  0.7062  0.7241 -0.0180 3.9799   0.0811       0.3322  0.5530
+        auc  D_chh_GAN  D_chh_N256    5    5  0.6868  0.7075 -0.0207 1.6429   0.2358       0.1704  0.9433
+        auc  D_chh_GAN  D_chh_N224    5    5  0.6868  0.7057 -0.0189 1.2080   0.3037       0.1312  0.9433
+        auc  C_chh_GAN  C_chh_N256    5    5  0.6772  0.6885 -0.0113 0.7363   0.4158       0.0843  0.9433
+        auc  C_chh_GAN  C_chh_N224    5    5  0.6772  0.7041 -0.0269 3.5157   0.0976       0.3053  0.5530
+   accuracy D_last_GAN D_last_N256    5    5  0.6194  0.6516 -0.0323 3.5714   0.0955       0.3086  0.7636
+   accuracy D_last_GAN D_last_N224    5    5  0.6194  0.6274 -0.0081 0.1393   0.7187       0.0171  1.0000
+   accuracy C_last_GAN C_last_N256    5    5  0.6290  0.6339 -0.0048 0.0726   0.7944       0.0090  1.0000
+   accuracy C_last_GAN C_last_N224    5    5  0.6290  0.6516 -0.0226 2.2791   0.1696       0.2217  1.0000
+   accuracy  D_chh_GAN  D_chh_N256    5    5  0.6177  0.6339 -0.0161 0.9259   0.3641       0.1037  1.0000
+   accuracy  D_chh_GAN  D_chh_N224    5    5  0.6177  0.6355 -0.0177 1.2737   0.2918       0.1373  1.0000
+   accuracy  C_chh_GAN  C_chh_N256    5    5  0.6129  0.6145 -0.0016 0.0090   0.9267       0.0011  1.0000
+   accuracy  C_chh_GAN  C_chh_N224    5    5  0.6129  0.6258 -0.0129 0.2678   0.6188       0.0324  1.0000
+  precision D_last_GAN D_last_N256    5    5  0.5763  0.6329 -0.0566 3.2793   0.1077       0.2907  0.8620
+  precision D_last_GAN D_last_N224    5    5  0.5763  0.5979 -0.0217 0.4889   0.5042       0.0576  1.0000
+  precision C_last_GAN C_last_N256    5    5  0.5934  0.5937 -0.0003 0.0003   0.9868       0.0000  1.0000
+  precision C_last_GAN C_last_N224    5    5  0.5934  0.6162 -0.0228 2.2553   0.1716       0.2199  1.0000
+  precision  D_chh_GAN  D_chh_N256    5    5  0.5911  0.5975 -0.0064 0.1333   0.7245       0.0164  1.0000
+  precision  D_chh_GAN  D_chh_N224    5    5  0.5911  0.5981 -0.0070 0.1881   0.6760       0.0230  1.0000
+  precision  C_chh_GAN  C_chh_N256    5    5  0.5866  0.5823  0.0043 0.0338   0.8588       0.0042  1.0000
+  precision  C_chh_GAN  C_chh_N224    5    5  0.5866  0.5830  0.0036 0.0233   0.8824       0.0029  1.0000
+     recall D_last_GAN D_last_N256    5    5  0.7831  0.6881  0.0949 2.7270   0.1373       0.2542  0.9609
+     recall D_last_GAN D_last_N224    5    5  0.7831  0.7288  0.0542 0.7913   0.3997       0.0900  1.0000
+     recall C_last_GAN C_last_N256    5    5  0.6983  0.7492 -0.0508 1.0135   0.3435       0.1124  1.0000
+     recall C_last_GAN C_last_N224    5    5  0.6983  0.7220 -0.0237 0.2063   0.6617       0.0251  1.0000
+     recall  D_chh_GAN  D_chh_N256    5    5  0.6475  0.7220 -0.0746 1.5869   0.2433       0.1655  1.0000
+     recall  D_chh_GAN  D_chh_N224    5    5  0.6475  0.7186 -0.0712 1.7126   0.2270       0.1763  1.0000
+     recall  C_chh_GAN  C_chh_N256    5    5  0.6508  0.7186 -0.0678 1.1577   0.3133       0.1264  1.0000
+     recall  C_chh_GAN  C_chh_N224    5    5  0.6508  0.7559 -0.1051 3.7984   0.0871       0.3219  0.6971
+specificity D_last_GAN D_last_N256    5    5  0.4708  0.6185 -0.1477 3.3032   0.1067       0.2922  0.8533
+specificity D_last_GAN D_last_N224    5    5  0.4708  0.5354 -0.0646 0.5329   0.4862       0.0625  1.0000
+specificity C_last_GAN C_last_N256    5    5  0.5662  0.5292  0.0369 0.5333   0.4860       0.0625  1.0000
+specificity C_last_GAN C_last_N224    5    5  0.5662  0.5877 -0.0215 0.2258   0.6474       0.0275  1.0000
+specificity  D_chh_GAN  D_chh_N256    5    5  0.5908  0.5538  0.0369 0.3983   0.5456       0.0474  1.0000
+specificity  D_chh_GAN  D_chh_N224    5    5  0.5908  0.5600  0.0308 0.3953   0.5471       0.0471  1.0000
+specificity  C_chh_GAN  C_chh_N256    5    5  0.5785  0.5200  0.0585 0.6306   0.4501       0.0731  1.0000
+specificity  C_chh_GAN  C_chh_N224    5    5  0.5785  0.5077  0.0708 1.7692   0.2201       0.1811  1.0000
+         f1 D_last_GAN D_last_N256    5    5  0.6613  0.6509  0.0105 0.7813   0.4025       0.0890  1.0000
+         f1 D_last_GAN D_last_N224    5    5  0.6613  0.6491  0.0122 0.8289   0.3892       0.0939  1.0000
+         f1 C_last_GAN C_last_N256    5    5  0.6392  0.6606 -0.0215 0.8506   0.3834       0.0961  1.0000
+         f1 C_last_GAN C_last_N224    5    5  0.6392  0.6630 -0.0238 1.0262   0.3407       0.1137  1.0000
+         f1  D_chh_GAN  D_chh_N256    5    5  0.6158  0.6500 -0.0342 2.0715   0.1880       0.2057  1.0000
+         f1  D_chh_GAN  D_chh_N224    5    5  0.6158  0.6503 -0.0345 2.0427   0.1908       0.2034  1.0000
+         f1  C_chh_GAN  C_chh_N256    5    5  0.6124  0.6381 -0.0257 1.2298   0.2997       0.1332  1.0000
+         f1  C_chh_GAN  C_chh_N224    5    5  0.6124  0.6576 -0.0452 2.3183   0.1664       0.2247  1.0000
+
+=== ANOVA ACROSS BOOTSTRAP RESAMPLES (test-set sampling noise; read eta-squared, resamples overlap) ===
+     metric    setup_a     setup_b         F  p_value  eta_squared  mean_a  mean_b
+        auc D_last_GAN D_last_N256   70.8277   0.0000       0.0342  0.7247  0.7416
+        auc D_last_GAN D_last_N224    0.0938   0.7594       0.0000  0.7247  0.7241
+        auc C_last_GAN C_last_N256  152.9499   0.0000       0.0711  0.7014  0.7268
+        auc C_last_GAN C_last_N224  175.2990   0.0000       0.0807  0.7014  0.7285
+        auc  D_chh_GAN  D_chh_N256   95.8715   0.0000       0.0458  0.6946  0.7147
+        auc  D_chh_GAN  D_chh_N224  122.9818   0.0000       0.0580  0.6946  0.7172
+        auc  C_chh_GAN  C_chh_N256    0.0058   0.9393       0.0000  0.6948  0.6949
+        auc  C_chh_GAN  C_chh_N224   82.5222   0.0000       0.0397  0.6948  0.7134
+   accuracy D_last_GAN D_last_N256  827.0794   0.0000       0.2928  0.6134  0.6686
+   accuracy D_last_GAN D_last_N224  270.0238   0.0000       0.1191  0.6134  0.6447
+   accuracy C_last_GAN C_last_N256 1825.8614   0.0000       0.4775  0.5804  0.6618
+   accuracy C_last_GAN C_last_N224 1493.0367   0.0000       0.4277  0.5804  0.6531
+   accuracy  D_chh_GAN  D_chh_N256   14.3969   0.0002       0.0072  0.6455  0.6527
+   accuracy  D_chh_GAN  D_chh_N224   77.0416   0.0000       0.0371  0.6455  0.6291
+   accuracy  C_chh_GAN  C_chh_N256   96.1664   0.0000       0.0459  0.6206  0.6389
+   accuracy  C_chh_GAN  C_chh_N224  307.7233   0.0000       0.1335  0.6206  0.6534
+  precision D_last_GAN D_last_N256  713.0536   0.0000       0.2630  0.5834  0.6329
+  precision D_last_GAN D_last_N224  125.1894   0.0000       0.0590  0.5834  0.6031
+  precision C_last_GAN C_last_N256 1972.5060   0.0000       0.4968  0.5525  0.6360
+  precision C_last_GAN C_last_N224 1237.5394   0.0000       0.3825  0.5525  0.6151
+  precision  D_chh_GAN  D_chh_N256    0.8947   0.3443       0.0004  0.6100  0.6084
+  precision  D_chh_GAN  D_chh_N224  259.8532   0.0000       0.1151  0.6100  0.5830
+  precision  C_chh_GAN  C_chh_N256    0.6729   0.4121       0.0003  0.6038  0.6022
+  precision  C_chh_GAN  C_chh_N224   18.7624   0.0000       0.0093  0.6038  0.6120
+     recall D_last_GAN D_last_N256  602.5562   0.0000       0.2317  0.6612  0.7276
+     recall D_last_GAN D_last_N224  980.9654   0.0000       0.3293  0.6612  0.7458
+     recall C_last_GAN C_last_N256  373.4465   0.0000       0.1575  0.6269  0.6800
+     recall C_last_GAN C_last_N224 1481.2617   0.0000       0.4257  0.6269  0.7287
+     recall  D_chh_GAN  D_chh_N256  419.0731   0.0000       0.1734  0.7123  0.7637
+     recall  D_chh_GAN  D_chh_N224  760.0905   0.0000       0.2756  0.7123  0.7807
+     recall  C_chh_GAN  C_chh_N256 2003.2976   0.0000       0.5007  0.5931  0.7154
+     recall  C_chh_GAN  C_chh_N224 3300.6736   0.0000       0.6229  0.5931  0.7474
+specificity D_last_GAN D_last_N256  278.1547   0.0000       0.1222  0.5700  0.6151
+specificity D_last_GAN D_last_N224   40.6037   0.0000       0.0199  0.5700  0.5530
+specificity C_last_GAN C_last_N256 1686.3341   0.0000       0.4577  0.5381  0.6452
+specificity C_last_GAN C_last_N224  309.3993   0.0000       0.1341  0.5381  0.5845
+specificity  D_chh_GAN  D_chh_N256  145.2515   0.0000       0.0678  0.5848  0.5519
+specificity  D_chh_GAN  D_chh_N224 1195.5752   0.0000       0.3744  0.5848  0.4915
+specificity  C_chh_GAN  C_chh_N256  859.6090   0.0000       0.3008  0.6455  0.5695
+specificity  C_chh_GAN  C_chh_N224  873.8897   0.0000       0.3043  0.6455  0.5681
+         f1 D_last_GAN D_last_N256  860.6932   0.0000       0.3011  0.6189  0.6759
+         f1 D_last_GAN D_last_N224  614.0919   0.0000       0.2351  0.6189  0.6660
+         f1 C_last_GAN C_last_N256 1199.7996   0.0000       0.3752  0.5865  0.6561
+         f1 C_last_GAN C_last_N224 1743.0086   0.0000       0.4659  0.5865  0.6662
+         f1  D_chh_GAN  D_chh_N256  125.1144   0.0000       0.0589  0.6563  0.6765
+         f1  D_chh_GAN  D_chh_N224   36.3456   0.0000       0.0179  0.6563  0.6669
+         f1  C_chh_GAN  C_chh_N256  768.9862   0.0000       0.2779  0.5971  0.6531
+         f1  C_chh_GAN  C_chh_N224 1425.2894   0.0000       0.4164  0.5971  0.6721
+
+Files written to supplementary_test_for_downsampling/5_chehade_cbam/evaluation/with_vs_without_cyclegan
+
+===== 2026-11-23 16:54:51 | DONE
