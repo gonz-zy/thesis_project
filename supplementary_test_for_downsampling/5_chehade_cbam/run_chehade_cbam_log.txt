@@ -1,2 +1,29 @@
 
 ===== 2026-11-23 13:29:52 | Chehade recipe | densenet | cyclegan | seeds 42-46
+
+===== 2026-11-23 13:35:21 | Chehade recipe | convnext | cyclegan | seeds 42-46
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+===== 2026-11-23 13:40:57 | Chehade recipe | densenet | nocyclegan_1024_to_256_to_224 | seeds 42-46
+
+===== 2026-11-23 13:46:13 | Chehade recipe | convnext | nocyclegan_1024_to_256_to_224 | seeds 42-46
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+===== 2026-11-23 13:51:42 | Chehade recipe | densenet | nocyclegan_1024_to_224 | seeds 42-46
+
+===== 2026-11-23 13:57:06 | Chehade recipe | convnext | nocyclegan_1024_to_224 | seeds 42-46
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+===== 2026-11-23 14:02:44 | our recipe, CBAM last | s2_densenet121 | cyclegan | search + seeds 42-46

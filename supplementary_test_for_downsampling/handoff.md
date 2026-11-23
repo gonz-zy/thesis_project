@@ -10,8 +10,8 @@ Main-study reference (CycleGAN, CBAM after every block): **Setup 2 DenseNet 0.72
 |---|---|---|
 | 1 | Corrected K-Means (new clustering + new CycleGAN) | done |
 | 2 | Without CycleGAN (two resize paths) | done |
-| 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | running |
-| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | queued |
+| 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | done |
+| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (0 of 6) |
 | 3c | Chehade CBAM — comparisons | queued |
 
 ---
@@ -48,3 +48,33 @@ exact S2/S4B path (clean images byte-identical to the main study, artifact image
   this means the CycleGAN cleaning step contributes nothing measurable in our pipeline — the opposite of Chehade's
   +3.98 points (their Table 2). The resize path does not matter. Thesis sentence: "An ablation without CycleGAN gave
   the same test AUC (DenseNet 0.725 vs 0.725; ConvNeXt 0.748 vs 0.735; DeLong p >= 0.50)."
+
+## 3a. Full Chehade classifier (folder `5_chehade_cbam/full_chehade_classifier/`, finished 14:02)
+**What:** Chehade et al.'s classifier recipe as written in their Sec. 3.6: ImageNet backbone with the lower layers
+frozen (assumption: everything before the last block), one CBAM on the last block, dense 1024 -> 512 + dropout 0.5,
+clinical values joined before the output, Adam with a fixed lr 1e-4 (no search), plain BCE, inputs in [0, 1],
+patience 5; seeds 42-46. Same 487 / 65 / 124 images. (Ensemble numbers below were computed from the finished runs;
+the script's own `evaluation/` folders are written at the end of the whole test.)
+
+| Test AUC (95% CI) | CycleGAN | No CycleGAN 1024->256->224 | No CycleGAN 1024->224 |
+|---|---|---|---|
+| DenseNet-121, Chehade recipe | 0.694 (0.602-0.786) | 0.715 (0.627-0.802) | 0.717 (0.631-0.804) |
+| ConvNeXt V2, Chehade recipe | 0.694 (0.602-0.786) | 0.694 (0.603-0.785) | 0.713 (0.625-0.801) |
+| *Our recipe, CBAM everywhere (reference)* | *D 0.725 / C 0.735* | *D 0.713 / C 0.728* | *D 0.725 / C 0.748* |
+
+- DenseNet vs ConvNeXt (Chehade recipe): DeLong p = 0.99 / 0.50 / 0.89 — tied in every image set.
+- Our recipe vs Chehade recipe (CycleGAN images): DenseNet 0.725 vs 0.694 (DeLong p = 0.30), ConvNeXt 0.735 vs 0.694
+  (p = 0.16). Seed ANOVA on AUC: DenseNet p = 0.27; **ConvNeXt 0.727 vs 0.677, p = 0.0016 (Holm 0.011)** — the only
+  significant result here: per seed, our recipe is better for ConvNeXt.
+- With vs without CycleGAN (Chehade recipe): DenseNet 0.694 vs 0.715 (p = 0.30), ConvNeXt 0.694 vs 0.694 (p = 0.99).
+- Training: best epoch 2-19 (median ~8); training Pneumonia recall reaches ~0.90 by epoch 9 while validation AUC peaks
+  around epoch 4 (DenseNet seed 42), so freezing the lower layers slows the overfitting but does not stop it.
+  Validation AUCs are 0.69-0.76 (vs 0.81-0.84 in our searched runs), and the validation-to-test drop is smaller
+  (~0.03 vs ~0.09-0.13) because there is no search picking the luckiest settings on the 65 images.
+
+**Analysis:** reproducing Chehade's classifier recipe does **not** bring us closer to their 0.8387; it is slightly
+worse than our recipe (0.69-0.72 vs 0.71-0.75), significantly so per seed for ConvNeXt. So the gap to Chehade is not
+explained by our fine-tuning choices (full fine-tuning, CBAM everywhere, tuned lr). The CycleGAN again adds nothing.
+The remaining explanations are outside the classifier: their split (image-level, 10 random splits; ours is one fixed
+patient-level split), their test-set size and variance (their SD 1.4% is unusually small for ~135-image test sets),
+and details they do not report. Next: 3b separates the effect of CBAM placement alone.
