@@ -80,3 +80,33 @@ Translation change (341 artifact images): centre MAE 5.3 grey levels (original 4
 The corrected clustering agrees slightly better with the manual marks, but it does not change the downstream results:
 cleaning still does not make the artifact and clean groups alike, AUC moves by at most 0.012, and DenseNet-121 and
 ConvNeXt V2 remain tied (~0.74). The bottleneck is the 487 / 65 / 124 sample size, not the clustering.
+
+---
+
+# Supplementary test 2: without CycleGAN (run 2026-11-23, 11:32-13:28; log `run_no_cyclegan_log.txt`)
+DenseNet-121 + CBAM and ConvNeXt V2-Tiny + CBAM (CBAM after every block) on the **untranslated** 676 images, same recipe
+as Setups 2 / 4B (20-trial search seed 100, seeds 42-46, 487 / 65 / 124). Two image paths, each in its own folder;
+augmentation is applied on the fly to the 224 training images, as in every setup. Images: `make_images_no_cyclegan.py`;
+everything: `run_no_cyclegan.sh`.
+
+| Folder | Image path |
+|---|---|
+| `5_no_cyclegan_1024_to_224/` | equalized 1024 -> 224 (one resize) |
+| `5_no_cyclegan_1024_to_256_to_224/` | equalized 1024 -> Setup 3's 256 file -> 224 = the S2/S4B path; all 371 clean images are byte-identical to the main study's, artifact images skip the CycleGAN |
+
+Test AUC, 124 images, five-seed ensemble (95% CI); main-study runs with CycleGAN for reference:
+
+| | With CycleGAN (main study) | No CycleGAN, 1024->224 | No CycleGAN, 1024->256->224 |
+|---|---|---|---|
+| DenseNet-121 + CBAM | 0.725 (0.635-0.814) | 0.725 (0.638-0.812) | 0.713 (0.620-0.806) |
+| ConvNeXt V2 + CBAM | 0.735 (0.648-0.822) | 0.748 (0.662-0.833) | 0.728 (0.639-0.817) |
+
+- **With vs without CycleGAN** (DeLong, Holm over the two networks): 1024->224 p = 0.97 (DenseNet), 0.50 (ConvNeXt);
+  1024->256->224 p = 0.64, 0.69 (all adjusted p = 1.0). Seed ANOVA on AUC: all p >= 0.76.
+- **DenseNet vs ConvNeXt without CycleGAN:** p = 0.26 (1024->224), 0.47 (1024->256->224); seed ANOVA p = 0.28, 0.12.
+- Search optimum: 1024->224 DenseNet lr 1.45e-4 / floor 0.10 (val 0.806), ConvNeXt 5.38e-5 / 0.22 (0.769);
+  1024->256->224 DenseNet 1.16e-4 / 0.49 (0.821), ConvNeXt 4.24e-5 / 0.42 (0.772).
+
+**Conclusion:** removing the CycleGAN changes test AUC by at most 0.013, in either direction, for both networks and
+both image paths. The cleaning step adds nothing measurable, which agrees with the KID check (cleaning made the
+artifact and clean groups less alike). The resize path (one step or through 256) does not matter either.

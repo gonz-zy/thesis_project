@@ -1,0 +1,18 @@
+{
+  "setups": {
+    "S2noGAN": "supplementary_test_for_downsampling/5_no_cyclegan_1024_to_224/s2_densenet121_nocyclegan/output/run_B/final/cbam_all",
+    "S4BnoGAN": "supplementary_test_for_downsampling/5_no_cyclegan_1024_to_224/s4_convnextv2_nocyclegan/output/run_B/final/cbam_all"
+  },
+  "pairs": [
+    [
+      "S2noGAN",
+      "S4BnoGAN"
+    ]
+  ],
+  "declared": true,
+  "subset": "3_downsampling_branch/output/labels/test_balanced_124.csv",
+  "n_test": 124,
+  "n_pos": 59,
+  "boot": 1000,
+  "boot_seed": 42
+}

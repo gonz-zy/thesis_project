@@ -1,0 +1,24 @@
+{
+  "setups": {
+    "S2": "5_training_and_classification/s2_densenet121_cyclegan/output/run_B/final/cbam_all",
+    "S2noGAN": "supplementary_test_for_downsampling/5_no_cyclegan_1024_to_256_to_224/s2_densenet121_nocyclegan/output/run_B/final/cbam_all",
+    "S4B": "5_training_and_classification/s4_convnextv2_cyclegan/output/run_B/final/cbam_all",
+    "S4BnoGAN": "supplementary_test_for_downsampling/5_no_cyclegan_1024_to_256_to_224/s4_convnextv2_nocyclegan/output/run_B/final/cbam_all"
+  },
+  "pairs": [
+    [
+      "S2",
+      "S2noGAN"
+    ],
+    [
+      "S4B",
+      "S4BnoGAN"
+    ]
+  ],
+  "declared": true,
+  "subset": "3_downsampling_branch/output/labels/test_balanced_124.csv",
+  "n_test": 124,
+  "n_pos": 59,
+  "boot": 1000,
+  "boot_seed": 42
+}
