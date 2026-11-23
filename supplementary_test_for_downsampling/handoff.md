@@ -11,7 +11,7 @@ Main-study reference (CycleGAN, CBAM after every block): **Setup 2 DenseNet 0.72
 | 1 | Corrected K-Means (new clustering + new CycleGAN) | done |
 | 2 | Without CycleGAN (two resize paths) | done |
 | 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | done |
-| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (4 of 6 done) |
+| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (5 of 6 done) |
 | 3c | Chehade CBAM — comparisons | queued |
 
 ---
@@ -159,3 +159,20 @@ search on these images (the search seed 100 draws the same 5 start-up trials eve
 better than Chehade's frozen-backbone recipe for ConvNeXt (now significant per seed in two image sets). A frozen
 backbone suits DenseNet better than ConvNeXt, plausibly because ConvNeXt's ImageNet features need more adaptation to
 grey-scale X-rays.
+
+## 3b-5. CBAM last, our recipe — DenseNet-121, no CycleGAN (1024->224) (finished 16:23)
+**What:** DenseNet with one CBAM after the last block, untranslated images resized 1024->224 in one step. Search
+optimum lr 1.80e-4, floor 0.16; best top-3 validation AUC 0.785 (trial 17, 0 diverged).
+
+| DenseNet-121, no CycleGAN (1024->224) | CBAM after every block | CBAM last only | Full Chehade recipe |
+|---|---|---|---|
+| Test AUC (95% CI) | 0.725 (0.638-0.812) | 0.725 (0.636-0.813) | 0.717 (0.631-0.804) |
+| Mean AUC of the 5 seeds | 0.701 | 0.720 | 0.706 |
+| Accuracy / recall / specificity | 0.645 / 0.797 / 0.508 | 0.645 / 0.746 / 0.554 | 0.629 / 0.780 / 0.492 |
+
+- CBAM everywhere vs CBAM last: 0.725 vs 0.725, DeLong p = 0.96; seed ANOVA p = 0.39.
+- CBAM last vs full Chehade recipe: 0.725 vs 0.717, DeLong p = 0.79; seed ANOVA p = 0.39.
+- Per seed: test 0.69-0.75, validation 0.75-0.82 (drop ~0.07).
+
+**Analysis:** no difference anywhere: CBAM placement, recipe, and (vs 3b-1, CycleGAN images 0.725) the CycleGAN —
+all three DenseNet CBAM-last runs land at 0.725-0.742.

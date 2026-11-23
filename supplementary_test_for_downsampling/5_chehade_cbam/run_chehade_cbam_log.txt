@@ -35,3 +35,5 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 ===== 2026-11-23 15:29:11 | our recipe, CBAM last | s4_convnextv2 | nocyclegan_1024_to_256_to_224 | search + seeds 42-46
 
 ===== 2026-11-23 15:59:03 | our recipe, CBAM last | s2_densenet121 | nocyclegan_1024_to_224 | search + seeds 42-46
+
+===== 2026-11-23 16:23:15 | our recipe, CBAM last | s4_convnextv2 | nocyclegan_1024_to_224 | search + seeds 42-46
