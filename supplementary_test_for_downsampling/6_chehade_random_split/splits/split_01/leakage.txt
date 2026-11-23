@@ -1,0 +1,4 @@
+patients: 639 | with images in more than one part: 10
+  test images whose patient also has a train image: 7 (7 patients)
+  validation images whose patient also has a train image: 4 (4 patients)
+  test images whose patient also has a validation image: 1 (1 patients)

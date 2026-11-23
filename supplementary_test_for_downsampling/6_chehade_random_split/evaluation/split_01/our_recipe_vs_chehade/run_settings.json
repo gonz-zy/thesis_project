@@ -1,0 +1,36 @@
+{
+  "setups": {
+    "D_ours_GAN": "supplementary_test_for_downsampling/6_chehade_random_split/our_recipe/s2_densenet121/output/split_01/cyclegan/run_B/final/cbam_all",
+    "D_chh_GAN": "supplementary_test_for_downsampling/6_chehade_random_split/chehade_recipe/s2_densenet121/output/split_01/cyclegan/run_B/final/cbam_last",
+    "C_ours_GAN": "supplementary_test_for_downsampling/6_chehade_random_split/our_recipe/s4_convnextv2/output/split_01/cyclegan/run_B/final/cbam_all",
+    "C_chh_GAN": "supplementary_test_for_downsampling/6_chehade_random_split/chehade_recipe/s4_convnextv2/output/split_01/cyclegan/run_B/final/cbam_last",
+    "D_ours_N224": "supplementary_test_for_downsampling/6_chehade_random_split/our_recipe/s2_densenet121/output/split_01/nocyclegan_1024_to_224/run_B/final/cbam_all",
+    "D_chh_N224": "supplementary_test_for_downsampling/6_chehade_random_split/chehade_recipe/s2_densenet121/output/split_01/nocyclegan_1024_to_224/run_B/final/cbam_last",
+    "C_ours_N224": "supplementary_test_for_downsampling/6_chehade_random_split/our_recipe/s4_convnextv2/output/split_01/nocyclegan_1024_to_224/run_B/final/cbam_all",
+    "C_chh_N224": "supplementary_test_for_downsampling/6_chehade_random_split/chehade_recipe/s4_convnextv2/output/split_01/nocyclegan_1024_to_224/run_B/final/cbam_last"
+  },
+  "pairs": [
+    [
+      "D_ours_GAN",
+      "D_chh_GAN"
+    ],
+    [
+      "C_ours_GAN",
+      "C_chh_GAN"
+    ],
+    [
+      "D_ours_N224",
+      "D_chh_N224"
+    ],
+    [
+      "C_ours_N224",
+      "C_chh_N224"
+    ]
+  ],
+  "declared": true,
+  "subset": "supplementary_test_for_downsampling/6_chehade_random_split/splits/split_01/test_images.csv",
+  "n_test": 135,
+  "n_pos": 64,
+  "boot": 1000,
+  "boot_seed": 42
+}

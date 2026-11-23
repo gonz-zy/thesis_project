@@ -1,0 +1,9 @@
+{
+  "mean": 0.4872123060598514,
+  "std": 0.29741342271016047,
+  "n": 474,
+  "n_pixels": 23783424,
+  "std_of_image_means": 0.018170341396163803,
+  "source_csv": "C:\\Users\\Admin\\Documents\\Developments\\thesis_project\\supplementary_test_for_downsampling\\6_chehade_random_split\\splits\\split_01\\manifest_cyclegan.csv",
+  "split": "train"
+}

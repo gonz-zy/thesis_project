@@ -13,6 +13,7 @@ Main-study reference (CycleGAN, CBAM after every block): **Setup 2 DenseNet 0.72
 | 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | done |
 | 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | done |
 | 3c | Chehade CBAM — comparisons | done (16:54) |
+| 4-1 | Chehade-style random image-level split 1 (70/20/10, patients ignored), 2 image sets x 2 networks x 2 recipes | done (22:30) |
 
 ---
 
@@ -237,3 +238,45 @@ It is a consistent direction (our recipe is higher in all 6 pairs: +0.008 to +0.
    feature, lung-mask and CycleGAN settings, and their unusually small reported SD (1.4% over ~135-image test sets).
 
 Possible next step (not run): Chehade's ten random splits (patient-level, 70/10/20), ~10-11 h — see the chat notes.
+
+---
+
+## 4-1. Chehade-style random split, split 1 (folder `6_chehade_random_split/`, finished ~22:30)
+**What:** one random IMAGE-level split of the same 676 images, 70 / 10 / 20 stratified by class, patients ignored
+(seed 1): **474 train / 67 validation / 135 test** (test 64 Pneumonia + 71 No Finding). The original K-Means and the
+main-study CycleGAN images are reused (both were fitted on all 676 images, so they do not depend on the split; same
+leakage as the main study). Two image sets (CycleGAN, no CycleGAN 1024->224) x two networks x two recipes
+(**ours** = CBAM after every block, 20-trial search, seeds 42-46; **chh** = Chehade's frozen-backbone classifier,
+CBAM last, fixed lr 1e-4, seeds 42-46). Normalization statistics come from the new 474 training images.
+**Leakage in this split:** 10 of 639 patients have images in more than one part (7 test images share a patient with a
+training image, 4 validation images with training, 1 test image with validation); see `splits/split_01/leakage.txt`.
+Evaluated on the 135 test images (five-seed ensemble, Youden threshold on the 67 validation images), folder
+`evaluation/split_01/`.
+
+**Ensemble test AUC (95% bootstrap CI), split 1 (n = 135) vs the patient-level 124-image test set:**
+
+| | Images | Split 1, ours | Split 1, Chehade | Patient-level, ours | Patient-level, Chehade |
+|---|---|---|---|---|---|
+| DenseNet | CycleGAN | 0.755 (0.673-0.838) | 0.782 (0.705-0.859) | 0.725 | 0.694 |
+| DenseNet | no CycleGAN | 0.766 (0.686-0.846) | 0.796 (0.722-0.870) | 0.725 | 0.717 |
+| ConvNeXt | CycleGAN | 0.775 (0.697-0.853) | 0.738 (0.651-0.826) | 0.735 | 0.694 |
+| ConvNeXt | no CycleGAN | 0.789 (0.713-0.864) | 0.765 (0.682-0.849) | 0.748 | 0.713 |
+
+**DeLong + Holm (within each family of 2 or 4 pairs): nothing is significant.**
+- DenseNet vs ConvNeXt, ours: diff -0.020 / -0.023, Holm p = 0.73. Chehade: +0.044 / +0.031, Holm p = 0.35.
+- With vs without CycleGAN: no CycleGAN is higher in all 4 pairs by 0.011-0.027, Holm p = 1.0.
+- Ours vs Chehade: the sign depends on the network (DenseNet: Chehade +0.027 / +0.030; ConvNeXt: ours +0.037 /
+  +0.023), Holm p = 1.0. Seed ANOVA on AUC: DenseNet Chehade > ours (p = 0.020 / 0.024, Holm 0.081 / 0.081
+  for the two DenseNet pairs), ConvNeXt no difference (Holm 0.38 / 0.83).
+
+**Analysis:**
+1. **Every combination scores higher than on the patient-level test set** (+0.03 to +0.09; the largest gain is
+   Chehade's DenseNet, 0.694 -> 0.782). The best value, 0.796, is still below Chehade's 0.8387.
+2. **The 7 shared-patient test images are too few to explain this**, so the more likely cause is that this random
+   test set is easier or differently composed than the fixed patient-level one. One split cannot separate that from
+   luck; the remaining 9 splits are needed (Chehade report mean +- SD over 10).
+3. **The conclusions of the patient-level tests hold on this split:** no CycleGAN is never worse; the two networks
+   are tied; the two recipes are tied (no consistent winner). Single-split CIs are about +-0.08 wide.
+4. Chehade's classifier has a higher recall and lower specificity than ours on the CycleGAN images (recall 0.88 vs
+   0.77 for DenseNet), i.e. its Youden threshold (0.24) sits lower; thresholds differ more between recipes than
+   AUC does.

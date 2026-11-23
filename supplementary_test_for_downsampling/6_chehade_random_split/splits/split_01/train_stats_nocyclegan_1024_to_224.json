@@ -1,0 +1,9 @@
+{
+  "mean": 0.48860699277814484,
+  "std": 0.29498473396177355,
+  "n": 474,
+  "n_pixels": 23783424,
+  "std_of_image_means": 0.028210759972086392,
+  "source_csv": "C:\\Users\\Admin\\Documents\\Developments\\thesis_project\\supplementary_test_for_downsampling\\6_chehade_random_split\\splits\\split_01\\manifest_nocyclegan_1024_to_224.csv",
+  "split": "train"
+}
