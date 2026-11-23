@@ -11,7 +11,7 @@ Main-study reference (CycleGAN, CBAM after every block): **Setup 2 DenseNet 0.72
 | 1 | Corrected K-Means (new clustering + new CycleGAN) | done |
 | 2 | Without CycleGAN (two resize paths) | done |
 | 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | done |
-| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (1 of 6 done) |
+| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (2 of 6 done) |
 | 3c | Chehade CBAM — comparisons | queued |
 
 ---
@@ -100,3 +100,22 @@ validation AUC 0.828, trial 8, 0 diverged).
 
 **Analysis:** where the CBAM sits makes no difference for DenseNet (0.725 either way). The CBAM placement is not why
 our results differ from Chehade's, and their placement is not better than ours.
+
+## 3b-2. CBAM last, our recipe — ConvNeXt V2, CycleGAN images (finished 15:00)
+**What:** identical to Setup 4B except for one CBAM after the last stage. Search optimum lr 1.66e-4 (higher than
+Setup 4B's), floor 0.05; best top-3 validation AUC 0.839 (trial 17, 0 diverged).
+
+| ConvNeXt V2, CycleGAN images | CBAM after every stage (Setup 4B) | CBAM last only | Full Chehade recipe |
+|---|---|---|---|
+| Test AUC (95% CI) | 0.735 (0.648-0.822) | 0.701 (0.610-0.793) | 0.694 (0.602-0.786) |
+| Mean AUC of the 5 seeds | 0.727 | 0.706 | 0.677 |
+| Accuracy / recall / specificity | 0.677 / 0.678 / 0.677 | 0.581 / 0.627 / 0.538 | 0.621 / 0.593 / 0.646 |
+
+- CBAM everywhere vs CBAM last: 0.735 vs 0.701, DeLong p = 0.15 (Holm 0.31); seed ANOVA p = 0.064.
+- CBAM last vs full Chehade recipe: 0.701 vs 0.694, DeLong p = 0.82; seed ANOVA p = 0.46.
+- Per seed: validation 0.78-0.82 vs test 0.69-0.72 (drop ~0.09). Domain check: training Pneumonia recall 0.82-0.93
+  on artifact vs 0.63-0.88 on clean images.
+
+**Analysis:** for ConvNeXt, one CBAM at the end is a little worse than a CBAM after every stage (-0.034), but not
+significantly. Together with 3b-1 (DenseNet: no change), Chehade's CBAM placement does not help either network; if
+anything our placement is slightly better for ConvNeXt.
