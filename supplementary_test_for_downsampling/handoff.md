@@ -11,7 +11,7 @@ Main-study reference (CycleGAN, CBAM after every block): **Setup 2 DenseNet 0.72
 | 1 | Corrected K-Means (new clustering + new CycleGAN) | done |
 | 2 | Without CycleGAN (two resize paths) | done |
 | 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | done |
-| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (2 of 6 done) |
+| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (3 of 6 done) |
 | 3c | Chehade CBAM — comparisons | queued |
 
 ---
@@ -119,3 +119,22 @@ Setup 4B's), floor 0.05; best top-3 validation AUC 0.839 (trial 17, 0 diverged).
 **Analysis:** for ConvNeXt, one CBAM at the end is a little worse than a CBAM after every stage (-0.034), but not
 significantly. Together with 3b-1 (DenseNet: no change), Chehade's CBAM placement does not help either network; if
 anything our placement is slightly better for ConvNeXt.
+
+## 3b-3. CBAM last, our recipe — DenseNet-121, no CycleGAN (1024->256->224) (finished 15:29)
+**What:** DenseNet with one CBAM after the last block, untranslated images (clean images identical to the main study).
+Search optimum lr 2.36e-5 (low), floor 0.39; best top-3 validation AUC 0.781 (trial 10, 0 diverged).
+
+| DenseNet-121, no CycleGAN (1024->256->224) | CBAM after every block | CBAM last only | Full Chehade recipe |
+|---|---|---|---|
+| Test AUC (95% CI) | 0.713 (0.620-0.806) | 0.742 (0.655-0.829) | 0.715 (0.627-0.802) |
+| Mean AUC of the 5 seeds | 0.703 | 0.729 | 0.708 |
+| Accuracy / recall / specificity | 0.540 / 0.780 / 0.323 | 0.669 / 0.729 / 0.615 | 0.653 / 0.763 / 0.554 |
+
+- CBAM everywhere vs CBAM last: 0.713 vs 0.742, DeLong p = 0.090 (Holm 0.18); seed ANOVA p = 0.30.
+- CBAM last vs full Chehade recipe: 0.742 vs 0.715, DeLong p = 0.32; seed ANOVA p = 0.46.
+- Per seed: test 0.72-0.74 (the most stable set so far); validation 0.75-0.79, so the validation-to-test drop is only
+  ~0.04 — the low learning rate gave longer runs (best epoch 12-23) and less selection optimism than in 3b-1 / 3b-2.
+
+**Analysis:** the highest DenseNet AUC so far (0.742), but within noise of every other DenseNet run (0.69-0.74). Here
+CBAM-last is slightly better than CBAM-everywhere, while for ConvNeXt on CycleGAN images (3b-2) it was slightly worse:
+the CBAM placement effect changes sign between runs and is never significant — it is noise around ~0.72.
