@@ -11,7 +11,7 @@ Main-study reference (CycleGAN, CBAM after every block): **Setup 2 DenseNet 0.72
 | 1 | Corrected K-Means (new clustering + new CycleGAN) | done |
 | 2 | Without CycleGAN (two resize paths) | done |
 | 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | done |
-| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (3 of 6 done) |
+| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (4 of 6 done) |
 | 3c | Chehade CBAM — comparisons | queued |
 
 ---
@@ -138,3 +138,24 @@ Search optimum lr 2.36e-5 (low), floor 0.39; best top-3 validation AUC 0.781 (tr
 **Analysis:** the highest DenseNet AUC so far (0.742), but within noise of every other DenseNet run (0.69-0.74). Here
 CBAM-last is slightly better than CBAM-everywhere, while for ConvNeXt on CycleGAN images (3b-2) it was slightly worse:
 the CBAM placement effect changes sign between runs and is never significant — it is noise around ~0.72.
+
+## 3b-4. CBAM last, our recipe — ConvNeXt V2, no CycleGAN (1024->256->224) (finished 15:59)
+**What:** ConvNeXt with one CBAM after the last stage, untranslated images. Search optimum lr 4.24e-5, floor 0.42
+(best top-3 validation AUC 0.802). Note: this is random start-up trial 1, the same settings that won the CBAM-everywhere
+search on these images (the search seed 100 draws the same 5 start-up trials every time).
+
+| ConvNeXt V2, no CycleGAN (1024->256->224) | CBAM after every stage | CBAM last only | Full Chehade recipe |
+|---|---|---|---|
+| Test AUC (95% CI) | 0.728 (0.639-0.817) | 0.726 (0.638-0.815) | 0.694 (0.603-0.785) |
+| Mean AUC of the 5 seeds | 0.729 | 0.723 | 0.689 |
+| Accuracy / recall / specificity | 0.637 / 0.678 / 0.600 | 0.661 / 0.678 / 0.646 | 0.637 / 0.712 / 0.569 |
+
+- CBAM everywhere vs CBAM last: 0.728 vs 0.726, DeLong p = 0.88; seed ANOVA p = 0.47.
+- CBAM last vs full Chehade recipe: 0.726 vs 0.694, DeLong p = 0.13; **seed ANOVA 0.723 vs 0.689, p = 0.014
+  (Holm 0.027)** — per seed our recipe beats Chehade's again (as for ConvNeXt in 3a).
+- Per seed: test 0.71-0.74, validation 0.75-0.80 (drop ~0.06).
+
+**Analysis:** CBAM placement: no difference (0.728 vs 0.726). Recipe: our full fine-tuning with a searched lr is
+better than Chehade's frozen-backbone recipe for ConvNeXt (now significant per seed in two image sets). A frozen
+backbone suits DenseNet better than ConvNeXt, plausibly because ConvNeXt's ImageNet features need more adaptation to
+grey-scale X-rays.
