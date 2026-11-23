@@ -1,0 +1,5 @@
+2026-11-23 14:24:06 | run=B | cbam=last | seed=42 | ok | 1.1 min
+2026-11-23 14:25:17 | run=B | cbam=last | seed=43 | ok | 1.2 min
+2026-11-23 14:26:24 | run=B | cbam=last | seed=44 | ok | 1.1 min
+2026-11-23 14:27:29 | run=B | cbam=last | seed=45 | ok | 1.1 min
+2026-11-23 14:28:38 | run=B | cbam=last | seed=46 | ok | 1.1 min

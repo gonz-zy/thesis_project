@@ -11,7 +11,7 @@ Main-study reference (CycleGAN, CBAM after every block): **Setup 2 DenseNet 0.72
 | 1 | Corrected K-Means (new clustering + new CycleGAN) | done |
 | 2 | Without CycleGAN (two resize paths) | done |
 | 3a | Chehade CBAM — full Chehade classifier recipe (3 image sets x 2 networks) | done |
-| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (0 of 6) |
+| 3b | Chehade CBAM — CBAM last, our recipe (3 image sets x 2 networks) | running (1 of 6 done) |
 | 3c | Chehade CBAM — comparisons | queued |
 
 ---
@@ -78,3 +78,25 @@ explained by our fine-tuning choices (full fine-tuning, CBAM everywhere, tuned l
 The remaining explanations are outside the classifier: their split (image-level, 10 random splits; ours is one fixed
 patient-level split), their test-set size and variance (their SD 1.4% is unusually small for ~135-image test sets),
 and details they do not report. Next: 3b separates the effect of CBAM placement alone.
+
+## 3b-1. CBAM last, our recipe — DenseNet-121, CycleGAN images (finished 14:28)
+**What:** identical to Setup 2 (CycleGAN images, full fine-tuning, 20-trial search, seeds 42-46) except that there is
+only **one CBAM, after the last dense block** (as Chehade). Search optimum lr 1.17e-4, floor 0.38 (best top-3
+validation AUC 0.828, trial 8, 0 diverged).
+
+| DenseNet-121, CycleGAN images | CBAM after every block (Setup 2) | CBAM last only | Full Chehade recipe |
+|---|---|---|---|
+| Test AUC (95% CI) | 0.725 (0.635-0.814) | 0.725 (0.635-0.814) | 0.694 (0.602-0.786) |
+| Mean AUC of the 5 seeds | 0.706 | 0.711 | 0.687 |
+| Accuracy / recall / specificity | 0.573 / 0.814 / 0.354 | 0.613 / 0.661 / 0.569 | 0.645 / 0.712 / 0.585 |
+| Threshold (from validation) | 0.217 | 0.437 | 0.345 |
+
+- CBAM everywhere vs CBAM last: identical ensemble AUC (both rank exactly 2,779 of the 3,835 Pneumonia / No Finding
+  pairs correctly; the predictions themselves differ, see the thresholds and seed means). DeLong p = 1.0; seed ANOVA
+  p = 0.65.
+- CBAM last (our recipe) vs full Chehade recipe: 0.725 vs 0.694, DeLong p = 0.30, seed ANOVA p = 0.18.
+- Per seed: best epoch 5-10, validation 0.80-0.86 vs test 0.70-0.73 (the same ~0.11 validation-to-test drop as
+  Setup 2). Domain check: training Pneumonia recall 0.86-0.94 on artifact images vs 0.65-0.82 on clean ones.
+
+**Analysis:** where the CBAM sits makes no difference for DenseNet (0.725 either way). The CBAM placement is not why
+our results differ from Chehade's, and their placement is not better than ours.
