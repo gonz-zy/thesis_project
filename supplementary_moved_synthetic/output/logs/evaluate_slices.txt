@@ -1,0 +1,52 @@
+C:\Users\Admin\Documents\Developments\thesis_project\venv\Scripts\python.exe 6_testing_and_validation\evaluate.py --setup S1=supplementary_moved_synthetic\output\s1\final\cbam_all --setup S3=supplementary_moved_synthetic\output\s3\final\cbam_all --pair S1=S3 --boot 1000 --out supplementary_moved_synthetic\output\evaluation\a_mixed
+C:\Users\Admin\Documents\Developments\thesis_project\venv\Scripts\python.exe 6_testing_and_validation\evaluate.py --setup S1=supplementary_moved_synthetic\output\s1\final\cbam_all --setup S3=supplementary_moved_synthetic\output\s3\final\cbam_all --pair S1=S3 --boot 1000 --out supplementary_moved_synthetic\output\evaluation\b_real_only --subset supplementary_moved_synthetic\output\manifests\slice_b_real_only.csv
+C:\Users\Admin\Documents\Developments\thesis_project\venv\Scripts\python.exe 6_testing_and_validation\evaluate.py --setup S1=supplementary_moved_synthetic\output\s1\final\cbam_all --setup S3=supplementary_moved_synthetic\output\s3\final\cbam_all --pair S1=S3 --boot 1000 --out supplementary_moved_synthetic\output\evaluation\c_synthetic_only --subset supplementary_moved_synthetic\output\manifests\slice_c_synthetic_only.csv
+setup_a setup_b  auc_a  auc_b    diff  ci_lower  ci_upper       z  p_value  p_holm  significant_holm_0.05            slice  p_holm_over_slices
+     S1      S3 0.9975 0.9978 -0.0003   -0.0007    0.0001 -1.4840   0.1378  0.1378                  False          a_mixed              0.4012
+     S1      S3 0.6449 0.6900 -0.0451   -0.1040    0.0138 -1.4996   0.1337  0.1337                  False      b_real_only              0.4012
+     S1      S3 1.0000 1.0000  0.0000    0.0000    0.0000  0.0000   1.0000  1.0000                  False c_synthetic_only              1.0000
+                                0      1      2      3      4         5      6      7      8      9      10        11
+setup                           S1     S1     S1     S1     S1        S1     S3     S3     S3     S3     S3        S3
+seed                            42     43     44     45     46  ensemble     42     43     44     45     46  ensemble
+best_epoch                     2.0    6.0    3.0    4.0    4.0       NaN   13.0   12.0   11.0    6.0   12.0       NaN
+epochs_run                     7.0   11.0    8.0    9.0    9.0       NaN   15.0   15.0   15.0   11.0   15.0       NaN
+best_val_auc                 0.998  0.997  0.997  0.998  0.998       NaN  0.997  0.997  0.997  0.997  0.997       NaN
+train_recall_real_pn_t05     0.004  0.004  0.004  0.015  0.004       NaN  0.004  0.007    0.0    0.0  0.007       NaN
+train_recall_synth_pn_t05      1.0    1.0    1.0    1.0    1.0       NaN    1.0    1.0    1.0    1.0    1.0       NaN
+train_acc_nf_t05             0.999    1.0    1.0  0.999  0.999       NaN    1.0    1.0    1.0    1.0    1.0       NaN
+val_recall_real_pn_t05         0.0    0.0    0.0    0.0    0.0       NaN    0.0    0.0    0.0    0.0    0.0       NaN
+val_recall_synth_pn_t05        1.0    1.0    1.0    1.0    1.0       NaN    1.0    1.0    1.0    1.0    1.0       NaN
+val_spec_nf_t05                1.0    1.0    1.0    1.0    1.0       NaN    1.0    1.0    1.0    1.0    1.0       NaN
+val_recall_real_pn_tseed       0.0    0.0    0.0    0.0    0.0       NaN    0.0    0.0    0.0    0.0    0.0       NaN
+val_recall_synth_pn_tseed      1.0    1.0    1.0    1.0    1.0       NaN  0.998    1.0    1.0    1.0    1.0       NaN
+val_spec_nf_tseed              1.0    1.0    1.0    1.0    1.0       NaN    1.0    1.0    1.0    1.0    1.0       NaN
+test_recall_real_pn_t05        0.0    0.0    0.0    0.0    0.0       NaN    0.0    0.0    0.0    0.0    0.0       NaN
+test_recall_synth_pn_t05       1.0    1.0    1.0    1.0    1.0       NaN    1.0    1.0    1.0    1.0    1.0       NaN
+test_spec_nf_t05               1.0    1.0    1.0    1.0    1.0       NaN    1.0    1.0    1.0    1.0    1.0       NaN
+test_recall_real_pn_tseed      0.0    0.0    0.0    0.0    0.0       NaN    0.0    0.0    0.0    0.0    0.0       NaN
+test_recall_synth_pn_tseed     1.0    1.0    1.0    1.0    1.0       NaN  0.997  0.999    1.0    1.0  0.999       NaN
+test_spec_nf_tseed             1.0    1.0    1.0    1.0    1.0       NaN    1.0    1.0    1.0    1.0    1.0       NaN
+val_recall_real_pn_tens        NaN    NaN    NaN    NaN    NaN       0.0    NaN    NaN    NaN    NaN    NaN       0.0
+val_recall_synth_pn_tens       NaN    NaN    NaN    NaN    NaN       1.0    NaN    NaN    NaN    NaN    NaN       1.0
+val_spec_nf_tens               NaN    NaN    NaN    NaN    NaN       1.0    NaN    NaN    NaN    NaN    NaN       1.0
+val_auc_real_pn_vs_nf          NaN    NaN    NaN    NaN    NaN     0.698    NaN    NaN    NaN    NaN    NaN     0.628
+val_auc_synthetic_pn_vs_nf     NaN    NaN    NaN    NaN    NaN       1.0    NaN    NaN    NaN    NaN    NaN       1.0
+test_recall_real_pn_tens       NaN    NaN    NaN    NaN    NaN       0.0    NaN    NaN    NaN    NaN    NaN       0.0
+test_recall_synth_pn_tens      NaN    NaN    NaN    NaN    NaN       1.0    NaN    NaN    NaN    NaN    NaN       1.0
+test_spec_nf_tens              NaN    NaN    NaN    NaN    NaN       1.0    NaN    NaN    NaN    NaN    NaN       1.0
+test_auc_real_pn_vs_nf         NaN    NaN    NaN    NaN    NaN     0.645    NaN    NaN    NaN    NaN    NaN      0.69
+test_auc_synthetic_pn_vs_nf    NaN    NaN    NaN    NaN    NaN       1.0    NaN    NaN    NaN    NaN    NaN       1.0
+ensemble_threshold             NaN    NaN    NaN    NaN    NaN     0.684    NaN    NaN    NaN    NaN    NaN     0.982
+setup      metric  estimate_main  ci_lower_main  ci_upper_main  threshold_main  estimate_moved  ci_lower_moved  ci_upper_moved  threshold_moved  diff_moved_minus_main
+   S1         auc         0.6533         0.5836         0.7229          0.0040          0.6449          0.5730          0.7167           0.6835                -0.0084
+   S1    accuracy         0.7195         0.7116         0.7275          0.0040          0.9952          0.9952          0.9952           0.6835                 0.2756
+   S1   precision         0.0096         0.0074         0.0118          0.0040          0.0000          0.0000          0.0000           0.6835                -0.0096
+   S1      recall         0.5593         0.4297         0.6890          0.0040          0.0000          0.0000          0.0000           0.6835                -0.5593
+   S1 specificity         0.7203         0.7123         0.7283          0.0040          1.0000          1.0000          1.0000           0.6835                 0.2797
+   S1          f1         0.0188         0.0145         0.0232          0.0040          0.0000          0.0000          0.0000           0.6835                -0.0188
+   S3         auc         0.6907         0.6136         0.7678          0.0031          0.6900          0.6107          0.7692           0.9824                -0.0007
+   S3    accuracy         0.7564         0.7487         0.7641          0.0031          0.9952          0.9952          0.9952           0.9824                 0.2388
+   S3   precision         0.0110         0.0084         0.0137          0.0031          0.0000          0.0000          0.0000           0.9824                -0.0110
+   S3      recall         0.5593         0.4257         0.6929          0.0031          0.0000          0.0000          0.0000           0.9824                -0.5593
+   S3 specificity         0.7574         0.7497         0.7650          0.0031          1.0000          1.0000          1.0000           0.9824                 0.2426
+   S3          f1         0.0216         0.0164         0.0268          0.0031          0.0000          0.0000          0.0000           0.9824                -0.0216

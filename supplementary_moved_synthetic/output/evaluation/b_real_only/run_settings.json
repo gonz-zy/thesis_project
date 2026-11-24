@@ -1,0 +1,18 @@
+{
+  "setups": {
+    "S1": "supplementary_moved_synthetic\\output\\s1\\final\\cbam_all",
+    "S3": "supplementary_moved_synthetic\\output\\s3\\final\\cbam_all"
+  },
+  "pairs": [
+    [
+      "S1",
+      "S3"
+    ]
+  ],
+  "declared": true,
+  "subset": "supplementary_moved_synthetic\\output\\manifests\\slice_b_real_only.csv",
+  "n_test": 12262,
+  "n_pos": 59,
+  "boot": 1000,
+  "boot_seed": 42
+}

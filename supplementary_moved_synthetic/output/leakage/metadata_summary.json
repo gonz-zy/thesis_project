@@ -1,0 +1,19 @@
+{
+  "n_val_test_synthetic_rows": 12550,
+  "n_distinct_tuples": 157,
+  "n_distinct_tuples_in_232_train_real_pneumonia": 157,
+  "rows_exact_copy_of_train_real_pneumonia_row": 12550,
+  "rows_exact_copy_of_any_train_real_row": 12550,
+  "rows_exact_copy_of_train_synthetic_row": 12550,
+  "distinct_tuples_exact_copy_of_train_real_pneumonia": 157,
+  "per_partition": {
+    "val": {
+      "rows": 4281,
+      "distinct": 157
+    },
+    "test": {
+      "rows": 8269,
+      "distinct": 157
+    }
+  }
+}

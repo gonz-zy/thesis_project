@@ -1,0 +1,4 @@
+pair,real_patient_overlap,real_image_overlap,synthetic_image_overlap,any_image_overlap
+train-val,0,0,0,0
+train-test,0,0,0,0
+val-test,0,0,0,0

@@ -1,0 +1,15 @@
+2026-11-24 11:24:57 | step 1: split
+2026-11-24 11:24:58 | step 1b: training-set mean/std (new training set)
+2026-11-24 11:56:33 | train s1 seed 42 ok | 31 min
+2026-11-24 12:44:12 | train s1 seed 43 ok | 47 min
+2026-11-24 13:19:54 | train s1 seed 44 ok | 35 min
+2026-11-24 14:00:00 | train s1 seed 45 ok | 40 min
+2026-11-24 14:39:09 | train s1 seed 46 ok | 39 min
+2026-11-24 16:02:42 | train s3 seed 42 ok | 83 min
+2026-11-24 17:26:08 | train s3 seed 43 ok | 83 min
+2026-11-24 18:49:34 | train s3 seed 44 ok | 83 min
+2026-11-24 19:51:01 | train s3 seed 45 ok | 61 min
+2026-11-24 21:14:23 | train s3 seed 46 ok | 83 min
+2026-11-24 21:14:23 | step 3: leakage diagnostics
+2026-11-24 21:16:33 | step 2b: evaluation on slices a/b/c
+2026-11-24 21:16:58 | done

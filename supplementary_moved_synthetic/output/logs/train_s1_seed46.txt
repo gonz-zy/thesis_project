@@ -1,0 +1,50 @@
+=== cbam-all_seed46 | lr=2.999e-05 floor=0.175 | batch 16 | 5274 steps/epoch | pos_weight 1.423 ===
+epoch 1/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 1/15:  43%|####3     | 2275/5274 [02:00<02:38, 18.96it/s]epoch 1/15:  43%|####3     | 2275/5274 [02:10<02:38, 18.96it/s]epoch 1/15:  92%|#########1| 4847/5274 [04:00<00:20, 20.41it/s]epoch 1/15:  92%|#########1| 4847/5274 [04:10<00:20, 20.41it/s]epoch 1/15: 100%|##########| 5274/5274 [04:19<00:00, 20.29it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 1.0, 'lr': 0.0, 'train_loss': 0.2268, 'val_auc': 0.9968, 'train_recall_real_pn': 0.1403, 'train_recall_synth_pn': 0.9648, 'train_acc_nf': 0.8909, 'epoch_time_sec': 277.8178}
+epoch 2/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 2/15:  48%|####8     | 2552/5274 [02:00<02:08, 21.27it/s]epoch 2/15:  48%|####8     | 2552/5274 [02:12<02:08, 21.27it/s]epoch 2/15:  97%|#########6| 5106/5274 [04:00<00:07, 21.27it/s]epoch 2/15: 100%|##########| 5274/5274 [04:07<00:00, 21.30it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 2.0, 'lr': 0.0, 'train_loss': 0.0305, 'val_auc': 0.9974, 'train_recall_real_pn': 0.0037, 'train_recall_synth_pn': 0.9996, 'train_acc_nf': 0.9996, 'epoch_time_sec': 254.5291}
+epoch 3/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 3/15:  49%|####8     | 2558/5274 [02:00<02:07, 21.31it/s]epoch 3/15:  49%|####8     | 2558/5274 [02:18<02:07, 21.31it/s]epoch 3/15:  97%|#########7| 5120/5274 [04:00<00:07, 21.34it/s]epoch 3/15: 100%|##########| 5274/5274 [04:07<00:00, 21.32it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 3.0, 'lr': 0.0, 'train_loss': 0.0285, 'val_auc': 0.9973, 'train_recall_real_pn': 0.0072, 'train_recall_synth_pn': 0.9998, 'train_acc_nf': 0.9995, 'epoch_time_sec': 254.2879}
+epoch 4/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 4/15:  48%|####8     | 2556/5274 [02:00<02:07, 21.29it/s]epoch 4/15:  48%|####8     | 2556/5274 [02:14<02:07, 21.29it/s]epoch 4/15:  97%|#########7| 5131/5274 [04:00<00:06, 21.39it/s]epoch 4/15: 100%|##########| 5274/5274 [04:06<00:00, 21.39it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 4.0, 'lr': 0.0, 'train_loss': 0.0277, 'val_auc': 0.9978, 'train_recall_real_pn': 0.0037, 'train_recall_synth_pn': 0.9997, 'train_acc_nf': 0.9994, 'epoch_time_sec': 253.4749}
+epoch 5/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 5/15:  49%|####8     | 2569/5274 [02:00<02:06, 21.40it/s]epoch 5/15:  49%|####8     | 2569/5274 [02:10<02:06, 21.40it/s]epoch 5/15:  97%|#########7| 5139/5274 [04:00<00:06, 21.41it/s]epoch 5/15: 100%|##########| 5274/5274 [04:06<00:00, 21.43it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 5.0, 'lr': 0.0, 'train_loss': 0.0273, 'val_auc': 0.9974, 'train_recall_real_pn': 0.0036, 'train_recall_synth_pn': 0.9998, 'train_acc_nf': 0.9993, 'epoch_time_sec': 253.0103}
+epoch 6/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 6/15:  48%|####8     | 2552/5274 [02:00<02:08, 21.26it/s]epoch 6/15:  48%|####8     | 2552/5274 [02:18<02:08, 21.26it/s]epoch 6/15:  98%|#########7| 5147/5274 [04:00<00:05, 21.47it/s]epoch 6/15: 100%|##########| 5274/5274 [04:06<00:00, 21.42it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 6.0, 'lr': 0.0, 'train_loss': 0.0246, 'val_auc': 0.9974, 'train_recall_real_pn': 0.0394, 'train_recall_synth_pn': 0.9999, 'train_acc_nf': 0.9996, 'epoch_time_sec': 253.1547}
+epoch 7/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 7/15:  48%|####8     | 2538/5274 [02:00<02:09, 21.14it/s]epoch 7/15:  48%|####8     | 2538/5274 [02:15<02:09, 21.14it/s]epoch 7/15:  96%|#########6| 5072/5274 [04:00<00:09, 21.12it/s]epoch 7/15: 100%|##########| 5274/5274 [04:09<00:00, 21.10it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 7.0, 'lr': 0.0, 'train_loss': 0.0235, 'val_auc': 0.997, 'train_recall_real_pn': 0.0358, 'train_recall_synth_pn': 0.9999, 'train_acc_nf': 0.9997, 'epoch_time_sec': 256.8214}
+epoch 8/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 8/15:  49%|####8     | 2571/5274 [02:00<02:06, 21.42it/s]epoch 8/15:  49%|####8     | 2571/5274 [02:18<02:06, 21.42it/s]epoch 8/15:  97%|#########6| 5112/5274 [04:00<00:07, 21.27it/s]epoch 8/15: 100%|##########| 5274/5274 [04:07<00:00, 21.30it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 8.0, 'lr': 0.0, 'train_loss': 0.0197, 'val_auc': 0.9969, 'train_recall_real_pn': 0.1018, 'train_recall_synth_pn': 1.0, 'train_acc_nf': 0.9997, 'epoch_time_sec': 254.5247}
+epoch 9/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 9/15:  48%|####8     | 2552/5274 [02:00<02:08, 21.26it/s]epoch 9/15:  48%|####8     | 2552/5274 [02:14<02:08, 21.26it/s]epoch 9/15:  97%|#########7| 5123/5274 [04:00<00:07, 21.35it/s]epoch 9/15: 100%|##########| 5274/5274 [04:06<00:00, 21.38it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 9.0, 'lr': 0.0, 'train_loss': 0.0171, 'val_auc': 0.9968, 'train_recall_real_pn': 0.1581, 'train_recall_synth_pn': 0.9999, 'train_acc_nf': 0.9996, 'epoch_time_sec': 253.6575}
+early stopping at epoch 9 (best val AUC 0.9978 at epoch 4)
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                predict:   0%|          | 0/321 [00:00<?, ?it/s]                                                {
+  "run_id": "cbam-all_seed46",
+  "phase": "final",
+  "setup": "1_densenet121_stylegan2ada",
+  "cbam": "all",
+  "seed": 46,
+  "trial": null,
+  "lr": 2.9994195964906545e-05,
+  "min_lr_ratio": 0.17545509120381428,
+  "batch": 16,
+  "warmup_epochs": 3,
+  "epoch_cap": 15,
+  "patience": 5,
+  "weight_decay": 0.0001,
+  "samples_per_epoch": 84384,
+  "pos_weight": 1.4232144061509409,
+  "epochs_run": 9,
+  "best_epoch": 4,
+  "diverged": false,
+  "best_val_auc": 0.9977830965042445,
+  "top3_val_auc": 0.9975367219596789,
+  "threshold_from_val": 0.28140559792518616,
+  "test_auc": 0.9972114924181651,
+  "accuracy": 0.997077589985875,
+  "precision": 0.9998790810157194,
+  "recall": 0.9929154658981748,
+  "f1": 0.9963851066393541,
+  "n_test": 20531,
+  "n_test_pneumonia": 8328
+}

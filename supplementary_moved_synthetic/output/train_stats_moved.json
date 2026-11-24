@@ -1,0 +1,9 @@
+{
+  "mean": 0.4926068584358163,
+  "std": 0.2934573534967511,
+  "n": 71858,
+  "n_pixels": 3605547008,
+  "std_of_image_means": 0.023110703103148972,
+  "source_csv": "supplementary_moved_synthetic/output/manifests/combined_training_labels.csv",
+  "split": null
+}

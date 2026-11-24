@@ -1,0 +1,46 @@
+{
+  "split_seed": 20261124,
+  "rng": "numpy.random.default_rng(seed).permutation over synthetic rows in combined_training_labels.csv order",
+  "synthetic_assignment": {
+    "train": 29422,
+    "val": 4281,
+    "test": 8269
+  },
+  "counts": {
+    "train": {
+      "total": 71858,
+      "real_pneumonia": 232,
+      "synthetic_pneumonia": 29422,
+      "no_finding": 42204
+    },
+    "val": {
+      "total": 10266,
+      "real_pneumonia": 31,
+      "synthetic_pneumonia": 4281,
+      "no_finding": 5954
+    },
+    "test": {
+      "total": 20531,
+      "real_pneumonia": 59,
+      "synthetic_pneumonia": 8269,
+      "no_finding": 12203
+    }
+  },
+  "slices": {
+    "a_mixed": 20531,
+    "b_real_only": 12262,
+    "c_synthetic_only": 20472
+  },
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "evaluation_bootstrap_seed": 42
+}
+      pair  real_patient_overlap  real_image_overlap  synthetic_image_overlap  any_image_overlap
+ train-val                     0                   0                        0                  0
+train-test                     0                   0                        0                  0
+  val-test                     0                   0                        0                  0

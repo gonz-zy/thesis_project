@@ -1,0 +1,10 @@
+{
+  "encoder": "torchvision densenet121 IMAGENET1K_V1, frozen, GAP 1024-d, L2-normalised",
+  "distance": "cosine distance = 1 - cosine similarity",
+  "thresholds": {
+    "p1_real_baseline": 0.04236280918121338,
+    "p5_real_baseline": 0.047216445207595825,
+    "p1_synthetic_train_to_synthetic_train": 0.01932564564049244
+  },
+  "justification": "p1/p5 of nearest-real-training distance of real val/test images, whose patients are disjoint from training by construction (independent baseline)"
+}

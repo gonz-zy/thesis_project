@@ -1,0 +1,54 @@
+=== cbam-all_seed43 | lr=2.999e-05 floor=0.175 | batch 16 | 5274 steps/epoch | pos_weight 1.423 ===
+epoch 1/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 1/15:  43%|####3     | 2277/5274 [02:00<02:38, 18.97it/s]epoch 1/15:  43%|####3     | 2277/5274 [02:10<02:38, 18.97it/s]epoch 1/15:  92%|#########1| 4837/5274 [04:00<00:21, 20.36it/s]epoch 1/15:  92%|#########1| 4837/5274 [04:10<00:21, 20.36it/s]epoch 1/15: 100%|##########| 5274/5274 [04:20<00:00, 20.24it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 1.0, 'lr': 0.0, 'train_loss': 0.2259, 'val_auc': 0.9969, 'train_recall_real_pn': 0.0735, 'train_recall_synth_pn': 0.9327, 'train_acc_nf': 0.9266, 'epoch_time_sec': 278.754}
+epoch 2/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 2/15:  49%|####8     | 2559/5274 [02:00<02:07, 21.32it/s]epoch 2/15:  49%|####8     | 2559/5274 [02:11<02:07, 21.32it/s]epoch 2/15:  97%|#########7| 5120/5274 [04:00<00:07, 21.33it/s]epoch 2/15: 100%|##########| 5274/5274 [04:07<00:00, 21.34it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 2.0, 'lr': 0.0, 'train_loss': 0.0313, 'val_auc': 0.9967, 'train_recall_real_pn': 0.0, 'train_recall_synth_pn': 0.9997, 'train_acc_nf': 0.9993, 'epoch_time_sec': 254.099}
+epoch 3/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 3/15:  49%|####8     | 2572/5274 [02:00<02:06, 21.43it/s]epoch 3/15:  49%|####8     | 2572/5274 [02:17<02:06, 21.43it/s]epoch 3/15:  97%|#########7| 5124/5274 [04:00<00:07, 21.33it/s]epoch 3/15: 100%|##########| 5274/5274 [04:06<00:00, 21.36it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 3.0, 'lr': 0.0, 'train_loss': 0.0275, 'val_auc': 0.9968, 'train_recall_real_pn': 0.0, 'train_recall_synth_pn': 0.9998, 'train_acc_nf': 0.9996, 'epoch_time_sec': 253.794}
+epoch 4/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 4/15:  48%|####8     | 2547/5274 [02:00<02:08, 21.22it/s]epoch 4/15:  48%|####8     | 2547/5274 [02:14<02:08, 21.22it/s]epoch 4/15:  97%|#########6| 5105/5274 [04:00<00:07, 21.28it/s]epoch 4/15: 100%|##########| 5274/5274 [04:07<00:00, 21.29it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 4.0, 'lr': 0.0, 'train_loss': 0.0252, 'val_auc': 0.9971, 'train_recall_real_pn': 0.0039, 'train_recall_synth_pn': 0.9998, 'train_acc_nf': 0.9997, 'epoch_time_sec': 254.6279}
+epoch 5/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 5/15:  48%|####8     | 2542/5274 [02:00<02:08, 21.18it/s]epoch 5/15:  48%|####8     | 2542/5274 [02:19<02:08, 21.18it/s]epoch 5/15:  97%|#########6| 5106/5274 [04:00<00:07, 21.29it/s]epoch 5/15: 100%|##########| 5274/5274 [04:08<00:00, 21.25it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 5.0, 'lr': 0.0, 'train_loss': 0.026, 'val_auc': 0.997, 'train_recall_real_pn': 0.0072, 'train_recall_synth_pn': 0.9999, 'train_acc_nf': 0.9996, 'epoch_time_sec': 255.0891}
+epoch 6/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 6/15:  48%|####8     | 2553/5274 [02:00<02:07, 21.27it/s]epoch 6/15:  48%|####8     | 2553/5274 [02:15<02:07, 21.27it/s]epoch 6/15:  97%|#########6| 5107/5274 [04:00<00:07, 21.28it/s]epoch 6/15: 100%|##########| 5274/5274 [04:07<00:00, 21.28it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 6.0, 'lr': 0.0, 'train_loss': 0.0239, 'val_auc': 0.9973, 'train_recall_real_pn': 0.0038, 'train_recall_synth_pn': 1.0, 'train_acc_nf': 0.9997, 'epoch_time_sec': 254.7508}
+epoch 7/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 7/15:  49%|####8     | 2562/5274 [02:00<02:07, 21.35it/s]epoch 7/15:  49%|####8     | 2562/5274 [02:10<02:07, 21.35it/s]epoch 7/15:  97%|#########6| 5102/5274 [04:00<00:08, 21.24it/s]epoch 7/15: 100%|##########| 5274/5274 [04:08<00:00, 21.25it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 7.0, 'lr': 0.0, 'train_loss': 0.0223, 'val_auc': 0.9969, 'train_recall_real_pn': 0.0179, 'train_recall_synth_pn': 0.9999, 'train_acc_nf': 0.9998, 'epoch_time_sec': 255.1747}
+epoch 8/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 8/15:  49%|####8     | 2574/5274 [02:00<02:05, 21.45it/s]epoch 8/15:  49%|####8     | 2574/5274 [02:15<02:05, 21.45it/s]epoch 8/15:  97%|#########7| 5137/5274 [04:00<00:06, 21.39it/s]epoch 8/15: 100%|##########| 5274/5274 [04:06<00:00, 21.37it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 8.0, 'lr': 0.0, 'train_loss': 0.0195, 'val_auc': 0.997, 'train_recall_real_pn': 0.0532, 'train_recall_synth_pn': 0.9999, 'train_acc_nf': 0.9996, 'epoch_time_sec': 253.7067}
+epoch 9/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 9/15:  49%|####8     | 2560/5274 [02:00<02:07, 21.33it/s]epoch 9/15:  49%|####8     | 2560/5274 [02:12<02:07, 21.33it/s]epoch 9/15:  97%|#########7| 5130/5274 [04:00<00:06, 21.38it/s]epoch 9/15: 100%|##########| 5274/5274 [04:06<00:00, 21.40it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 9.0, 'lr': 0.0, 'train_loss': 0.016, 'val_auc': 0.9972, 'train_recall_real_pn': 0.1825, 'train_recall_synth_pn': 0.9999, 'train_acc_nf': 0.9994, 'epoch_time_sec': 253.3319}
+epoch 10/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 10/15:  48%|####8     | 2544/5274 [02:00<02:08, 21.19it/s]epoch 10/15:  48%|####8     | 2544/5274 [02:18<02:08, 21.19it/s]epoch 10/15:  97%|#########6| 5099/5274 [04:00<00:08, 21.25it/s]epoch 10/15: 100%|##########| 5274/5274 [04:08<00:00, 21.26it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 10.0, 'lr': 0.0, 'train_loss': 0.0127, 'val_auc': 0.9972, 'train_recall_real_pn': 0.3712, 'train_recall_synth_pn': 1.0, 'train_acc_nf': 0.9992, 'epoch_time_sec': 255.0034}
+epoch 11/15:   0%|          | 0/5274 [00:00<?, ?it/s]epoch 11/15:  49%|####8     | 2566/5274 [02:00<02:06, 21.38it/s]epoch 11/15:  49%|####8     | 2566/5274 [02:14<02:06, 21.38it/s]epoch 11/15:  97%|#########7| 5136/5274 [04:00<00:06, 21.40it/s]epoch 11/15: 100%|##########| 5274/5274 [04:06<00:00, 21.38it/s]
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                {'epoch': 11.0, 'lr': 0.0, 'train_loss': 0.0094, 'val_auc': 0.9969, 'train_recall_real_pn': 0.5148, 'train_recall_synth_pn': 1.0, 'train_acc_nf': 0.9993, 'epoch_time_sec': 253.6703}
+early stopping at epoch 11 (best val AUC 0.9973 at epoch 6)
+predict:   0%|          | 0/161 [00:00<?, ?it/s]                                                predict:   0%|          | 0/321 [00:00<?, ?it/s]                                                {
+  "run_id": "cbam-all_seed43",
+  "phase": "final",
+  "setup": "1_densenet121_stylegan2ada",
+  "cbam": "all",
+  "seed": 43,
+  "trial": null,
+  "lr": 2.9994195964906545e-05,
+  "min_lr_ratio": 0.17545509120381428,
+  "batch": 16,
+  "warmup_epochs": 3,
+  "epoch_cap": 15,
+  "patience": 5,
+  "weight_decay": 0.0001,
+  "samples_per_epoch": 84384,
+  "pos_weight": 1.4232144061509409,
+  "epochs_run": 11,
+  "best_epoch": 6,
+  "diverged": false,
+  "best_val_auc": 0.9972869457429657,
+  "top3_val_auc": 0.9972579341535984,
+  "threshold_from_val": 0.29421496391296387,
+  "test_auc": 0.9974664749136899,
+  "accuracy": 0.9971262968194438,
+  "precision": 1.0,
+  "recall": 0.9929154658981748,
+  "f1": 0.9964451406880761,
+  "n_test": 20531,
+  "n_test_pneumonia": 8328
+}

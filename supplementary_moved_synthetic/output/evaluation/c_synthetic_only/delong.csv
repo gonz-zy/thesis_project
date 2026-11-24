@@ -1,0 +1,2 @@
+setup_a,setup_b,auc_a,auc_b,diff,ci_lower,ci_upper,z,p_value,p_holm,significant_holm_0.05
+S1,S3,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,False

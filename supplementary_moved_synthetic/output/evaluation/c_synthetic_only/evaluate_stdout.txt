@@ -1,0 +1,73 @@
+Test set: 20472 images, 8269 pneumonia / 12203 No Finding   (subset slice_c_synthetic_only.csv)
+Declared comparisons (Holm over exactly these): S1 - S3
+
+=== PER-SEED TEST METRICS ===
+setup  seed  threshold  auc  accuracy  precision  recall  specificity     f1
+   S1    42     0.3877  1.0    1.0000     0.9999  1.0000       0.9999 0.9999
+   S1    43     0.2942  1.0    1.0000     1.0000  1.0000       1.0000 1.0000
+   S1    44     0.6192  1.0    1.0000     1.0000  0.9999       1.0000 0.9999
+   S1    45     0.4569  1.0    1.0000     1.0000  1.0000       1.0000 1.0000
+   S1    46     0.2814  1.0    1.0000     0.9999  1.0000       0.9999 0.9999
+   S3    42     0.9999  1.0    0.9989     1.0000  0.9973       1.0000 0.9987
+   S3    43     0.9999  1.0    0.9995     1.0000  0.9988       1.0000 0.9994
+   S3    44     0.9998  1.0    0.9999     1.0000  0.9996       1.0000 0.9998
+   S3    45     0.9124  1.0    1.0000     1.0000  0.9999       1.0000 0.9999
+   S3    46     0.9997  1.0    0.9997     1.0000  0.9992       1.0000 0.9996
+
+=== ENSEMBLE (mean of seeds), stratified bootstrap x1000, CI = estimate +/- 1.96 SD ===
+setup      metric  n_seeds  threshold  estimate     sd  ci_lower  ci_upper
+   S1         auc        5     0.6835    1.0000 0.0000    1.0000       1.0
+   S1    accuracy        5     0.6835    1.0000 0.0000    1.0000       1.0
+   S1   precision        5     0.6835    1.0000 0.0000    1.0000       1.0
+   S1      recall        5     0.6835    1.0000 0.0000    1.0000       1.0
+   S1 specificity        5     0.6835    1.0000 0.0000    1.0000       1.0
+   S1          f1        5     0.6835    1.0000 0.0000    1.0000       1.0
+   S3         auc        5     0.9824    1.0000 0.0000    1.0000       1.0
+   S3    accuracy        5     0.9824    1.0000 0.0000    0.9999       1.0
+   S3   precision        5     0.9824    1.0000 0.0000    1.0000       1.0
+   S3      recall        5     0.9824    0.9999 0.0001    0.9996       1.0
+   S3 specificity        5     0.9824    1.0000 0.0000    1.0000       1.0
+   S3          f1        5     0.9824    0.9999 0.0001    0.9998       1.0
+
+=== CONFUSION COUNTS at the validation threshold (tp = pneumonia found, fn = missed, fp = false alarms, tn) ===
+setup    level  seed  threshold   tp  fn  fp    tn
+   S1     seed    42    0.38769 8269   0   1 12202
+   S1     seed    43    0.29421 8269   0   0 12203
+   S1     seed    44    0.61924 8268   1   0 12203
+   S1     seed    45    0.45689 8269   0   0 12203
+   S1     seed    46    0.28141 8269   0   1 12202
+   S3     seed    42    0.99988 8247  22   0 12203
+   S3     seed    43    0.99986 8259  10   0 12203
+   S3     seed    44    0.99981 8266   3   0 12203
+   S3     seed    45    0.91244 8268   1   0 12203
+   S3     seed    46    0.99974 8262   7   0 12203
+   S1 ensemble    -1    0.68354 8269   0   0 12203
+   S3 ensemble    -1    0.98239 8268   1   0 12203
+
+Reference (descriptive only, no per-image predictions published): Chehade et al. (2025) AUC 0.8387 +/- 0.014 (mean +/- SD over ten random splits, balanced ~135-image test sets)
+
+=== DELONG (ensemble AUC, difference = first - second, Holm over 1 declared comparisons) ===
+setup_a setup_b  auc_a  auc_b  diff  ci_lower  ci_upper   z  p_value  p_holm  significant_holm_0.05
+     S1      S3    1.0    1.0   0.0       0.0       0.0 0.0      1.0     1.0                  False
+
+=== ANOVA ACROSS SEEDS (training randomness; n = seeds per setup; per declared pair, Holm per metric) ===
+     metric setup_a setup_b  n_a  n_b  mean_a  mean_b    diff      F  p_value  eta_squared  p_holm
+        auc      S1      S3    5    5     1.0  1.0000 -0.0000 2.5000   0.1525       0.2381  0.1525
+   accuracy      S1      S3    5    5     1.0  0.9996  0.0004 4.6647   0.0628       0.3683  0.0628
+  precision      S1      S3    5    5     1.0  1.0000 -0.0000 2.6667   0.1411       0.2500  0.1411
+     recall      S1      S3    5    5     1.0  0.9990  0.0010 5.1504   0.0529       0.3917  0.0529
+specificity      S1      S3    5    5     1.0  1.0000 -0.0000 2.6667   0.1411       0.2500  0.1411
+         f1      S1      S3    5    5     1.0  0.9995  0.0005 4.6605   0.0629       0.3681  0.0629
+
+=== ANOVA ACROSS BOOTSTRAP RESAMPLES (test-set sampling noise; read eta-squared, resamples overlap) ===
+     metric setup_a setup_b        F  p_value  eta_squared  mean_a  mean_b
+        auc      S1      S3  61.5096      0.0        0.000     1.0  1.0000
+   accuracy      S1      S3 993.0259      0.0        0.332     1.0  1.0000
+  precision      S1      S3      NaN      NaN          NaN     1.0  1.0000
+     recall      S1      S3 993.0259      0.0        0.332     1.0  0.9999
+specificity      S1      S3      NaN      NaN          NaN     1.0  1.0000
+         f1      S1      S3 992.9197      0.0        0.332     1.0  0.9999
+
+Files written to supplementary_moved_synthetic\output\evaluation\c_synthetic_only
+C:\Users\Admin\Documents\Developments\thesis_project\venv\lib\site-packages\scipy\stats\_axis_nan_policy.py:586: ConstantInputWarning: Each of the input arrays is constant; the F statistic is not defined or infinite
+  res = hypotest_fun_out(*samples, **kwds)
